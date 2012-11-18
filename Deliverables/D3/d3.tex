@@ -34,33 +34,40 @@ Asset Sarsengaliyev\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Standard section for all documents
 \section{Introduction}
+
 \subsection{Identification}
+
 Requirements specification for the internship system for PSD3 team project.
 \subsection{Related Documentation}
+
 PSD3 Group Exercise Description \url{http://fims.moodle.gla.ac.uk/file.php/128/coursework/
 psd3-ge-1-rev3278.pdf}\\
 Deliverables Template \url{http://fims.moodle.gla.ac.uk/file.php/128/coursework/templates.zip}\\
 PSD3 Course Notes \url{http://fims.moodle.gla.ac.uk/file.php/128/lecture-notes/notes-r3275.pdf}
 \\
 \subsection{Purpose and Description of Document}
+
 The purpose of this document is to detail and explain the requirements collected for the
 internship advert system. This will include all the actors within the system, their use cases and
 descriptions, and scenarios which would be suitable for the system.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{Document Status and Schedule}
+
 \begin{center}{
-\begin{tabular}{|c|c|c|}
-\hline \textbf{Date} &\textbf{ Change} & \textbf{Version}\\ 
-\hline 25/10/2012 & Began Draft & 0.1 \\ 
-\hline 30/10/2012 & Initial Draft Completed & 0.2\\ 
-\hline 10/11/2012 & Finalised for Submission & 0.3\\ 
-\hline 11/11/2012 & \textbf{Draft Submission Deadline} & 1.0 \\ 
-\hline ... & Revision &\\ 
-\hline 29/11/2012 & \textbf{Final Submission Deadline} & \\ 
+\begin{tabular}{|c|c|c|c|}
+\hline \textbf{Date} &\textbf{ Change} & \textbf{Version} & \textbf{Author}\\ 
+\hline 25/10/2012 & Began Draft & 0.1 & All \\ 
+\hline 30/10/2012 & Initial Draft Completed & 0.2 & All \\ 
+\hline 10/11/2012 & Finalised for Submission & 0.3 & All\\ 
+\hline 11/11/2012 & \textbf{Draft Submission Deadline} & 1.0 & All\\ 
+\hline ... & Revision & & All\\ 
+\hline 26/11/2012 & \textbf{Final Submission Deadline} & All\\ 
 \hline 
 \end{tabular} }
 \end{center}
+
 \section{Extended Problem Definition}
 A program is needed to manage internship adverts posted by companies that students can then
 search through and then apply if they are interested.
@@ -72,7 +79,9 @@ ordinator will remove any adverts that have been filled or whose deadlines have 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{System Scope}
+
 \textbf{TO DO!}\\
+
 \textit{Give an overview of the system here, in the context of the surrounding
 environment. Use case diagrams can be used to illustrate the
 interactions between actors in the environment and the system.}
@@ -82,13 +91,17 @@ boundary of the system (i.e. what the system will and will not do).}
 stakeholders, how you resolved them and why.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{System Actors}
 \textbf{Course Coordinator}: Responsible for the management of adverts on the system.\\
 \textbf{Students}: Uses the system to browse the list of internship adverts and apply.\\
 \textbf{Company}: Submits adverts for moderation.\\
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{Domain Model}
+
 \begin{figure}[h]
 \begin{center}
 \includegraphics
@@ -98,42 +111,51 @@ stakeholders, how you resolved them and why.}
 \label{fig1:domain model}
 \end{center}
 \end{figure}
+
 \textit{Explain the elements of the domain here.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Use Case Descriptions}
+
 This section describes the required functionality for the Student Internship Advert System as
 four groups of related
 use cases. The core use cases for the system are:\\
+
 \textbf{Submission of internship advertisements (Section 4.1):}
 \begin{itemize}
-\item Submit adverts to the system
-\item Edit adverts submitted to the system
-\item remove adverts from the system
+\item Submit internship adverts
+\item Edit adverts 
+\item remove internship adverts
 \end{itemize}
+
 \textbf{Review, comment and publication of internship advertisements by Course Coordinator
 (Section 4.2) :}
 \begin{itemize}
-\item Review company internship adverts
+\item Review internship adverts
 \item Approve internship adverts
 \end{itemize}
+
 \textbf{Review of Advertisement by Student (Section 4.3) :}
 \begin{itemize}
 \item Review internship adverts list
-\item Apply for internship adverts
-\item Flag unsuitable/inappropriate adverts
+\item Apply for internship
+\item Flag unsuitable adverts
 \end{itemize}
+
 \textbf{Notification of successful selection for an internship by an SE/ESE student (Section 4.4)
 :}
 \begin{itemize}
 \item Notify course coordinator of successful placement
-\item remove/close adverts
+\item remove internship adverts
 \end{itemize}
+
 \textbf{Common utility services (Section 4.5) :}
 \begin{itemize}
 \item Login
 \item Logout
 \end{itemize}
+
 \subsection{Submission of internship advertisements}
 \begin{figure}[h]
 \begin{center}
@@ -144,8 +166,9 @@ use cases. The core use cases for the system are:\\
 \label{fig2:Use Case Diagram4.1}
 \end{center}
 \end{figure}
+
 \begin{UseCaseTemplate}
-\UseCaseLabel{Submit application}
+\UseCaseLabel{Submit internship adverts}
 \UseCaseDescription{A company should login and post internship adverts to the system,
 confirm it and logout.}
 \UseCaseRationale{A company must be able to post their internship adverts on the system in
@@ -153,15 +176,16 @@ order for students to apply for them, if suitable.}
 \UseCasePriority{Must have}
 \UseCaseStatus{Not implemented}
 \UseCaseActors{Company}
-\UseCaseIncludes{Login/Logout}
+\UseCaseIncludes{Login,Logout}
 \UseCaseConditions{ Post: Course coordinator needs to review adverts to determine whether or
 not it is suitable for students.}
 \UseCaseNonFunctionalRequirements{}
 \UseCaseScenarios{}
 \UseCaseRisks{Company may post internship adverts that may not be suitable for students.}
 \end{UseCaseTemplate}
+
 \begin{UseCaseTemplate}
-\UseCaseLabel{Edit adverts submitted to the system}
+\UseCaseLabel{Edit adverts}
 \UseCaseDescription{A company must login, make changes to their advert where necessary,
 confirm changes and then logout.}
 \UseCaseRationale{A company must be able to make changes to their advert in order to include
@@ -169,15 +193,16 @@ more information about it or remove irrelevant/incorrect details.}
 \UseCasePriority{Must Have}
 \UseCaseStatus{Not implemented}
 \UseCaseActors{Company}
-\UseCaseIncludes{Login/Logout}
+\UseCaseIncludes{Login,Logout}
 \UseCaseConditions{Pre: Company must have uploaded their advert to the system. Post: The
 amended advert will now be reviewed (again) by the course Coordinator.}
 \UseCaseNonFunctionalRequirements{}
 \UseCaseScenarios{}
 \UseCaseRisks{}
 \end{UseCaseTemplate}
+
 \begin{UseCaseTemplate}
-\UseCaseLabel{Remove adverts from the system}
+\UseCaseLabel{remove internship adverts}
 \UseCaseDescription{A Company should login, select an option to remove their advert from the
 system, confirm this and then logout.}
 \UseCaseRationale{A company should be able to remove their advert from the system if the
@@ -185,15 +210,17 @@ position has been taken and/or the internship is no longer available.}
 \UseCasePriority{Must Have}
 \UseCaseStatus{Not Implemented}
 \UseCaseActors{Company}
-\UseCaseIncludes{Login/Logout}
+\UseCaseIncludes{Login,Logout}
 \UseCaseConditions{Post: Advert should no longer be available on the system.}
 \UseCaseNonFunctionalRequirements{}
 \UseCaseScenarios{}
 \UseCaseRisks{Company may remove the wrong advert. Advert may not be successfully
 removed.}
 \end{UseCaseTemplate}
+
 \subsection{Review, comment and publication of internship advertisements by Course
 Coordinator}
+
 \begin{figure}[h]
 \begin{center}
 \includegraphics
@@ -203,8 +230,9 @@ Coordinator}
 \label{fig2:Use Case Diagram4.2}
 \end{center}
 \end{figure}
+
 \begin{UseCaseTemplate}
-\UseCaseLabel{Review company internship adverts}
+\UseCaseLabel{Review internship adverts}
 \UseCaseDescription{Course coordinator must login, read through new/edited adverts posted
 and decide if they are suitable for the students.}
 \UseCaseRationale{A member of the school of computing science (course coordinator) must
@@ -212,7 +240,7 @@ review all adverts to ensure they are suitable for ESE/SE students.}
 \UseCasePriority{Must have}
 \UseCaseStatus{Not implemented}
 \UseCaseActors{Course Coordinator}
-\UseCaseIncludes{login/logout}
+\UseCaseIncludes{Login,Logout}
 \UseCaseConditions{ Pre: company must post adverts to the system. Post: adverts are made
 available to the students.}
 \UseCaseNonFunctionalRequirements{}
@@ -220,6 +248,7 @@ available to the students.}
 \UseCaseRisks{}
 \end{UseCaseTemplate}
 \begin{UseCaseTemplate}
+
 \UseCaseLabel{Approve internship adverts}
 \UseCaseDescription{Course Coordinator must login. After reviewing the adverts and deciding
 they are suitable, the adverts are made available to the students.}
@@ -229,14 +258,16 @@ internships.}
 \UseCasePriority{Must have}
 \UseCaseStatus{Not implemented}
 \UseCaseActors{Course coordinator}
-\UseCaseIncludes{Login/logout}
+\UseCaseIncludes{Login,Logout}
 \UseCaseConditions{ Pre: company upload adverts to the system. Pre: adverts reviewed by
 course coordinator}
 \UseCaseNonFunctionalRequirements{}
 \UseCaseScenarios{}
 \UseCaseRisks{Course coordinator may accidentally approve an unsuitable advert.}
 \end{UseCaseTemplate}
+
 \subsection{Review of Advertisement by Student}
+
 \begin{figure}[h]
 \begin{center}
 \includegraphics
@@ -246,23 +277,25 @@ course coordinator}
 \label{fig2:Use Case Diagram4.3}
 \end{center}
 \end{figure}
+
 \begin{UseCaseTemplate}
-\UseCaseLabel{Review Advert List}
+\UseCaseLabel{Review internship adverts list}
 \UseCaseDescription{List of adverts is displayed on screen and users scrolls through and can
 read detailed information about the internship.}
 \UseCaseRationale{User needs to be able to see the adverts in order to apply.}
 \UseCasePriority{Must Have}
 \UseCaseStatus{Not Implemented}
 \UseCaseActors{Student}
-\UseCaseIncludes{Login/Logout, Apply}
+\UseCaseIncludes{Login, Logout, Apply for internship}
 \UseCaseConditions{Pre: adverts have been approved by the CC. Post: student can apply for
 internship.}
 \UseCaseNonFunctionalRequirements{}
 \UseCaseScenarios{}
 \UseCaseRisks{}
 \end{UseCaseTemplate}
+
 \begin{UseCaseTemplate}
-\UseCaseLabel{Apply for Adverts}
+\UseCaseLabel{Apply for internship}
 \UseCaseDescription{User selects an advert to apply for and will then have to email the
 company or will be directed to the company website to apply}
 \UseCaseRationale{Student must be able to see all details for the advert, including an email
@@ -270,14 +303,15 @@ address and/or website in order to apply for the placement.}
 \UseCasePriority{Must Have}
 \UseCaseStatus{Not Implemented}
 \UseCaseActors{Student}
-\UseCaseIncludes{Login/Logout}
+\UseCaseIncludes{Login,Logout}
 \UseCaseConditions{}
 \UseCaseNonFunctionalRequirements{}
 \UseCaseScenarios{}
 \UseCaseRisks{The email/website may be incorrect so student may not be able to apply.}
 \end{UseCaseTemplate}
+
 \begin{UseCaseTemplate}
-\UseCaseLabel{Flag Inappropriate Advert}
+\UseCaseLabel{Flag unsuitable adverts}
 \UseCaseDescription{Let course coordinator know an advert is not appropriate for its current
 category (if, for example it is categorised as SE suitable but it shouldn’t be).}
 \UseCaseRationale{A student can let the Course Coordinator know there is something wrong
@@ -285,7 +319,7 @@ with an advert on the system.}
 \UseCasePriority{Could have.}
 \UseCaseStatus{Not Implemented}
 \UseCaseActors{Student}
-\UseCaseIncludes{Login/Logout}
+\UseCaseIncludes{Login,Logout}
 \UseCaseConditions{Pre: The inappropriate advert must be still visible on the system.Post:
 Course Coordinator is notified.}
 \UseCaseNonFunctionalRequirements{}
@@ -293,7 +327,9 @@ Course Coordinator is notified.}
 fulfil the School of Computing Science placement guidelines and flags it.}
 \UseCaseRisks{Student might abuse this functionality by flagging random adverts .}
 \end{UseCaseTemplate}
+
 \subsection{Notification of successful selection for an internship by an SE/ESE student}
+
 \begin{figure}[h]
 \begin{center}
 \includegraphics
@@ -303,8 +339,9 @@ fulfil the School of Computing Science placement guidelines and flags it.}
 \label{fig2:Use Case Diagram4.4}
 \end{center}
 \end{figure}
+
 \begin{UseCaseTemplate}
-\UseCaseLabel{Notify Course Coordinator for Successful Application}
+\UseCaseLabel{Notify course coordinator of successful placement}
 \UseCaseDescription{Let course coordinator know a Placement position has been filled.}
 \UseCaseRationale{A student should let the Course Coordinator know that they were successful
 with their application for a specified placement position so that the CC can go on and remove
@@ -319,8 +356,9 @@ visible on the system. Post: Course Coordinator is notified.}
 \UseCaseScenarios{}
 \UseCaseRisks{}
 \end{UseCaseTemplate}
+
 \begin{UseCaseTemplate}
-\UseCaseLabel{Remove internship adverts}
+\UseCaseLabel{remove internship adverts}
 \UseCaseDescription{Course Coordinator logins in to system. If advert is passed deadline or no
 longer suitable or available, the advert will be taken off the system and then log out.}
 \UseCaseRationale{A member of the school of computing science (course coordinator) is
@@ -329,7 +367,7 @@ longer available or suitable.}
 \UseCasePriority{Must have}
 \UseCaseStatus{Not implemented}
 \UseCaseActors{Course coordinator}
-\UseCaseIncludes{login/logout}
+\UseCaseIncludes{Login,Logout}
 \UseCaseConditions{Pre: The application’s deadline for a placement has passed or a company
 has confirmed an offer of position to a student and the student has confirmed he/she accepted
 the position.Post: The advert is no longer visible on the system.}
@@ -337,7 +375,9 @@ the position.Post: The advert is no longer visible on the system.}
 \UseCaseScenarios{}
 \UseCaseRisks{Course Coordinator might remove the wrong advert.}
 \end{UseCaseTemplate}
+
 \subsection{Common utility services}
+
 \begin{UseCaseTemplate}
 \UseCaseLabel{Login}
 \UseCaseDescription{A user should enter their login id and a password to allow them to access
@@ -352,6 +392,7 @@ the system. }
 \UseCaseScenarios{}
 \UseCaseRisks{}
 \end{UseCaseTemplate}
+
 \begin{UseCaseTemplate}
 \UseCaseLabel{Logout}
 \UseCaseDescription{The logout use cases changes a users account to logged out, requiring
@@ -368,31 +409,40 @@ unauthorised access from an unattended terminal.}
 \UseCaseScenarios{}
 \UseCaseRisks{}
 \end{UseCaseTemplate}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Non Functional Requirements}
+
 \begin{itemize}
 \item User Concurrency: The system should be available to all Students of the School of Computing Science and a large number of users might want to use the system at the same time so the System should be able to handle a large number of users at once.
 \item Security: Students should be able to log in with their GUIDs and passowrds which would be the same used for other University of Glasgow websites such as Moodle and MyCampus. Employers who wish to use the system to post placement adverts will need to be provided with new usernames and passwords in order to use the system.
 \item Number of Adverts: The system must be able to handle an unlimited number of adverts. Any number of companies might offer placement opportunities for students each year therefore the number of adverts that can be posted on the system must not be limited.
-\item Advert Removal: The course coordinator will be responsible for manually removing an advert from the system when the position is filled.
 \end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Summary}
+
 A company should upload their adverts to the system. The course coordinator will review
 all adverts posted to the system and determine whether or not they are appropriate for the
 students. If appropriate, the CC makes the advert available for the students to view. If a student
 wants to apply for an advert, they will email the company or apply through their website. If
 a student successfully secures a placement, they must notify the course coordinator. If all
 placements have been filled, the CC can take the adverts off the system.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
+
 \section{Glossary}
 CC - Course Coordinator
+PSD - Professional Software Development
+
 \section{Stakeholder Interview Documentation}
+
 Key points we got from our interview with the client are:
+
 \begin{itemize}
 \item The company does not directly interact with the system.
 \item The Course Coordinator will review adverts sent via email and if they are suitable, would
@@ -405,7 +455,9 @@ an email address in order to send in their CV.
 system.
 \item Once a student has accepted a placement, the advert is taken off the system.
 \end{itemize}
+
 \section{Stakeholder Panel Documentation}
+
 Originally, we were informed that the company would not interact with the system, all adverts
 would be submitted via email to the course coordinator. However, at the stakeholder meeting
 it was clarified that the company would interact with the system. The company will be given a
