@@ -1,0 +1,178 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is a template for constructing your project plan document, but
+% also to show the use of the l3deliverable class. Use pdflatex and
+% bibtex to process the file, creating a PDF file as output (there is
+% no need to use dvips when using pdflatex).
+%
+% Several meta data commands have been implemented to collect
+% information such as deliverable identifier, project name etc (see
+% below the \date command.
+
+\documentclass{l3deliverable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% You can use the svn-multi package to automatically insert version
+% control information into your document (an example of how to do this
+% is shown below).  Make sure to set the 'svn:keywords' subversion
+% property to 'Id' for the source file, for example, type:
+%
+% svn propset svn:keywords 'Id' d1.tex
+%
+% in the same directory as your 'd2.tex' file. 
+%
+% The information between the two $$ will now be updated when you next
+% commit the file to your SVN repository.
+%
+% You can of course, just use this field to insert manual version
+% information, e.g. 1.2, 1.2.1 ... instead.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{url}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Check these macro values for appropriateness for your own document.
+
+\title{Team Organisation}
+
+%%authors
+\author{Ross Adam\\
+     	Andrew Gardner\\
+     	Nicole Kearns\\
+ 	Mamas Nicolaou\\
+    	Asset Sarsengaliyev\\
+}
+
+%%release date 
+\date{10 January 2009}
+
+\deliverableID{D1}
+\project{PSD3 Group Exercise 1}
+\team{V}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Standard section for all documents
+
+\section{Introduction}
+
+\subsection{Identification}
+
+Organisation Plan document for Team V’s PSD3 Project.
+
+\subsection{Related Documentation}
+
+PSD3 Group Exercise Description \url{http://fims.moodle.gla.ac.uk/file.php/128/coursework/
+psd3-ge-1-rev3278.pdf}\\
+Deliverables Template \url{http://fims.moodle.gla.ac.uk/file.php/128/coursework/templates.zip}\\
+PSD3 Course Notes \url{http://fims.moodle.gla.ac.uk/file.php/128/lecture-notes/notes-r3275.pdf}\\
+ 
+\subsection{Purpose and Description of Document}
+
+The purpose of this document is to detail and explain the organisational structure of Team V’s PSD3
+Group Project. This includes role assignment and the risks associated with the organisational structure
+chosen.
+
+\subsection{Document Status and Schedule}
+
+\begin{center}{
+\begin{tabular}{|c|c|c|c|}
+\hline \textbf{Date} &\textbf{Change} & \textbf{Version} & \textbf{Author}\\ 
+\hline 24/09/2012 & Began Draft & 0.1 & All \\ 
+\hline 25/09/2012 & Initial Draft Completed & 0.2 & All \\ 
+\hline 26/09/2012 & Finalised for Submission & 0.3 & All\\ 
+\hline 27/09/2012 & \textbf{Draft Submission Deadline} & 1.0 & All\\ 
+\hline ... & Revision & & All\\ 
+\hline 29/11/2012 & \textbf{Final Submission Deadline} & & All\\ 
+\hline 
+\end{tabular} }
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Roles}
+
+\begin{center}{
+\begin{tabular}{|c|c|}
+\hline \textbf{Name} &\textbf{Roles}\\ 
+\hline Ross Adam & Project Manage, Test Manager, Quality Assuror\\ 
+\hline Andrew Gardner & Chief Architect, Customer Liaison, Quality Assuror  \\ 
+\hline Mamas Nicolaou & Toolsmith, Librarian, Quality Assuror\\ 
+\hline Nicole Kearns & Secretary, Test Manager, Quality Assuror\\ 
+\hline Asset Sarsengaliyev & \textbf{ENTER ROLES!}\\
+\hline 
+\end{tabular} }
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Authority}
+
+The Project Manager role was assigned to Ross Adam. Important group decisions will be democratically
+discussed within the group with the Project Manager enforcing the consensus and ensuring
+deadlines are met.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Communication}
+
+Meetings will be held at least once a week, likely within the University’s library or the Level 3 Computing
+Lab. Subsequent meeting arrangements will be discussed and finalised at the end of each
+meeting.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Information Management}
+
+The librarian is repsonsible for maintaining the documents and information that pertain to the project.
+We intend to use..\\
+
+Mahara: \textit{Utilising a private forum as a central document and information index.}\\
+GitHub: \textit{Online SCM hosting for our codebase and Latex documents.}\\
+Facebook: \textit{Informal progress updates, idea sketching and general conversation.}\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Organisational Risks}
+
+The role based model suggests less risks than with alternatives but if someone was to fall behind or
+become absent then their role within the team would be compromised. If not immediately addressed
+this could threaten the project’s integrity.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+
+\section{Glossary}
+
+\textbf{PSD3} Professional Software Development 3\\
+\textbf{SCM} Source Control Management\\
+
+\section{Another appendix}
+
+\begin{center}{
+\begin{tabular}{|c|}
+\hline \textbf{Meeting Plan}\\ 
+\hline
+\hline Time\\
+\hline Location\\
+\hline Attendees\\
+\hline Previous Minutes\\
+\hline Current Agenda\\
+\hline Goals\\
+\hline Arrange next meeting\\
+\hline
+\end{tabular} }
+\end{center}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
