@@ -32,7 +32,7 @@ elif [ $username == "1005730w" ]; then
 	echo "Logging in..."
 	echo	
 	sleep 2
-	#bash ./studentHome.sh
+	bash ./studentHome.sh
 elif [ $username == "IBM" ]; then
 	displayHeader
 	echo "Logging in..."
