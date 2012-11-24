@@ -11,7 +11,7 @@ function displayHeader {
 displayHeader
 
 # display adverts
-echo "Unapproved adverts"
+echo "## Unapproved adverts ##"
 echo
 echo "1.  Help support and implement an internal website covering what's for"
 echo "    dinner at the canten, allowing employees to vote for what they'd like."
@@ -38,6 +38,7 @@ echo -n "Select advert (b to go back): "
 # read option
 read input
 
+# display option 
 if [ $input == "1" ]; then 
 	displayHeader
 	echo "1. Description"
@@ -56,6 +57,7 @@ if [ $input == "1" ]; then
 	echo "Updating..."
 	sleep 2
 	echo "Updated."
+	echo
 	sleep 1
 	bash ./editedAdvert.sh
 else

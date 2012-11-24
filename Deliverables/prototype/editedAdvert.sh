@@ -11,7 +11,7 @@ function displayHeader {
 displayHeader
 
 # display adverts
-echo "Unapproved adverts"
+echo "## Unapproved adverts ##"
 echo
 echo "1.  Help support and implement an internal website covering what's for"
 echo "    dinner at the canteen, allowing employees to vote for what they'd like."
