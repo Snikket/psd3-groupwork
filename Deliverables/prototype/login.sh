@@ -10,8 +10,8 @@ function displayHeader {
 # display header
 displayHeader
 
-# login and password
-echo -n "Login: " # -n allows input at the end of this line
+# read login & password
+echo -n "Login: "
 read username
 echo -n "Password: "
 stty -echo
@@ -20,7 +20,7 @@ stty echo
 echo
 echo
 
-# check and process input
+# check input & run relevant script
 if [ $username == "tws3r" ]; then
 	displayHeader
 	echo "Logging in..."
@@ -38,7 +38,7 @@ elif [ $username == "IBM" ]; then
 	echo "Logging in..."
 	echo
 	sleep 2
-	#bash ./companyHome.sh
+	bash ./companyHome.sh
 else
 	displayHeader
 	echo "Logging in..."
