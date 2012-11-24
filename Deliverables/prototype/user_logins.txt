@@ -1,0 +1,7 @@
+-----------
+USER LOGINS
+-----------
+Course Coordinator: 	tws3r (Tim's actual GUID)
+Student:				1005730w
+Company:				IBM
+
