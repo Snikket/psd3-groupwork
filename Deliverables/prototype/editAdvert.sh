@@ -33,7 +33,7 @@ echo "    Start date: 08/07/2012"
 echo "    Duration: 12 weeks"
 echo "    Compensation: £500"
 echo
-echo -n "Select advert (b to go back): "
+echo -n "Select advert ('b' to go back): "
 
 # read option
 read input
