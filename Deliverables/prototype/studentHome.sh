@@ -7,10 +7,10 @@ function displayHeader {
 	echo
 }
 
-#display header
+# display header
 displayHeader
 
-#display options
+# display options
 echo "1. View adverts"
 echo "2. Notify course co-ordinator of successful placement"
 echo "3. Logout"
@@ -20,14 +20,10 @@ echo -n "Select option: "
 # read option
 read input
 
-if [ $input == "1" ]; then 
-	echo "View adverts!"
-	sleep 2
-	#bash ./studentViewAdverts.sh
+if [ $input == "1" ]; then
+	bash ./studentViewAdverts.sh
 elif [ $input == "2" ]; then
-	echo "Notify CC!"
-	sleep 2
-	#bash ./notifyCC.sh
+	bash ./studentNotify.sh
 elif [ $input == "3" ]; then
 	displayHeader
 	echo "Logging out..."
