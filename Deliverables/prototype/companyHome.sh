@@ -11,8 +11,8 @@ function displayHeader {
 displayHeader
 
 #display options
-echo "1. Submit advert to system"
-echo "2. Edit submitted advert"
+echo "1. Submit advert"
+echo "2. Edit advert"
 echo "3. Logout"
 echo 
 echo -n "Select option: "
