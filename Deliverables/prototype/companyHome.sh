@@ -20,10 +20,8 @@ echo -n "Select option: "
 # read option
 read input
 
-if [ $input == "1" ]; then 
-	echo "Submit advert!"
-	sleep 2
-	#bash ./submitAdvert.sh
+if [ $input == "1" ]; then
+	bash ./submitAdvert.sh
 elif [ $input == "2" ]; then
 	echo "Edit advert!"
 	sleep 2
