@@ -7,10 +7,10 @@ function displayHeader {
 	echo
 }
 
-#display header
+# display header
 displayHeader
 
-#display options
+# display options
 echo "1. Submit advert"
 echo "2. Edit advert"
 echo "3. Logout"
@@ -36,7 +36,8 @@ elif [ $input == "3" ]; then
 	bash ./login.sh
 else
 	displayHeader
-	echo "Incorrect option selected, please try again."
+	echo "Incorrect option selected."
+	echo "Please try again."
 	echo
 	sleep 2
 	bash ./companyHome.sh
