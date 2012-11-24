@@ -26,7 +26,7 @@ if [ $username == "tws3r" ]; then
 	echo "Logging in..."
 	echo
 	sleep 2
-	#bash ./adminHome.sh
+	bash ./CCHome.sh
 elif [ $username == "1005730w" ]; then
 	displayHeader
 	echo "Logging in..."
