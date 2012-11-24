@@ -23,9 +23,7 @@ read input
 if [ $input == "1" ]; then
 	bash ./submitAdvert.sh
 elif [ $input == "2" ]; then
-	echo "Edit advert!"
-	sleep 2
-	#bash ./editAdvert.sh
+	bash ./editAdvert.sh
 elif [ $input == "3" ]; then
 	displayHeader
 	echo "Logging out..."
