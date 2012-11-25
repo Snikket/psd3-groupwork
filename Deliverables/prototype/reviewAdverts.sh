@@ -24,7 +24,7 @@ if [ $input == "1" ]; then
 	#bash ./approvedAdverts.sh
 elif [ $input == "2" ]; then
 	echo "Pending!"
-	#bash ./pendingAdverts.sh
+	bash ./pendingAdverts.sh
 else
 	bash ./CCHome.sh
 fi

@@ -4,6 +4,8 @@ function displayHeader {
 	echo "---------------------------------------"
 	echo "-- DCS Internship Management System! --"
 	echo "---------------------------------------"
+	echo "--------- Course Co-Ordinator ---------"
+	echo "---------------------------------------"
 	echo
 }
 
