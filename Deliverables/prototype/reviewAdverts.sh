@@ -11,32 +11,20 @@ function displayHeader {
 displayHeader
 
 # display options
-echo "1. Review adverts"
-echo "2. Delete advert(s)"
-echo "3. Logout"
+echo "1. View approved adverts"
+echo "2. View pending adverts"
 echo 
-echo -n "Select option: "
+echo -n "Select option ('b' to go back): "
 
 # read option
 read input
 
 if [ $input == "1" ]; then 
-	bash ./reviewAdverts.sh
+	echo "Approved!"
+	#bash ./approvedAdverts.sh
 elif [ $input == "2" ]; then
-	echo "Delete advert(s)!"
-	sleep 2
-	#bash ./deleteAdvert.sh
-elif [ $input == "3" ]; then
-	displayHeader
-	echo "Logging out..."
-	echo
-	sleep 2
-	bash ./login.sh
+	echo "Pending!"
+	#bash ./pendingAdverts.sh
 else
-	displayHeader
-	echo "Incorrect option selected."
-	echo "Please try again."
-	echo
-	sleep 2
 	bash ./CCHome.sh
 fi

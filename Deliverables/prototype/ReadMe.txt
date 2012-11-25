@@ -12,8 +12,8 @@ Will talk you guys through it Monday morning.
 USER LOGINS
 -----------
 Course Coordinator: 	tws3r (Tim's actual GUID)
-Student:				      1005730w
-Company:				      IBM
+Student:			    1005730w
+Company:			    IBM
 
 -------
 Company
