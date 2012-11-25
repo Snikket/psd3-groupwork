@@ -40,3 +40,9 @@ Logout
 ------------------
 Course Coordinator
 ------------------
+Login as CC
+View pending adverts
+Approve IBM advert
+Flag who it's suitable for
+View approved
+Delete an advert?
