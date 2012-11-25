@@ -1,9 +1,19 @@
+-----
+USAGE
+-----
+1. Grab all the .sh files
+2. Start it in terminal with ./login.sh
+3. Use one of the logins below, password is irrelevant so just type whatever.
+4. Navigate around.
+
+Will talk you guys through it Monday morning.
+
 -----------
 USER LOGINS
 -----------
 Course Coordinator: 	tws3r (Tim's actual GUID)
-Student:				1005730w
-Company:				IBM
+Student:				      1005730w
+Company:				      IBM
 
 -------
 Company
