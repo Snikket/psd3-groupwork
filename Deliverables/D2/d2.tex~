@@ -155,18 +155,18 @@ header):
   \PSDTaskDescription{ Meeting with client to collect requirements using the Interview Plan document. If additional information is revealed plan document will be deviated from.}%
   \PSDTaskOutcomes{Interview notes - system requirements}%
   \PSDTaskDeliverables{None}%
-  \PSDTaskRisks{ Client might be unclear or provide incorrect specifications.}
+  \PSDTaskRisks{Client might be unclear or provide incorrect specifications.}
 \end{PSDTask}
 
 \begin{PSDTask}{5}{Review interview notes}
-  \PSDTaskDescription{ Look over the requirements and notes gathered in the interview with the client.}%
+  \PSDTaskDescription{Look over the notes gathered in the interview with the client and the initial requirements.}%
   \PSDTaskOutcomes{None}%
   \PSDTaskDeliverables{None}%
   \PSDTaskRisks{}
 \end{PSDTask}
 
-\begin{PSDTask}{6}{Produce requirements - post interview}
-  \PSDTaskDescription{ Produce a document containing all requirements gathered for the system.}%
+\begin{PSDTask}{6}{Produce requirements document - post interview}
+  \PSDTaskDescription{Produce a document containing all requirements gathered for the system from the client interview.}%
   \PSDTaskOutcomes{Requirements document}%
   \PSDTaskDeliverables{None}%
   \PSDTaskRisks{}
@@ -181,82 +181,89 @@ header):
 
 \begin{PSDTask}{8}{Prepare for Stakeholder Panel}
   \PSDTaskDescription{Come up with a few key questions about the system/requirements we are unsure about to ask the clients. Allows us to clarify the requirements we have are correct.}%
+  \PSDTaskOutcomes{Stakeholder panel Questions}%
+  \PSDTaskDeliverables{None}%
+  \PSDTaskRisks{}
+\end{PSDTask}
+
+\begin{PSDTask}{9}{Attend Stakeholder Panel Interview}
+  \PSDTaskDescription{Allow the teams to ask questions about the system that maybe were not clear in the interview; or ask questions which they forgot about during the interview.}%
   \PSDTaskOutcomes{Stakeholder panel notes}%
   \PSDTaskDeliverables{None}%
   \PSDTaskRisks{}
 \end{PSDTask}
 
-\begin{PSDTask}{9}{Review Stakeholder Panel Notes}
-  \PSDTaskDescription{ Go through the notes from the stakeholder panel and amend the requirements document where necessary.}%
-  \PSDTaskOutcomes{Problem breakdown.}%
+\begin{PSDTask}{10}{Review Stakeholder Panel Notes}
+  \PSDTaskDescription{Go through the notes from the stakeholder panel and amend the requirements document where necessary.}%
+  \PSDTaskOutcomes{}%
   \PSDTaskDeliverables{None}%
   \PSDTaskRisks{Own interpretation of problem might be wrong.}
 \end{PSDTask}
 
-\begin{PSDTask}{10}{Finalise All Requirements}
+\begin{PSDTask}{11}{Finalise All Requirements}
   \PSDTaskDescription{Gather all requirements from the interview and the stakeholder panel and ensure that all the requirements are included in the document}%
   \PSDTaskOutcomes{Final Requirements Document}%
-  \PSDTaskDeliverables{D3}%
+  \PSDTaskDeliverables{}%
   \PSDTaskRisks{ Client might be unclear or provide incorrect specifications.}
 \end{PSDTask}
 
-\begin{PSDTask}{11}{Create UML of the internship system}
+\begin{PSDTask}{12}{Create UML of the internship system}
   \PSDTaskDescription{Produce a UML diagram of the system to show the structure of the internship system}%
   \PSDTaskOutcomes{UML diagram}%
-  \PSDTaskDeliverables{None}%
+  \PSDTaskDeliverables{D3}%
   \PSDTaskRisks{}
 \end{PSDTask}
 
-\begin{PSDTask}{12}{Create Use Cases}
-  \PSDTaskDescription{ For each of the requirements gathered, produce a use case containing all appropriate information ie. description, actors, condtions,etc}%
+\begin{PSDTask}{13}{Create Use Cases}
+  \PSDTaskDescription{ For each of the requirements gathered, produce a use case containing all appropriate information ie. description, actors, conditions,etc}%
   \PSDTaskOutcomes{Requirements Specification}%
-  \PSDTaskDeliverables{None}%
+  \PSDTaskDeliverables{D3}%
   \PSDTaskRisks{}
 \end{PSDTask}
 
-\begin{PSDTask}{13}{Create use case diagrams}
+\begin{PSDTask}{14}{Create use case diagrams}
   \PSDTaskDescription{ Produce use case diagrams to show the relationship between different use cases and the actors involved.}%
   \PSDTaskOutcomes{Requirements Specification}%
-  \PSDTaskDeliverables{None}%
+  \PSDTaskDeliverables{D3}%
   \PSDTaskRisks{}
 \end{PSDTask}
 
-\begin{PSDTask}{14}{Finalise Requirements Specification}
-  \PSDTaskDescription{Check over the requirements document to ensure it is correct and contains all relevant information.}%
+\begin{PSDTask}{15}{Finalise Requirements Specification}
+  \PSDTaskDescription{Check over the requirements specification to ensure it is correct and contains all relevant information for the use cases, and that the use case diagrams match the information in the descriptions.}%
   \PSDTaskOutcomes{Requirments Specificaiton}%
-  \PSDTaskDeliverables{None}%
+  \PSDTaskDeliverables{D3}%
   \PSDTaskRisks{}
 \end{PSDTask}
 
-\begin{PSDTask}{15}{Research Bash Scripting}
+\begin{PSDTask}{16}{Research Bash Scripting}
   \PSDTaskDescription{Learn how to do bash scripting in order to create a prototype to show the client the basic functionality of the system and the workflow.}%
   \PSDTaskOutcomes{None}%
   \PSDTaskDeliverables{None}%
   \PSDTaskRisks{}
 \end{PSDTask}
 
-\begin{PSDTask}{16}{Create Bash Prototype of the Application}
+\begin{PSDTask}{17}{Create Bash Prototype of the Application}
   \PSDTaskDescription{Creating the first actual prototype of the application written in Bash Scripting Language.}%
   \PSDTaskOutcomes{Bash Prototype created}%
   \PSDTaskDeliverables{D4}%
   \PSDTaskRisks{Developer might create an application which is not according the specifications.}
 \end{PSDTask}
 
-\begin{PSDTask}{17}{Test Bash Prototype}
+\begin{PSDTask}{18}{Test Bash Prototype}
   \PSDTaskDescription{Allow someone to test the prototype created in order to ensure there are no bugs and works as expected.}%
   \PSDTaskOutcomes{}%
   \PSDTaskDeliverables{D4}%
   \PSDTaskRisks{}
 \end{PSDTask}
 
-\begin{PSDTask}{18}{Demonstrate Bash Prototype to Customer.}
+\begin{PSDTask}{19}{Demonstrate Bash Prototype to Customer.}
   \PSDTaskDescription{Giving the Customer a first view of how the application functions. The customer will have the opportunity to ask questions and the customer liaison will be available to give answers}%
   \PSDTaskOutcomes{Bash Prototype demonstrated to Customer}%
   \PSDTaskDeliverables{D4}%
   \PSDTaskRisks{******* TO DO *******.}
 \end{PSDTask}
 
-\begin{PSDTask}{19}{Review notes from client about Bash prototype demonstration.}
+\begin{PSDTask}{20}{Review notes from client about Bash prototype demonstration.}
   \PSDTaskDescription{***TO DO***}%
   \PSDTaskOutcomes{}%
   \PSDTaskDeliverables{D4}%
@@ -276,13 +283,30 @@ header):
 Task & Title & Hours & Team Members \\ [0.5ex] % inserts table 
 %heading
 \hline                  % inserts single horizontal line
-1 & Breakdown of Initial Problem Definition & 5  &test2\\ % inserting body of the table
-2 & Prepare Interview Plan & 3  &\\
-3 & Conduct Interview & 0.15  &\\
-4 & Prepare Requirements Specification document & 10 &\\
-5 & Prepare Paper Prototype & 3 &\\ [1ex]      % [1ex] adds vertical space
-6 & Create Bash Prototype of the Application & 6 & Andrew Gardner\\ [1ex]      % [1ex] adds vertical space
-7 & Demonstrate Bash Prototype to Customer & 0.30 &\\ [1ex]      % [1ex] adds vertical space
+1 & Breakdown of Initial Problem Definition & 5:00  & All\\ % inserting body of the table
+2 & Identify Initial Requirements & 3:00  & All\\
+3 & Prepare Interview Plan & 3:00  & Ross Adam, Nicole Kearns\\
+ & & & Asset Sarsengaliyev \\
+4 & Conduct Interview & 0:15  & All\\
+5 & Review Interview Notes& 1:00  & All\\
+6 & Produce Requirements Post Interview & 1:00 & All\\
+7 & Review Initial Requirements & 1:00 & \\
+8 & Prepare Stakeholders Panel Interview Questions & 1:00 & All\\
+9 & Review Notes from Stakeholders Panel Interview & 1:00 & All \\
+10 & Finalise all Requirements & 2:00 & All\\
+11 & Create UML Diagram of Internship Management System & 3:00 & Asset Sarsengaliyev, Nicole Kearns,\\
+ & & & Andrew Gardner \\
+12 & Create Use Cases & 3:00 & Nicole Kearns, Andrew Gardner, \\
+ & & & Ross Adam, Mamas Nicolaou \\
+13 & Create Use Case diagrams for use cases & 4:00 & Nicole Kearns, Andrew Gardner, \\
+ & & & Ross Adam, Mamas Nicolaou \\
+14 & Finalise Requirements Specifications Documents & 2:00 & Ross Adam \\
+15 & Research Bash Scripting & 3:00 & Andrew Gardner\\
+16 & Create Bash Prototype & 6:00 & Andrew Gardner \\
+17 & Test Bash Prototype & 2:00 & Mamas Nicolaou \\
+18 & Demonstrate Bash Prototype to Customer & 0.30 & All\\     
+19 & Review Notes from customer about Bash Prototype & 1:00 & All\\      
+
 \hline %inserts single line
 \end{tabular}
 \label{table:nonlin} % is used to refer this table in the text
@@ -308,6 +332,24 @@ based. Include a task table, Gantt and PERT charts.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Assurance Plan}
+
+
+The Quality Assurance Plan( The QAP) is the basis for maintaining the quality of our product on the highest level that matches the requirements of the given software system. The QAP will be overseen by the team to maintain quality improvement activities, such as monitoring, adding features and evaluating defects. The purpose of the QAP is designed to match the following requirements:\\
+
+\begin{itemize}
+\item to perform suitable actions when possibilities for improvements in service are identified.\\
+\item to implement corrective action when technical issues or bugs are found.\\
+\item To ensure that the software system is maintaining properly all the time.\\
+\end{itemize}
+
+Our team will mainly rely on Risk Management Plan and Product Requirements Specification to keep the product quality to the appropriate level.\\
+
+Team activities:\\
+
+Prior to making any changes to code, it will be reviewed by the team and will be submitted to GitHub, supporting version control of source code. After altering any part of the code, we invoke test sets to check if the corresponding oracles match expected outputs. Apart from that, we use black box testing with other teams to check if they can find bugs, as they have a fresh look to the product.\\
+
+This documentation does not contain any details regarding the action taken.\\
+
 
 Describe the activities to be performed by for assurance of the
 software and other deliverables.
