@@ -64,10 +64,17 @@ echo -n "Select option: "
 # read option
 read input
 
+echo
+echo -n "Select advert to apply for: "
+read choice
+
 if [ $input == "1" ]; then
 	echo
 	echo "Browser automatically opens company's URL for applying..."
 	sleep 2
+	echo
+	echo "Done."
+	sleep 1
 	bash ./studentHome.sh
 else
 	bash ./studentHome.sh
