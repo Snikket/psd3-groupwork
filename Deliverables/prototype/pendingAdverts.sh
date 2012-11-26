@@ -13,8 +13,6 @@ function displayHeader {
 displayHeader
 
 # display adverts
-echo "## Adverts Pending Approval ##"
-echo
 echo "1. IBM"
 echo "   ---"
 echo "   Help support and implement an internal website covering what's for"
