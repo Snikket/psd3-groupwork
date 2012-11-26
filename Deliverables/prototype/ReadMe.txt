@@ -51,4 +51,4 @@ Deletes from approved
 Views deletedApproved.sh or w/e
 
 
-TODO: CC Delete Adverts, Student Apply,  Student Flag?
+TODO: Student Apply,  Student Flag?

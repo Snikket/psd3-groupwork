@@ -20,6 +20,9 @@ echo -n "Select option ('b' to go back): "
 read input
 
 if [ $input == "1" ]; then 
+	if [ $DELETED == "true" ]; then
+		bash ./deletedAdverts.sh
+	fi
 	bash ./approvedAdverts.sh
 elif [ $input == "2" ]; then
 	bash ./pendingAdverts.sh
