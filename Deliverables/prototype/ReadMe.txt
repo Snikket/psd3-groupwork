@@ -49,5 +49,3 @@ Student applies for canteen
 Student notifies
 Deletes from approved
 Views approved and sees that it's been deleted
-
-TODO: Student Flag?
