@@ -48,7 +48,6 @@ View approved
 Student applies for canteen
 Student notifies
 Deletes from approved
-Views deletedApproved.sh or w/e
+Views approved and sees that it's been deleted
 
-
-TODO: Student Apply,  Student Flag?
+TODO: Student Flag?
