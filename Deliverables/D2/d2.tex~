@@ -137,33 +137,156 @@ header):
   \PSDTaskRisks{Own interpretation of problem might be wrong.}
 \end{PSDTask}
 
-\begin{PSDTask}{2}{Prepare Interview Plan}
-  \PSDTaskDescription{ Construct questions for Customer Liaison to ask the client in order to elicit requirements. Questions will then be approved by group. An interview plan will then be written consisting of these questions.
-}%
-  \PSDTaskOutcomes{Interview Plan document.}%
+\begin{PSDTask}{2}{Identify initial requirements}
+  \PSDTaskDescription{ Using the initial problem definition, identify what the basic features of the system should be.}%
+  \PSDTaskOutcomes{Inital requirements list}%
   \PSDTaskDeliverables{None}%
-  \PSDTaskRisks{Questions may be in inappropriate may be too many or
-    too few questions.}
+  \PSDTaskRisks{Our list of basic requirements of the system may be incorrect.}
 \end{PSDTask}
 
-\begin{PSDTask}{3}{Conduct Interview}
+\begin{PSDTask}{3}{Prepare Interview Plan}
+  \PSDTaskDescription{ Construct questions for Customer Liaison to ask the client in order to elicit requirements. Questions will then be approved by group. An interview plan will then be written consisting of these questions.}%
+  \PSDTaskOutcomes{Interview Plan document.}%
+  \PSDTaskDeliverables{None}%
+  \PSDTaskRisks{Questions may be in inappropriate may be too many or too few questions.}
+\end{PSDTask}
+
+\begin{PSDTask}{4}{Conduct Interview}
   \PSDTaskDescription{ Meeting with client to collect requirements using the Interview Plan document. If additional information is revealed plan document will be deviated from.}%
-  \PSDTaskOutcomes{Client requirements collected}%
+  \PSDTaskOutcomes{Interview notes - system requirements}%
   \PSDTaskDeliverables{None}%
   \PSDTaskRisks{ Client might be unclear or provide incorrect specifications.}
 \end{PSDTask}
 
-\begin{PSDTask}{3}{Prepare Requirements Specification document}
-  \PSDTaskDescription{ Meeting with client to collect requirements using the Interview Plan document. If additional information is revealed plan document will be deviated from.}%
-  \PSDTaskOutcomes{Client requirements collected}%
+\begin{PSDTask}{5}{Review interview notes}
+  \PSDTaskDescription{ Look over the requirements and notes gathered in the interview with the client.}%
+  \PSDTaskOutcomes{None}%
+  \PSDTaskDeliverables{None}%
+  \PSDTaskRisks{}
+\end{PSDTask}
+
+\begin{PSDTask}{6}{Produce requirements - post interview}
+  \PSDTaskDescription{ Produce a document containing all requirements gathered for the system.}%
+  \PSDTaskOutcomes{Requirements document}%
+  \PSDTaskDeliverables{None}%
+  \PSDTaskRisks{}
+\end{PSDTask}
+
+\begin{PSDTask}{7}{Review of requirements document}
+  \PSDTaskDescription{Check over the requirements document to ensure it contains all requirements for the system, and that they are appropriate for the system}%
+  \PSDTaskOutcomes{}%
+  \PSDTaskDeliverables{None}%
+  \PSDTaskRisks{}
+\end{PSDTask}
+
+\begin{PSDTask}{8}{Prepare for Stakeholder Panel}
+  \PSDTaskDescription{Come up with a few key questions about the system/requirements we are unsure about to ask the clients. Allows us to clarify the requirements we have are correct.}%
+  \PSDTaskOutcomes{Stakeholder panel notes}%
+  \PSDTaskDeliverables{None}%
+  \PSDTaskRisks{}
+\end{PSDTask}
+
+\begin{PSDTask}{9}{Review Stakeholder Panel Notes}
+  \PSDTaskDescription{ Go through the notes from the stakeholder panel and amend the requirements document where necessary.}%
+  \PSDTaskOutcomes{Problem breakdown.}%
+  \PSDTaskDeliverables{None}%
+  \PSDTaskRisks{Own interpretation of problem might be wrong.}
+\end{PSDTask}
+
+\begin{PSDTask}{10}{Finalise All Requirements}
+  \PSDTaskDescription{Gather all requirements from the interview and the stakeholder panel and ensure that all the requirements are included in the document}%
+  \PSDTaskOutcomes{Final Requirements Document}%
   \PSDTaskDeliverables{D3}%
   \PSDTaskRisks{ Client might be unclear or provide incorrect specifications.}
 \end{PSDTask}
+
+\begin{PSDTask}{11}{Create UML of the internship system}
+  \PSDTaskDescription{Produce a UML diagram of the system to show the structure of the internship system}%
+  \PSDTaskOutcomes{UML diagram}%
+  \PSDTaskDeliverables{None}%
+  \PSDTaskRisks{}
+\end{PSDTask}
+
+\begin{PSDTask}{12}{Create Use Cases}
+  \PSDTaskDescription{ For each of the requirements gathered, produce a use case containing all appropriate information ie. description, actors, condtions,etc}%
+  \PSDTaskOutcomes{Requirements Specification}%
+  \PSDTaskDeliverables{None}%
+  \PSDTaskRisks{}
+\end{PSDTask}
+
+\begin{PSDTask}{13}{Create use case diagrams}
+  \PSDTaskDescription{ Produce use case diagrams to show the relationship between different use cases and the actors involved.}%
+  \PSDTaskOutcomes{Requirements Specification}%
+  \PSDTaskDeliverables{None}%
+  \PSDTaskRisks{}
+\end{PSDTask}
+
+\begin{PSDTask}{14}{Finalise Requirements Specification}
+  \PSDTaskDescription{Check over the requirements document to ensure it is correct and contains all relevant information.}%
+  \PSDTaskOutcomes{Requirments Specificaiton}%
+  \PSDTaskDeliverables{None}%
+  \PSDTaskRisks{}
+\end{PSDTask}
+
+\begin{PSDTask}{15}{Research Bash Scripting}
+  \PSDTaskDescription{Learn how to do bash scripting in order to create a prototype to show the client the basic functionality of the system and the workflow.}%
+  \PSDTaskOutcomes{None}%
+  \PSDTaskDeliverables{None}%
+  \PSDTaskRisks{}
+\end{PSDTask}
+
+\begin{PSDTask}{16}{Create Bash Prototype of the Application}
+  \PSDTaskDescription{Creating the first actual prototype of the application written in Bash Scripting Language.}%
+  \PSDTaskOutcomes{Bash Prototype created}%
+  \PSDTaskDeliverables{D4}%
+  \PSDTaskRisks{Developer might create an application which is not according the specifications.}
+\end{PSDTask}
+
+\begin{PSDTask}{17}{Test Bash Prototype}
+  \PSDTaskDescription{Allow someone to test the prototype created in order to ensure there are no bugs and works as expected.}%
+  \PSDTaskOutcomes{}%
+  \PSDTaskDeliverables{D4}%
+  \PSDTaskRisks{}
+\end{PSDTask}
+
+\begin{PSDTask}{18}{Demonstrate Bash Prototype to Customer.}
+  \PSDTaskDescription{Giving the Customer a first view of how the application functions. The customer will have the opportunity to ask questions and the customer liaison will be available to give answers}%
+  \PSDTaskOutcomes{Bash Prototype demonstrated to Customer}%
+  \PSDTaskDeliverables{D4}%
+  \PSDTaskRisks{******* TO DO *******.}
+\end{PSDTask}
+
+\begin{PSDTask}{19}{Review notes from client about Bash prototype demonstration.}
+  \PSDTaskDescription{***TO DO***}%
+  \PSDTaskOutcomes{}%
+  \PSDTaskDeliverables{D4}%
+  \PSDTaskRisks{}
+\end{PSDTask}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Resource Estimation and Allocation to WBS\label{sec:allocation}}
 
+\begin{table}[ht]
+\caption{Requirements Gathering} % title of Table
+\centering  % used for centering table
+\begin{tabular}{|c |c |c |c |c |} % centered columns (4 columns)
+\hline\hline                        %inserts double horizontal lines
+Task & Title & Hours & Team Members \\ [0.5ex] % inserts table 
+%heading
+\hline                  % inserts single horizontal line
+1 & Breakdown of Initial Problem Definition & 5  &test2\\ % inserting body of the table
+2 & Prepare Interview Plan & 3  &\\
+3 & Conduct Interview & 0.15  &\\
+4 & Prepare Requirements Specification document & 10 &\\
+5 & Prepare Paper Prototype & 3 &\\ [1ex]      % [1ex] adds vertical space
+6 & Create Bash Prototype of the Application & 6 & Andrew Gardner\\ [1ex]      % [1ex] adds vertical space
+7 & Demonstrate Bash Prototype to Customer & 0.30 &\\ [1ex]      % [1ex] adds vertical space
+\hline %inserts single line
+\end{tabular}
+\label{table:nonlin} % is used to refer this table in the text
+\end{table}
 
 The purpose of this subsection is to list and describe the resources
 available to support the activities defined in the WBS. The resources
