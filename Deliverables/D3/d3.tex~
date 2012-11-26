@@ -126,6 +126,7 @@ use cases. The core use cases for the system are:\\
 \begin{itemize}
 \item Submit internship adverts
 \item Edit adverts 
+\item remove internship adverts
 \end{itemize}
 
 \textbf{Review, comment and publication of internship advertisements by Course Coordinator
@@ -139,6 +140,7 @@ use cases. The core use cases for the system are:\\
 \begin{itemize}
 \item Review internship adverts list
 \item Apply for internship
+\item Flag unsuitable adverts
 \end{itemize}
 
 \textbf{Notification of successful selection for an internship by an SE/ESE student (Section 4.4)
