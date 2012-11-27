@@ -275,7 +275,42 @@ header):
 
 \subsection{Resource Estimation and Allocation to WBS\label{sec:allocation}}
 
+\begin{table}[ht]
+\caption{Requirements Gathering} % title of Table
+\centering  % used for centering table
+\begin{tabular}{|c |c |c |c |c |} % centered columns (4 columns)
+\hline\hline                        %inserts double horizontal lines
+Task & Title & Hours & Team Members \\ [0.5ex] % inserts table 
+%heading
+\hline                  % inserts single horizontal line
+1 & Breakdown of Initial Problem Definition & 5:00  & All\\ % inserting body of the table
+2 & Identify Initial Requirements & 3:00  & All\\
+3 & Prepare Interview Plan & 3:00  & Ross Adam, Nicole Kearns\\
+ & & & Asset Sarsengaliyev \\
+4 & Conduct Interview & 0:15  & All\\
+5 & Review Interview Notes& 1:00  & All\\
+6 & Produce Requirements Post Interview & 1:00 & All\\
+7 & Review Initial Requirements & 1:00 & \\
+8 & Prepare Stakeholders Panel Interview Questions & 1:00 & All\\
+9 & Review Notes from Stakeholders Panel Interview & 1:00 & All \\
+10 & Finalise all Requirements & 2:00 & All\\
+11 & Create UML Diagram of Internship Management System & 3:00 & Asset Sarsengaliyev, Nicole Kearns,\\
+ & & & Andrew Gardner \\
+12 & Create Use Cases & 3:00 & Nicole Kearns, Andrew Gardner, \\
+ & & & Ross Adam, Mamas Nicolaou \\
+13 & Create Use Case diagrams for use cases & 4:00 & Nicole Kearns, Andrew Gardner, \\
+ & & & Ross Adam, Mamas Nicolaou \\
+14 & Finalise Requirements Specifications Documents & 2:00 & Ross Adam \\
+15 & Research Bash Scripting & 3:00 & Andrew Gardner\\
+16 & Create Bash Prototype & 6:00 & Andrew Gardner \\
+17 & Test Bash Prototype & 2:00 & Mamas Nicolaou \\
+18 & Demonstrate Bash Prototype to Customer & 0.30 & All\\     
+19 & Review Notes from customer about Bash Prototype & 1:00 & All\\      
 
+\hline %inserts single line
+\end{tabular}
+\label{table:nonlin} % is used to refer this table in the text
+\end{table}
 
 The purpose of this subsection is to list and describe the resources
 available to support the activities defined in the WBS. The resources
@@ -287,47 +322,6 @@ measure).
 
 \subsection{Schedules}
 
-\begin{table}[ht]
-\caption{Tasks Table} % title of Table
-
-\begin{tabular}{|c |c |c |c |c |} % centered columns (4 columns)
-\hline\hline                        %inserts double horizontal lines
-Task & Title & Hours & Depend & Team Members \\ [0.5ex]
-\hline 1 & Breakdown of Initial Problem Definition & 5:00 &-& All\\ % inserting body of the table
-\hline2 & Identify Initial Requirements & 3:00 &1& All\\
-\hline3 & &  && Ross Adam, \\
- &  Prepare Interview Plan&3:00 &2 &Nicole Kearns, \\
- & & & &Asset Sarsengaliyev \\
-\hline4 & Conduct Interview & 0:15 &3& All\\
-\hline5 & Review Interview Notes& 1:00 &4& All\\
-\hline6 & Produce Requirements Post Interview & 1:00 &5& All\\
-\hline7 & Review Initial Requirements & 1:00 &6& All \\
-\hline8 & Prepare Stakeholders Panel Interview Questions & 1:00 &7& All\\
-\hline9 & Attend Stakeholders Panel Interview & 1:00 &8& All\\
-\hline10 & Review Notes from Stakeholders Panel Interview & 1:00 &9& All\\
-\hline11 & Finalise all Requirements & 2:00 &10& All\\
-\hline12 & Create UML Diagram of  & 3:00 &11& Asset Sarsengaliyev, \\
- &Internship Management System& & &Nicole Kearns,  \\
- && & & Andrew Gardner \\
-\hline13 & &  && Andrew Gardner, \\
- & & & & Mamas Nicolaou, \\
- & Create Use Cases & 3:00& 11& Nicole Kearns,\\
- & & & & Ross Adam \\
-\hline14 &  & && Nicole Kearns, \\
- & & & & Ross Adam, \\
- & Create Use Case diagrams for use cases&4:00  &13 &  Andrew Gardner, \\
- & & & & Mamas Nicolaou \\
-\hline15 & Finalise Requirements Specifications Documents & 2:00 &12,14& Ross Adam \\
-\hline16 & Research Bash Scripting & 3:00 &-&Andrew Gardner\\
-\hline17 & Create Bash Prototype & 6:00 &16&Andrew Gardner \\
-\hline18 & Test Bash Prototype & 2:00 &17& Mamas Nicolaou \\
-\hline19 & Demonstrate Bash Prototype to Customer & 0.30 &18& All\\     
-\hline20 & Review Notes from customer about Bash Prototype & 1:00 &19& All\\      
-
-\hline %inserts single line
-\end{tabular}
-\label{table:nonlin} % is used to refer this table in the text
-\end{table}
 Present the schedules on which performance and resource planning are
 based. Include a task table, Gantt and PERT charts.
 

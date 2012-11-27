@@ -4,7 +4,7 @@ function displayHeader {
 	echo "---------------------------------------"
 	echo "-- DCS Internship Management System! --"
 	echo "---------------------------------------"
-	echo "------------ Notify Screen ------------"
+	echo "--------- Delete Advert Screen --------"
 	echo "---------------------------------------"
 	echo
 }
@@ -55,16 +55,23 @@ echo "    Compensation: £1100 per day"
 echo "    Suitable for: CS/SE"
 echo
 
-echo -n "Select advert('b' to go back): "
+echo -n "Select advert to delete (b to go back): "
 
-# read option
 read input
 
 if [ $input == "1" ]; then
-	echo
-	echo "Notifying course co-ordinator..."
-	sleep 2
-	echo "Notified."
-	sleep 1
+echo
+echo "Selection: (1) IBM Glasgow"
+echo
+echo -n "Confirm deletion ('y' or 'n'): "
+read confirmation
+echo
+echo "Deleting..."
+sleep 2
+echo "Deleted."
+sleep 1
 fi
-bash ./studentHome.sh
+
+export DELETED="true"
+
+bash ./CCHome.sh

@@ -75,57 +75,15 @@ The purpose of this document is to give a detailed description of our group orga
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Objectives}
-
-The objective of building the prototype is to manage risks created by uncertainty that may still be outstanding after the requirements gathering stages. If we do not prototype we may progress to development of the final program without clarifying the final requirements with the clients which would increase development time unnecessarily.
-
-The prototype is to be used as a demonstration tool to confirm with clients that all main requirements have been included. Additionally it allows us as developers to visualise the work flow within our program. 
+Why build the prototype?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Prototype Scope and Design}
 
-\subsection{Scope}
-
-The scope of the prototype includes several essential elements:\\
-
-General:\\
-
-1. Allow seperate logins for different types of Users specifically the subclasses Student, Course Co-ordinator and Company.\\
-2. Allow each user to log out from the system. \\
-3. A "back" option to naviagte away from pages.\\
-
-Student:\\
-
-1. Display a list of adverts.\\
-2. Functionality to select an advert to apply for from the displayed list.\\
-3. A function to notify course co-ordinator of succesful application.\\
-
-Course Co-ordinator:\\
-
-1. Display a list of Adverts that have been approved.\\
-2. Display a list of adverts that still have to be approved.\\
-3. Functionality to approve an advert from list.\\
- 
-Company:\\
-
-1. Ability to submit an advert for approval.\\
-2. Ability to edit advert.\\
-
-\subsection{Design}
-
-Working with Bash Scripting significantly confines how a user can interact with the prototype system. Our interface uses textual commands to take input from the user. \\
-
-The first thing a user sees is a login screen that prompts them for a Username and then a password. Depending on the details provided the user will be taking to either the Student, Course Co-ordinator or Company screen. Each screen has unique options for the user to select. To allow ease of use for the users option selections are made with numbers that correspond to a command adjacent to them.  
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Evaluation}
-
-Our evaluation was conducted with one of the clients: Rose English. We demonstrated the system by walking through the lifecycle of an advert from submission to eventual deletion.\\
-Firstly our demonstrator Andrew Gardner logged in as IBM to act as a company. He submitted a new advert using text inputs that restricted input to our pre-specified input. After the advert was submitted Andrew logged put of the company account and logged in as the Course Co-ordinator. From here he selected the option to look at adverts for approval and approved the IBM advert. Then he logged into a student account and accessed the list of approved adverts ad applied for the IBM job, the course co-ordinator then deleted this advert after succesful application.//
-After demonstrating our prototype we asked our client if she felt that our implementation was suitable for her requirements. Rose said she felt that all key aspects that she would want from the program were included.\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

@@ -45,4 +45,7 @@ View pending adverts
 Approve IBM advert
 Flag who it's suitable for
 View approved
-Delete an advert?
+Student applies for canteen
+Student notifies
+Deletes from approved
+Views approved and sees that it's been deleted

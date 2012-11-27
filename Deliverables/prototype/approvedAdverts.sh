@@ -4,7 +4,7 @@ function displayHeader {
 	echo "---------------------------------------"
 	echo "-- DCS Internship Management System! --"
 	echo "---------------------------------------"
-	echo "------------ Notify Screen ------------"
+	echo "------- Approved Advert Screen --------"
 	echo "---------------------------------------"
 	echo
 }
@@ -55,16 +55,10 @@ echo "    Compensation: £1100 per day"
 echo "    Suitable for: CS/SE"
 echo
 
-echo -n "Select advert('b' to go back): "
+# display options
+echo -n "Press 'b' to go back: "
 
 # read option
 read input
 
-if [ $input == "1" ]; then
-	echo
-	echo "Notifying course co-ordinator..."
-	sleep 2
-	echo "Notified."
-	sleep 1
-fi
-bash ./studentHome.sh
+bash ./reviewAdverts.sh

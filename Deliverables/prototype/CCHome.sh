@@ -4,6 +4,8 @@ function displayHeader {
 	echo "---------------------------------------"
 	echo "-- DCS Internship Management System! --"
 	echo "---------------------------------------"
+	echo "--------- Course Co-Ordinator ---------"
+	echo "---------------------------------------"
 	echo
 }
 
@@ -23,9 +25,7 @@ read input
 if [ $input == "1" ]; then 
 	bash ./reviewAdverts.sh
 elif [ $input == "2" ]; then
-	echo "Delete advert(s)!"
-	sleep 2
-	#bash ./deleteAdvert.sh
+    bash ./deleteAdverts.sh
 elif [ $input == "3" ]; then
 	displayHeader
 	echo "Logging out..."

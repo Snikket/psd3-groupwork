@@ -20,11 +20,12 @@ echo -n "Select option ('b' to go back): "
 read input
 
 if [ $input == "1" ]; then 
-	echo "Approved!"
-	#bash ./approvedAdverts.sh
+	if [ $DELETED == "true" ]; then
+		bash ./deletedAdverts.sh
+	fi
+	bash ./approvedAdverts.sh
 elif [ $input == "2" ]; then
-	echo "Pending!"
-	#bash ./pendingAdverts.sh
+	bash ./pendingAdverts.sh
 else
 	bash ./CCHome.sh
 fi
