@@ -231,7 +231,7 @@ use cases. The core use cases for the system are:\\
 \begin{UseCaseTemplate}
 
 \UseCaseLabel{Approve internship advert}
-\UseCaseDescription{C\includegraphics[scale=0.7]{img/ApproveAdverts.png}}
+\UseCaseDescription{C\includegraphics[scale=0.7]{img/ApproveAdvert.png}}
 \UseCaseRationale{During the client interview we verified that it was essential for the CC to have the ability to approve adverts.}
 \UseCasePriority{Must have}
 \UseCaseStatus{Not implemented}
