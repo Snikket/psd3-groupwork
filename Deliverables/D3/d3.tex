@@ -162,7 +162,7 @@ use cases. The core use cases for the system are:\\
 
 \textbf{Notification of successful internship placement by student (Section 4.4):}
 \begin{itemize}
-\item Notify Course Co-ordinator of successful placement
+\item Notify if successful placement
 \item Remove internship advert
 \end{itemize}
 
@@ -192,7 +192,7 @@ confirm it and logout.}
 \UseCaseStatus{Not implemented}
 \UseCaseActors{Company}
 \UseCaseIncludes{Login, Logout}
-\UseCaseConditions{Post: The advert is stored in the system, pending approval by the CC.}
+\UseCaseConditions{\textbf{Post:} The advert is stored in the system, pending approval by the CC.}
 \UseCaseNonFunctionalRequirements{Security}
 \UseCaseScenarios{IBM are wanting to submit an internship advert to the system. They log in to the system using their designated username IBM, fill out the submission form, confirm their submission and submit it to the system to eventually be approved by Timothy Storer, the current CC. IBM then log out of the system.}
 \UseCaseRisks{}
@@ -207,7 +207,7 @@ confirm changes and then logout.}
 \UseCaseStatus{Not implemented}
 \UseCaseActors{Company}
 \UseCaseIncludes{Login, Logout}
-\UseCaseConditions{Pre: Company's advert must currently be pending approval by the CC.}
+\UseCaseConditions{\textbf{Pre:} Company's advert must currently be pending approval by the CC.}
 \UseCaseNonFunctionalRequirements{Data consistency}
 \UseCaseScenarios{IBM realise that the advert they have previously submitted contains the wrong starting date. They log in to the system, select the relevant advert and section they want to edit and correct the starting date. They confirm their changes and then log out.}
 \UseCaseRisks{During client interview we were told that this probably wouldn't be needed, yet during the stakeholder panel meeting it was made clear that it was a valid requirement.}
@@ -234,7 +234,7 @@ and decide if they are suitable for the students.}
 \UseCaseStatus{Not implemented}
 \UseCaseActors{Course Co-ordinator}
 \UseCaseIncludes{Login, Logout}
-\UseCaseConditions{Pre: Must have advert(s) pending approval on system.}
+\UseCaseConditions{\textbf{Pre:} Must have advert(s) pending approval on system.}
 \UseCaseNonFunctionalRequirements{Data consistency}
 \UseCaseScenarios{Timothy Storer, the current CC, logs in to the system with his GUID and views all pending adverts submitted to the system and decides whether or not each internship is suitable for student review.}
 \UseCaseRisks{}
@@ -249,13 +249,13 @@ they are suitable, the adverts are made available to the students.}
 \UseCaseStatus{Not implemented}
 \UseCaseActors{Course coordinator}
 \UseCaseIncludes{Login, Logout}
-\UseCaseConditions{Pre: Must have advert(s) pending approval on system. Pre: adverts reviewed by course coordinator}
+\UseCaseConditions{\textbf{Pre:} Must have advert(s) pending approval on system. \textbf{Post:} Approved advert now available for student viewing}
 \UseCaseNonFunctionalRequirements{Data consistency}
-\UseCaseScenarios{After having reviewed an internship advert from IBM, Timothy Storer, the current CC, decides that the advert is suitable. He specifies what degree structure (CS/SE/ESE) it's suitable for and approves the advert for later student review.}
+\UseCaseScenarios{After having reviewed an internship advert from IBM, Timothy Storer, the current CC, decides that the advert is suitable. He specifies what degree structure (CS/SE/ESE) it's suitable for and approves the advert for later student viewing.}
 \UseCaseRisks{}
 \end{UseCaseTemplate}
 
-\subsection{Review of Advertisement by Student}
+\subsection{Review of adverts by Student} %%%%%%%%%%%%%%
 
 \begin{figure}[h]
 \begin{center}
@@ -268,34 +268,34 @@ they are suitable, the adverts are made available to the students.}
 \end{figure}
 
 \begin{UseCaseTemplate}
-\UseCaseLabel{View internship adverts list}
+\UseCaseLabel{View internship adverts}
 \UseCaseDescription{List of adverts is displayed on screen and users scrolls through and can read detailed information about the internship.}
-\UseCaseRationale{User needs to be able to see the adverts in order to apply.}
+\UseCaseRationale{During the client interview we verified that it was essential for students to have the ability to view adverts.}
 \UseCasePriority{Must Have}
 \UseCaseStatus{Not Implemented}
 \UseCaseActors{Student}
-\UseCaseIncludes{Login, Logout, Apply for internship}
-\UseCaseConditions{Pre: adverts have been approved by the CC.}
-\UseCaseNonFunctionalRequirements{}
-\UseCaseScenarios{}
+\UseCaseIncludes{Login, Logout}
+\UseCaseConditions{\textbf{Pre:} Must have advert(s) approved by the CC.}
+\UseCaseNonFunctionalRequirements{User Concurrency, Security, Number of Adverts}
+\UseCaseScenarios{Jim, a 3rd year Software Engineering student, wants to see if there is any suitable internships available that he might apply to. He logs into the system and selects the option that allows him to view the currently available internships.}
 \UseCaseRisks{}
 \end{UseCaseTemplate}
 
 \begin{UseCaseTemplate}
 \UseCaseLabel{Apply for internship}
 \UseCaseDescription{User selects an advert to apply for and will then have to email the company or will be directed to the company website to apply}
-\UseCaseRationale{Student should be redirected to the company URL or email in order to apply for the internship placement.}
-\UseCasePriority{Must Have}
+\UseCaseRationale{During the interview, client told us that this would be a desirable feature to have but perhaps not essential.}
+\UseCasePriority{Could Have}
 \UseCaseStatus{Not Implemented}
 \UseCaseActors{Student}
-\UseCaseIncludes{Login,Logout}
-\UseCaseConditions{}
-\UseCaseNonFunctionalRequirements{}
-\UseCaseScenarios{The student will select the apply option within the system. The student will then be redirected to the company website in order to fill out the application for the internship.}
-\UseCaseRisks{The email/website may be incorrect so student may not be able to apply.}
+\UseCaseIncludes{Login, View internship adverts, Logout}
+\UseCaseConditions{\textbf{Pre:} Must have advert(s) approved by the CC.}
+\UseCaseNonFunctionalRequirements{User Concurrency, Security, Number of Adverts}
+\UseCaseScenarios{Jim, the 3rd year Software Engineering student, wants to apply for the IBM internship that he saw whilst reviewing the available internships. He selects the Apply option, chooses the IBM internship and confirms his selection. Jim's browser then directs him to IBM's apply page on their website.}
+\UseCaseRisks{The stakeholder panel meeting somewhat contradicted what we had gathered from our client interview, saying that applying through the system itself would be outwith the system scope. However, we felt that having the browser open the company's own apply URL was a reasonable compromise.}
 \end{UseCaseTemplate}
 
-\subsection{Notification of successful selection for an internship by an SE/ESE student}
+\subsection{Notification of successful internship placement by student}
 
 \begin{figure}[h]
 \begin{center}
@@ -308,37 +308,33 @@ they are suitable, the adverts are made available to the students.}
 \end{figure}
 
 \begin{UseCaseTemplate}
-\UseCaseLabel{Notify course coordinator of successful placement}
+\UseCaseLabel{Notify if successful placement}
 \UseCaseDescription{Let course coordinator know a Placement position has been filled.}
-\UseCaseRationale{A student should let the Course Coordinator know that they were successful
-with their application for a specified placement position so that the CC can go on and remove
-the advert from the System.}
-\UseCasePriority{Must have.}
+\UseCaseRationale{During the client interview we were told that allowing students to notify the CC of a successful placement was a requirement.}
+\UseCasePriority{Should have}
 \UseCaseStatus{Not Implemented}
 \UseCaseActors{Student}
-\UseCaseIncludes{Login,Logout}
-\UseCaseConditions{Pre: The advert for the placement position that was taken must be still
-visible on the system. Post: Course Coordinator is notified.}
-\UseCaseNonFunctionalRequirements{}
-\UseCaseScenarios{A student has been successful with a placement with one of the adverts on the system. The student will notfiy the Course coordinator of there successful placement within the system and the course coordinator will receive an email.}
-\UseCaseRisks{}
+\UseCaseIncludes{Login, Logout}
+\UseCaseConditions{\textbf{Pre:} The advert for the placement position that was taken must be still
+visible on the system. \textbf{Post:} Course Coordinator is notified.}
+\UseCaseNonFunctionalRequirements{User Concurrency, Security}
+\UseCaseScenarios{Jim, the 3rd year Software Engineering student, has successfully obtained an internship at his company of choice, IBM. He logs in to the system in order to notify Timothy Storer, the current Course Co-ordinator, that he has got the placement. He selects the relevant option and selects the IBM placement to notify the Course Co-ordinator.}
+\UseCaseRisks{The stakeholder panel meeting left this requirement necessity somewhat abiguous but we didn't feel it was outwith the system scope.}
 \end{UseCaseTemplate}
 
 \begin{UseCaseTemplate}
-\UseCaseLabel{remove internship adverts}
+\UseCaseLabel{Remove internship advert}
 \UseCaseDescription{Course Coordinator logins in to system. If advert is passed deadline or no
 longer suitable or available, the advert will be taken off the system and then log out.}
-\UseCaseRationale{A member of the school of computing science (course coordinator) is
-responsible for taking adverts down so as to avoid students applying for internships that are no
-longer available or suitable.}
+\UseCaseRationale{During our client interview we gathered that the CC must be able to remove adverts that were no longer available or had passed the deadline.}
 \UseCasePriority{Must have}
 \UseCaseStatus{Not implemented}
-\UseCaseActors{Course coordinator}
-\UseCaseIncludes{Login,Logout}
-\UseCaseConditions{Pre: Course Coordinator has recieved a notification to say the placement has been filled. Post: Advert no longer available on the system.}
-\UseCaseNonFunctionalRequirements{}
-\UseCaseScenarios{The course coordinator has recieved a notification of a successful placement and logs into the system. The course coordinator then removes the internship advert from the system, so that it is no longer available to the students.}
-\UseCaseRisks{Course Coordinator might remove the wrong advert.}
+\UseCaseActors{Course Co-ordinator}
+\UseCaseIncludes{Login, Logout}
+\UseCaseConditions{\textbf{Pre:} Course Co-ordinator has recieved a notification to say the placement has been filled. \textbf{Post:} Advert no longer available on the system.}
+\UseCaseNonFunctionalRequirements{Data Consistency}
+\UseCaseScenarios{Timothy Storer, the current Course Co-ordinator, receives a notification that Jim the SE student has secured a placement with IBM. Timothy logs in to the system, finds and selects the IBM advert, and removes it from the system.}
+\UseCaseRisks{}
 \end{UseCaseTemplate}
 
 \subsection{Common utility services}
@@ -347,14 +343,14 @@ longer available or suitable.}
 \UseCaseLabel{Login}
 \UseCaseDescription{A user should enter their login id and a password to allow them to access
 the system. }
-\UseCaseRationale{A user must be able to login, providing different levels of access to the system.}
+\UseCaseRationale{Logging in was ascertained to be a requirement both from client interview and stakeholder panel meeting.}
 \UseCasePriority{Must have}
 \UseCaseStatus{Not implemented}
-\UseCaseActors{Company, Students, Course Coordinator}
+\UseCaseActors{Company, Students, Course Co-ordinator}
 \UseCaseIncludes{}
-\UseCaseConditions{}
-\UseCaseNonFunctionalRequirements{}
-\UseCaseScenarios{}
+\UseCaseConditions{\textbf{Pre:} User should not be already logged in to the system.}
+\UseCaseNonFunctionalRequirements{Security, User Concurrency}
+\UseCaseScenarios{Jim, the 3rd year Softare Engineering student, wishes to access the internship management system. Knowing his GUID and password he logs in to the system.}
 \UseCaseRisks{}
 \end{UseCaseTemplate}
 
@@ -363,15 +359,14 @@ the system. }
 \UseCaseDescription{The logout use cases changes a users account to logged out, requiring
 them to have to log back in to the system. Logout is either invoked by the user or by the internal
 inactivity timer actor.}
-\UseCaseRationale{The logout case will allow a user to leave the system to prevent
-unauthorised access from an unattended terminal.}
+\UseCaseRationale{Logging out was ascertained to be a requirement both from client interview and stakeholder panel meeting.}
 \UseCasePriority{Must Have}
 \UseCaseStatus{Not implemented}
 \UseCaseActors{Company, Students, Course Coordinator}
 \UseCaseIncludes{}
-\UseCaseConditions{Pre: User must be logged in to the system.}
+\UseCaseConditions{\textbf{Pre:} User must be currently logged in to the system.}
 \UseCaseNonFunctionalRequirements{}
-\UseCaseScenarios{}
+\UseCaseScenarios{Jim, the 3rd year software engineering student, after browsing the available adverts on the system but finding nothing suitable, wishes to log out of the system. He selects log out and his subsequently logged out of the system.}
 \UseCaseRisks{}
 \end{UseCaseTemplate}
 
