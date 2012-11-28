@@ -38,7 +38,7 @@
   ...}
 
 %%release date
-\date{10 January 2009}
+\date{29 November 2012}
 
 \deliverableID{D2}
 \project{PSD Group Exercise 1}
@@ -442,24 +442,62 @@ Apart from that, we use black box testing with other teams to check if they can 
 
 \section{Configuration Management Plan}
 
+To safely and successfully produce both the documentation and code
+associated with our program there must be a stringent configuration
+management plan.\\
 
+\begin {enumerate}
+\item Change Management
+The decision to create a prototype rather than use incremental
+development will allow us to let the client interact with a primitive
+yet functional system quickly.//
+The prototype will help elicit and validate system requirements while
+also increasing our understanding of the system and uncover any
+additional requirements that may have been omitted.\\
 
+\item Version Management
+In order to prevent a team member's work being overwritten
+accidentally Team V will be using GitHub to keep a central repository
+of work. This can then be pulled from the GitHub site and worked on in
+a local workspace. To prevent the aforementioned interference local work is
+merged back into the central repository safely.\\  
 
-Describe the activities and plans for configuration management to be
-performed by the organization preparing this Management Plan. The
-primary topics for the plan include:
+\item System Building
+As above we will be using GitHub to maintain consistency in the
+codeline.\\
 
-\begin{enumerate}
-\item Configuration management process
-\item Configuration control activities
-\item Configuration identification
-\item Configuration change control
+\item Release Management
+Team V will be utilising the issues feature on GitHub to highlight
+completed tasks and milestones. It can also be used to assign new
+tasks for memebers to complete. This will allow the team to track
+current releases. \\
 \end{enumerate}
 
-The contents of this subsection will be explained later in the 1st
-semester in the PSD lectures. For initial hand-in deadline, you may
-leave this subsection blank or make your best effort to produce an
-assurance plan.
+Generally if changes need to be made the team will have to discuss
+several different points to conclude if it should be addressed:\\
+
+\begin{enumerate}
+\item Consequences of not implementing the change
+If a change is need to alter a serious system failure it will be
+prioritised and addressed quickly. However if it is a simple error it
+may be left until a later date.
+
+\item Benefits of change
+Will the change benefit the majority of users or will it simply
+benefit the change proposer.
+
+\item Number of Users affected by change
+If the change is for the benefit of only a few users is it worth the
+risk to potentially adversely effect more users?
+
+\item Cost of making the change
+If the change is likely to create new bugs or take a lng time to
+implement it may simply be rejected.
+
+\end{enumerate}
+
+If these steps are followed then the software can be maintained
+easily and changes can be handled efficiently.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
