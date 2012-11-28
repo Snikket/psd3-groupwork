@@ -85,6 +85,32 @@ The Course Co-ordinator will remove any adverts that have been filled or whose d
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{System Scope}
 
+From our requirements gathering and the stakeholder panel it has been
+concluded that the program must have the following features:
+
+\textbf{General:}\\
+
+1. Allow seperate logins for different types of Users specifically the subclasses Student, Course Co-ordinator and Company.\\
+2. Allow each user to log out from the system. \\
+3. A "back" option to naviagte away from pages.\\
+
+\textbf{Student:}\\
+
+1. Display a list of adverts.\\
+2. Functionality to select an advert to apply for from the displayed list.\\
+3. A function to notify course co-ordinator of succesful application.\\
+
+\textbf{Course Co-ordinator:}\\
+
+1. Display a list of Adverts that have been approved.\\
+2. Display a list of adverts that still have to be approved.\\
+3. Functionality to approve an advert from list.\\
+ 
+\textbf{Company:}\\
+
+1. Ability to submit an advert for approval.\\
+2. Ability to edit advert.\\
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -113,43 +139,40 @@ The Course Co-ordinator will remove any adverts that have been filled or whose d
 
 \section{Use Case Descriptions}
 
-This section describes the required functionality for the Student Internship Advert System as
-four groups of related
+This section describes the required functionality for the internship management system as four groups of related
 use cases. The core use cases for the system are:\\
 
-\textbf{Submission of internship advertisements (Section 4.1):}
+\textbf{Submission of internship advert by Company (Section 4.1):}
 \begin{itemize}
-\item Submit internship adverts
-\item Edit adverts 
+\item Submit internship advert
+\item Edit advert
 \end{itemize}
 
-\textbf{Review and approval of internship advertisements by Course Co-ordinator
-(Section 4.2) :}
+\textbf{Review and approval of internship adverts by Course Co-ordinator (Section 4.2):}
 \begin{itemize}
 \item Review internship adverts
-\item Approve internship adverts
+\item Approve internship advert
 \end{itemize}
 
-\textbf{Review of Advertisement by Student (Section 4.3) :}
+\textbf{Review of adverts by Student (Section 4.3):}
 \begin{itemize}
-\item Review internship adverts list
+\item View internship adverts
 \item Apply for internship
 \end{itemize}
 
-\textbf{Notification of successful selection for an internship by an SE/ESE student (Section 4.4)
-:}
+\textbf{Notification of successful internship placement by student (Section 4.4):}
 \begin{itemize}
-\item Notify course co-ordinator of successful placement
-\item remove internship adverts
+\item Notify Course Co-ordinator of successful placement
+\item Remove internship advert
 \end{itemize}
 
-\textbf{Common utility services (Section 4.5) :}
+\textbf{Common utility services (Section 4.5):}
 \begin{itemize}
 \item Login
 \item Logout
 \end{itemize}
 
-\subsection{Submission of internship advertisements}
+\subsection{Submission of internship advert by Company}
 \begin{figure}[h]
 \begin{center}
 \includegraphics
@@ -164,14 +187,14 @@ use cases. The core use cases for the system are:\\
 \UseCaseLabel{Submit internship advert}
 \UseCaseDescription{A company should login and post internship adverts to the system,
 confirm it and logout.}
-\UseCaseRationale{A company must be able to submit internship adverts to the system in order for the students to view and apply for the placement.}
+\UseCaseRationale{During the client interview we were given the requirement that a company must be able to submit internship adverts to the system in order for the students to view and apply for the placement.}
 \UseCasePriority{Must have}
 \UseCaseStatus{Not implemented}
 \UseCaseActors{Company}
 \UseCaseIncludes{Login, Logout}
-\UseCaseConditions{Post: The advert is then stored, pending approval by the CC.}
+\UseCaseConditions{Post: The advert is stored in the system, pending approval by the CC.}
 \UseCaseNonFunctionalRequirements{Security}
-\UseCaseScenarios{A company logs in to the system, fills out the submission form and submits it to the system to be reviewd by the course coordinator.}
+\UseCaseScenarios{IBM are wanting to submit an internship advert to the system. They log in to the system using their designated username IBM, fill out the submission form, confirm their submission and submit it to the system to eventually be approved by Timothy Storer, the current CC. IBM then log out of the system.}
 \UseCaseRisks{}
 \end{UseCaseTemplate}
 
@@ -179,20 +202,18 @@ confirm it and logout.}
 \UseCaseLabel{Edit internship advert}
 \UseCaseDescription{A company must login, make changes to their advert where necessary,
 confirm changes and then logout.}
-\UseCaseRationale{A company must be able to make changes to their advert in order to include
-more information about it or remove irrelevant/incorrect details that may prevent the advert from being approved.}
+\UseCaseRationale{During the stakeholder panel meeting the need for companies to be able to edit pending approval adverts was clarified to be a requirement.}
 \UseCasePriority{Must Have}
 \UseCaseStatus{Not implemented}
 \UseCaseActors{Company}
 \UseCaseIncludes{Login, Logout}
 \UseCaseConditions{Pre: Company's advert must currently be pending approval by the CC.}
 \UseCaseNonFunctionalRequirements{Data consistency}
-\UseCaseScenarios{A company logs in, they select the option to edit their advert and select which section to edit. The appropriate changes are made and the advert remains pending approval.}
-\UseCaseRisks{}
+\UseCaseScenarios{IBM realise that the advert they have previously submitted contains the wrong starting date. They log in to the system, select the relevant advert and section they want to edit and correct the starting date. They confirm their changes and then log out.}
+\UseCaseRisks{During client interview we were told that this probably wouldn't be needed, yet during the stakeholder panel meeting it was made clear that it was a valid requirement.}
 \end{UseCaseTemplate}
 
-\subsection{Review and approval of internship advertisements by Course
-Coordinator}
+\subsection{Review and approval of internship adverts by Course Co-ordinator}
 
 \begin{figure}[h]
 \begin{center}
@@ -206,37 +227,32 @@ Coordinator}
 
 \begin{UseCaseTemplate}
 \UseCaseLabel{Review internship adverts}
-\UseCaseDescription{Course coordinator must login, read through new/edited adverts posted
+\UseCaseDescription{CC must login, read through new/edited adverts posted
 and decide if they are suitable for the students.}
-\UseCaseRationale{A member of the school of computing science (course coordinator) must
-review all adverts to ensure they are suitable for ESE/SE students.}
+\UseCaseRationale{During the client interview we verified that it was essential for the CC to have the ability to review adverts.}
 \UseCasePriority{Must have}
 \UseCaseStatus{Not implemented}
-\UseCaseActors{Course Coordinator}
-\UseCaseIncludes{Login,Logout}
-\UseCaseConditions{ Pre: company must post adverts to the system. Post: adverts are made
-available to the students.}
-\UseCaseNonFunctionalRequirements{}
-\UseCaseScenarios{The CC logs into the system. The CC will view all unapproved adverts submitted to the system and decide whether or not the internship is suitable for the students. If not, the advert is not made available to the students and is removed from the system.}
+\UseCaseActors{Course Co-ordinator}
+\UseCaseIncludes{Login, Logout}
+\UseCaseConditions{Pre: Must have advert(s) pending approval on system.}
+\UseCaseNonFunctionalRequirements{Data consistency}
+\UseCaseScenarios{Timothy Storer, the current CC, logs in to the system with his GUID and views all pending adverts submitted to the system and decides whether or not each internship is suitable for student review.}
 \UseCaseRisks{}
 \end{UseCaseTemplate}
 \begin{UseCaseTemplate}
 
-\UseCaseLabel{Approve internship adverts}
+\UseCaseLabel{Approve internship advert}
 \UseCaseDescription{Course Coordinator must login. After reviewing the adverts and deciding
 they are suitable, the adverts are made available to the students.}
-\UseCaseRationale{A member of the school of computing science (course coordinator) is
-responsible for making adverts available for the students so they can view and apply for the
-internships.}
+\UseCaseRationale{During the client interview we verified that it was essential for the CC to have the ability to approve adverts.}
 \UseCasePriority{Must have}
 \UseCaseStatus{Not implemented}
 \UseCaseActors{Course coordinator}
-\UseCaseIncludes{Login,Logout}
-\UseCaseConditions{ Pre: company upload adverts to the system. Pre: adverts reviewed by
-course coordinator}
-\UseCaseNonFunctionalRequirements{}
-\UseCaseScenarios{The CC logs in to the system. The CC will then select the option to view unapproved adverts. After reviewing the advert, the  CC selects yes and states which students this advert is suitable for.}
-\UseCaseRisks{Course coordinator may accidentally approve an unsuitable advert.}
+\UseCaseIncludes{Login, Logout}
+\UseCaseConditions{Pre: Must have advert(s) pending approval on system. Pre: adverts reviewed by course coordinator}
+\UseCaseNonFunctionalRequirements{Data consistency}
+\UseCaseScenarios{After having reviewed an internship advert from IBM, Timothy Storer, the current CC, decides that the advert is suitable. He specifies what degree structure (CS/SE/ESE) it's suitable for and approves the advert for later student review.}
+\UseCaseRisks{}
 \end{UseCaseTemplate}
 
 \subsection{Review of Advertisement by Student}
@@ -252,9 +268,8 @@ course coordinator}
 \end{figure}
 
 \begin{UseCaseTemplate}
-\UseCaseLabel{Review internship adverts list}
-\UseCaseDescription{List of adverts is displayed on screen and users scrolls through and can
-read detailed information about the internship.}
+\UseCaseLabel{View internship adverts list}
+\UseCaseDescription{List of adverts is displayed on screen and users scrolls through and can read detailed information about the internship.}
 \UseCaseRationale{User needs to be able to see the adverts in order to apply.}
 \UseCasePriority{Must Have}
 \UseCaseStatus{Not Implemented}
@@ -268,8 +283,7 @@ read detailed information about the internship.}
 
 \begin{UseCaseTemplate}
 \UseCaseLabel{Apply for internship}
-\UseCaseDescription{User selects an advert to apply for and will then have to email the
-company or will be directed to the company website to apply}
+\UseCaseDescription{User selects an advert to apply for and will then have to email the company or will be directed to the company website to apply}
 \UseCaseRationale{Student should be redirected to the company URL or email in order to apply for the internship placement.}
 \UseCasePriority{Must Have}
 \UseCaseStatus{Not Implemented}
@@ -388,7 +402,7 @@ placements have been filled, the CC can take the adverts off the system.
 \appendix
 
 \section{Glossary}
-CC - Course Coordinator
+CC - Course Co-ordinator
 PSD - Professional Software Development
 
 \section{Stakeholder Interview Documentation}
