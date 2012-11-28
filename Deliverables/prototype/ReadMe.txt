@@ -15,37 +15,24 @@ Course Coordinator: 	tws3r (Tim's actual GUID)
 Student:			    1005730w
 Company:			    IBM
 
--------
-Company
--------
-Login as IBM
-Submit canteen advert
-Figures something "canten/canteen" is misspelt
-Goes to edit.
-Selects first advert.
-Edits description field.
-Shows edited advert.
-Logout
-
--------
-Student
--------
-Login as Tom
-View adverts
-Apply for IBM
-Get it?
-Notify CC
-Logout
-
-------------------
-Course Coordinator
-------------------
-Login as CC
-View pending adverts
-Approve IBM advert
-Flag who it's suitable for
-View approved
-Student applies for canteen
-Student notifies
-Deletes from approved
-Views approved and sees that it's been deleted
+----------
+DEMO USAGE
+----------
+1. Login as company (IBM)
+2. Submit canteen placement IBM
+3. Spelling mistake
+4. Edit canteen placement
+5. Logout
+-
+1. Login as co-ordinator (Tim)
+2. View pending adverts
+3. Approve IBM advert
+4. Logout
+-
+1. Login as student
+2. View adverts
+3. Apply for IBM
+4. Notifies Tim
+4. Logout
+-
+1. Login as co-ordinator (Tim)
