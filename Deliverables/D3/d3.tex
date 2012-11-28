@@ -21,7 +21,7 @@ Asset Sarsengaliyev\\
 \deliverableID{D3}
 \project{PSD3 Group Exercise 1}
 \team{V}
-\version{1.0}
+\version{1.5}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -37,7 +37,7 @@ Asset Sarsengaliyev\\
 
 \subsection{Identification}
 
-Requirements specification for the internship system for PSD3 team project.
+Requirements specification for the internship management system for PSD3 team project.
 \subsection{Related Documentation}
 
 PSD3 Group Exercise Description \url{http://fims.moodle.gla.ac.uk/file.php/128/coursework/
@@ -48,8 +48,8 @@ PSD3 Course Notes \url{http://fims.moodle.gla.ac.uk/file.php/128/lecture-notes/n
 \subsection{Purpose and Description of Document}
 
 The purpose of this document is to detail and explain the requirements collected for the
-internship advert system. This will include all the actors within the system, their use cases and
-descriptions, and scenarios which would be suitable for the system.
+internship management system. This will include all actors within the system, their use cases, descriptions, and suitable 
+scenarios for the system.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -67,20 +67,20 @@ descriptions, and scenarios which would be suitable for the system.
 \hline 26/11/2012 & Modified the use case diagrams & 1.2 & Nicole\\
 \hline 26/11/2012 & Modified the use case descriptions & 1.3 & Andrew\\
 \hline 27/11/2012 & Modified the use case scenarios & 1.4 & Nicole\\
-\hline 27/11/2012 & & &\\
+\hline 28/11/2012 & Minor modifications to all use cases & 1.5 & Andrew, Nicole, Mamas\\
 \hline 29/11/2012 & \textbf{Final Submission Deadline} & & All\\ 
 \hline 
 \end{tabular} }
 \end{center}
 
 \section{Extended Problem Definition}
-A program is needed to manage internship adverts posted by companies that students can then
-search through and then apply if they are interested.
-In order for this program to be successful it requires a login system that allows a company
-to submit, edit or remove their adverts. Submitted adverts are then reviewed by the Course
-Co-ordinator. If deemed relevant they will be added to the list of adverts for students to see.
-Applying will send the student’s details to the company to register their interest. The course co-
-ordinator will remove any adverts that have been filled or whose deadlines have expired.\\
+A system is needed to manage internship adverts posted by companies so that students can browse
+through them and apply if they are interested.
+In order for this system to be successful it requires a login mechanism, allowing a company
+to submit and edit their adverts. Submitted adverts are then approved by the Course
+Co-ordinator. If approved they will be made available for the students to see.
+Applying will direct the student to the appropriate apply page belonging to the company. 
+The Course Co-ordinator will remove any adverts that have been filled or whose deadlines have expired.\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{System Scope}
@@ -89,9 +89,9 @@ ordinator will remove any adverts that have been filled or whose deadlines have 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{System Actors}
-\textbf{Course Coordinator}: Responsible for the management of adverts on the system.\\
-\textbf{Students}: Uses the system to browse the list of internship adverts and apply.\\
-\textbf{Company}: Submits adverts for moderation.\\
+\textbf{Course Co-ordinator}: Responsible for the management of adverts on the system.\\
+\textbf{Students}: Uses the system to browse available internship adverts and apply.\\
+\textbf{Company}: Submits adverts for approval.\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -123,7 +123,7 @@ use cases. The core use cases for the system are:\\
 \item Edit adverts 
 \end{itemize}
 
-\textbf{Review, comment and publication of internship advertisements by Course Coordinator
+\textbf{Review and approval of internship advertisements by Course Co-ordinator
 (Section 4.2) :}
 \begin{itemize}
 \item Review internship adverts
@@ -139,7 +139,7 @@ use cases. The core use cases for the system are:\\
 \textbf{Notification of successful selection for an internship by an SE/ESE student (Section 4.4)
 :}
 \begin{itemize}
-\item Notify course coordinator of successful placement
+\item Notify course co-ordinator of successful placement
 \item remove internship adverts
 \end{itemize}
 
@@ -161,38 +161,37 @@ use cases. The core use cases for the system are:\\
 \end{figure}
 
 \begin{UseCaseTemplate}
-\UseCaseLabel{Submit internship adverts}
+\UseCaseLabel{Submit internship advert}
 \UseCaseDescription{A company should login and post internship adverts to the system,
 confirm it and logout.}
 \UseCaseRationale{A company must be able to submit internship adverts to the system in order for the students to view and apply for the placement.}
 \UseCasePriority{Must have}
 \UseCaseStatus{Not implemented}
 \UseCaseActors{Company}
-\UseCaseIncludes{Login,Logout}
-\UseCaseConditions{Post: The advert is then stored and must be approved by the CC before put on the system for students to view.}
-\UseCaseNonFunctionalRequirements{}
-\UseCaseScenarios{A company logs in to the system and fills out the advert form, filling in all appropriate details, and then submits it for review by the course coordinator.}
+\UseCaseIncludes{Login, Logout}
+\UseCaseConditions{Post: The advert is then stored, pending approval by the CC.}
+\UseCaseNonFunctionalRequirements{Security}
+\UseCaseScenarios{A company logs in to the system, fills out the submission form and submits it to the system to be reviewd by the course coordinator.}
 \UseCaseRisks{}
 \end{UseCaseTemplate}
 
 \begin{UseCaseTemplate}
-\UseCaseLabel{Edit adverts}
+\UseCaseLabel{Edit internship advert}
 \UseCaseDescription{A company must login, make changes to their advert where necessary,
 confirm changes and then logout.}
 \UseCaseRationale{A company must be able to make changes to their advert in order to include
-more information about it or remove irrelevant/incorrect details.}
+more information about it or remove irrelevant/incorrect details that may prevent the advert from being approved.}
 \UseCasePriority{Must Have}
 \UseCaseStatus{Not implemented}
 \UseCaseActors{Company}
-\UseCaseIncludes{Login,Logout}
-\UseCaseConditions{Pre: Company must have uploaded their advert to the system. Post: The
-amended advert will now be reviewed (again) by the course Coordinator.}
-\UseCaseNonFunctionalRequirements{}
-\UseCaseScenarios{The company logs in. They select the option to edit their advert, and selcts which section they want to edit. The appropriate changes are made and the advert must wait for approval by the CC.}
+\UseCaseIncludes{Login, Logout}
+\UseCaseConditions{Pre: Company's advert must currently be pending approval by the CC.}
+\UseCaseNonFunctionalRequirements{Data consistency}
+\UseCaseScenarios{A company logs in, they select the option to edit their advert and select which section to edit. The appropriate changes are made and the advert remains pending approval.}
 \UseCaseRisks{}
 \end{UseCaseTemplate}
 
-\subsection{Review, comment and publication of internship advertisements by Course
+\subsection{Review and approval of internship advertisements by Course
 Coordinator}
 
 \begin{figure}[h]
@@ -368,6 +367,7 @@ unauthorised access from an unattended terminal.}
 
 \begin{itemize}
 \item User Concurrency: The system should be available to all Students of the School of Computing Science and a large number of users might want to use the system at the same time so the System should be able to handle a large number of users at once.
+\item Data Consistency: The system must maintain data accuracy and integrity throughout the sytem's use, to ensure that each user observes a consistent view of the data despite any changes made by other users.
 \item Security: Students should be able to log in with their GUIDs and passowrds which would be the same used for other University of Glasgow websites such as Moodle and MyCampus. Employers who wish to use the system to post placement adverts will need to be provided with new usernames and passwords in order to use the system.
 \item Number of Adverts: The system must be able to handle an unlimited number of adverts. Any number of companies might offer placement opportunities for students each year therefore the number of adverts that can be posted on the system must not be limited.
 \end{itemize}
