@@ -19,6 +19,13 @@
 \newcommand{\PSDTaskDeliverables}[1]{\PSDTaskComponent{Deliverables}{#1}}
 \newcommand{\PSDTaskRisks}[1]{\PSDTaskComponent{Risk}{#1}}
 
+\newcommand{\PSDRiskComponent}[2]{\it #1: & #2 \\ \hline}
+\newcommand{\PSDRiskID}[1]{\PSDTaskComponent{ID}{#1}}
+\newcommand{\PSDRiskCategory}[1]{\PSDTaskComponent{Category}{#1}}
+\newcommand{\PSDRiskDescription}[1]{\PSDTaskComponent{Description}{#1}}
+\newcommand{\PSDRiskProbability}[1]{\PSDTaskComponent{Probability}{#1}}
+\newcommand{\PSDRiskImpact}[1]{\PSDTaskComponent{Impact}{#1}}
+\newcommand{\PSDRiskControls}[1]{\PSDTaskComponent{Controls}{#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{url}
@@ -137,7 +144,7 @@ header):
   \PSDTaskRisks{Own interpretation of problem might be wrong.}
 \end{PSDTask}
 
-\begin{PSDTask}{2}{Identify initial requirements}
+\begin{PSDTask}{2}{Identify Initial Requirements}
   \PSDTaskDescription{ Using the initial problem definition, identify what the basic features of the system should be.}%
   \PSDTaskOutcomes{Inital requirements list}%
   \PSDTaskDeliverables{None}%
@@ -158,56 +165,29 @@ header):
   \PSDTaskRisks{Client might be unclear or provide incorrect specifications.}
 \end{PSDTask}
 
-\begin{PSDTask}{5}{Review interview notes}
+\begin{PSDTask}{5}{Review Interview Notes}
   \PSDTaskDescription{Look over the notes gathered in the interview with the client and the initial requirements.}%
   \PSDTaskOutcomes{None}%
   \PSDTaskDeliverables{None}%
   \PSDTaskRisks{}
 \end{PSDTask}
 
-\begin{PSDTask}{6}{Produce requirements document - post interview}
+\begin{PSDTask}{6}{Produce Requirements Post Interview}
   \PSDTaskDescription{Produce a document containing all requirements gathered for the system from the client interview.}%
   \PSDTaskOutcomes{Requirements document}%
   \PSDTaskDeliverables{None}%
   \PSDTaskRisks{}
 \end{PSDTask}
 
-\begin{PSDTask}{7}{Review of requirements document}
+\begin{PSDTask}{7}{Review Initial Requirements}
   \PSDTaskDescription{Check over the requirements document to ensure it contains all requirements for the system, and that they are appropriate for the system}%
   \PSDTaskOutcomes{}%
   \PSDTaskDeliverables{None}%
   \PSDTaskRisks{}
+<<<<<<< HEAD
 \end{PSDTask}
 
-\begin{PSDTask}{8}{Prepare for Stakeholder Panel}
-  \PSDTaskDescription{Come up with a few key questions about the system/requirements we are unsure about to ask the clients. Allows us to clarify the requirements we have are correct.}%
-  \PSDTaskOutcomes{Stakeholder panel Questions}%
-  \PSDTaskDeliverables{None}%
-  \PSDTaskRisks{}
-\end{PSDTask}
-
-\begin{PSDTask}{9}{Attend Stakeholder Panel Interview}
-  \PSDTaskDescription{Allow the teams to ask questions about the system that maybe were not clear in the interview; or ask questions which they forgot about during the interview.}%
-  \PSDTaskOutcomes{Stakeholder panel notes}%
-  \PSDTaskDeliverables{None}%
-  \PSDTaskRisks{}
-\end{PSDTask}
-
-\begin{PSDTask}{10}{Review Stakeholder Panel Notes}
-  \PSDTaskDescription{Go through the notes from the stakeholder panel and amend the requirements document where necessary.}%
-  \PSDTaskOutcomes{}%
-  \PSDTaskDeliverables{None}%
-  \PSDTaskRisks{Own interpretation of problem might be wrong.}
-\end{PSDTask}
-
-\begin{PSDTask}{11}{Finalise All Requirements}
-  \PSDTaskDescription{Gather all requirements from the interview and the stakeholder panel and ensure that all the requirements are included in the document}%
-  \PSDTaskOutcomes{Final Requirements Document}%
-  \PSDTaskDeliverables{}%
-  \PSDTaskRisks{ Client might be unclear or provide incorrect specifications.}
-\end{PSDTask}
-
-\begin{PSDTask}{12}{Create UML of the internship system}
+\begin{PSDTask}{12}{Create UML of Internship Management System}
   \PSDTaskDescription{Produce a UML diagram of the system to show the structure of the internship system}%
   \PSDTaskOutcomes{UML diagram}%
   \PSDTaskDeliverables{D3}%
@@ -221,14 +201,89 @@ header):
   \PSDTaskRisks{}
 \end{PSDTask}
 
-\begin{PSDTask}{14}{Create use case diagrams}
+\begin{PSDTask}{14}{Create Use Case Diagrams}
   \PSDTaskDescription{ Produce use case diagrams to show the relationship between different use cases and the actors involved.}%
   \PSDTaskOutcomes{Requirements Specification}%
   \PSDTaskDeliverables{D3}%
   \PSDTaskRisks{}
 \end{PSDTask}
 
-\begin{PSDTask}{15}{Finalise Requirements Specification}
+=======
+\end{PSDTask}
+
+\begin{PSDTask}{8}{Prepare Stakeholders Panel Interview Questions}
+  \PSDTaskDescription{Come up with a few key questions about the system/requirements we are unsure about to ask the clients. Allows us to clarify the requirements we have are correct.}%
+  \PSDTaskOutcomes{Stakeholder panel Questions}%
+  \PSDTaskDeliverables{None}%
+  \PSDTaskRisks{}
+\end{PSDTask}
+
+\begin{PSDTask}{9}{Attend Stakeholders Panel Interview}
+  \PSDTaskDescription{Allow the teams to ask questions about the system that maybe were not clear in the interview; or ask questions which they forgot about during the interview.}%
+  \PSDTaskOutcomes{Stakeholder panel notes}%
+  \PSDTaskDeliverables{None}%
+  \PSDTaskRisks{}
+\end{PSDTask}
+
+\begin{PSDTask}{10}{Review Notes from Stakeholders Panel Interview}
+  \PSDTaskDescription{Go through the notes from the stakeholder panel and amend the requirements document where necessary.}%
+  \PSDTaskOutcomes{}%
+  \PSDTaskDeliverables{None}%
+  \PSDTaskRisks{Own interpretation of problem might be wrong.}
+\end{PSDTask}
+
+\begin{PSDTask}{11}{Finalise all Requirements}
+  \PSDTaskDescription{Gather all requirements from the interview and the stakeholder panel and ensure that all the requirements are included in the document}%
+  \PSDTaskOutcomes{Final Requirements Document}%
+  \PSDTaskDeliverables{}%
+  \PSDTaskRisks{ Client might be unclear or provide incorrect specifications.}
+<<<<<<< HEAD
+\end{PSDTask}
+
+\begin{PSDTask}{12}{Finalised UML of Internship Management System}
+  \PSDTaskDescription{Modified the UML diagram to suit the requirements gathered at the stakeholder panel}%
+  \PSDTaskOutcomes{UML diagram}%
+  \PSDTaskDeliverables{D3}%
+  \PSDTaskRisks{}
+\end{PSDTask}
+
+\begin{PSDTask}{13}{Finalised Use Cases}
+  \PSDTaskDescription{Modified the use cases to suit the requirements gathered at the stakeholder panel}%
+  \PSDTaskOutcomes{Requirements Specification}%
+  \PSDTaskDeliverables{D3}%
+  \PSDTaskRisks{}
+\end{PSDTask}
+
+\begin{PSDTask}{14}{Finalised Use Case Diagrams}
+  \PSDTaskDescription{Modified the use case diagrams to suit the requirements gathered at the stakeholder panel}%
+  \PSDTaskOutcomes{Requirements Specification}%
+  \PSDTaskDeliverables{D3}%
+  \PSDTaskRisks{}
+\end{PSDTask}
+
+\begin{PSDTask}{12}{Create UML of Internship Management System}
+  \PSDTaskDescription{Produce a UML diagram of the system to show the structure of the internship system}%
+  \PSDTaskOutcomes{UML diagram}%
+  \PSDTaskDeliverables{D3}%
+  \PSDTaskRisks{}
+\end{PSDTask}
+
+\begin{PSDTask}{13}{Create Use Cases}
+  \PSDTaskDescription{ For each of the requirements gathered, produce a use case containing all appropriate information ie. description, actors, conditions,etc}%
+  \PSDTaskOutcomes{Requirements Specification}%
+  \PSDTaskDeliverables{D3}%
+  \PSDTaskRisks{}
+\end{PSDTask}
+
+\begin{PSDTask}{14}{Create Use Case Diagrams}
+  \PSDTaskDescription{ Produce use case diagrams to show the relationship between different use cases and the actors involved.}%
+>>>>>>> f7a2c14b7e6f8e0d06051dd5e7e03cdae67305f8
+  \PSDTaskOutcomes{Requirements Specification}%
+  \PSDTaskDeliverables{D3}%
+  \PSDTaskRisks{}
+\end{PSDTask}
+
+\begin{PSDTask}{15}{Finalise Requirements Specifications Documents}
   \PSDTaskDescription{Check over the requirements specification to ensure it is correct and contains all relevant information for the use cases, and that the use case diagrams match the information in the descriptions.}%
   \PSDTaskOutcomes{Requirments Specificaiton}%
   \PSDTaskDeliverables{D3}%
@@ -242,7 +297,7 @@ header):
   \PSDTaskRisks{}
 \end{PSDTask}
 
-\begin{PSDTask}{17}{Create Bash Prototype of the Application}
+\begin{PSDTask}{17}{Create Bash Prototype}
   \PSDTaskDescription{Creating the first actual prototype of the application written in Bash Scripting Language.}%
   \PSDTaskOutcomes{Bash Prototype created}%
   \PSDTaskDeliverables{D4}%
@@ -256,14 +311,14 @@ header):
   \PSDTaskRisks{}
 \end{PSDTask}
 
-\begin{PSDTask}{19}{Demonstrate Bash Prototype to Customer.}
+\begin{PSDTask}{19}{Demonstrate Bash Prototype to Customer}
   \PSDTaskDescription{Giving the Customer a first view of how the application functions. The customer will have the opportunity to ask questions and the customer liaison will be available to give answers}%
   \PSDTaskOutcomes{Bash Prototype demonstrated to Customer}%
   \PSDTaskDeliverables{D4}%
   \PSDTaskRisks{******* TO DO *******.}
 \end{PSDTask}
 
-\begin{PSDTask}{20}{Review notes from client about Bash prototype demonstration.}
+\begin{PSDTask}{20}{Review Notes from customer about Bash Prototype}
   \PSDTaskDescription{***TO DO***}%
   \PSDTaskOutcomes{}%
   \PSDTaskDeliverables{D4}%
@@ -275,42 +330,7 @@ header):
 
 \subsection{Resource Estimation and Allocation to WBS\label{sec:allocation}}
 
-\begin{table}[ht]
-\caption{Requirements Gathering} % title of Table
-\centering  % used for centering table
-\begin{tabular}{|c |c |c |c |c |} % centered columns (4 columns)
-\hline\hline                        %inserts double horizontal lines
-Task & Title & Hours & Team Members \\ [0.5ex] % inserts table 
-%heading
-\hline                  % inserts single horizontal line
-1 & Breakdown of Initial Problem Definition & 5:00  & All\\ % inserting body of the table
-2 & Identify Initial Requirements & 3:00  & All\\
-3 & Prepare Interview Plan & 3:00  & Ross Adam, Nicole Kearns\\
- & & & Asset Sarsengaliyev \\
-4 & Conduct Interview & 0:15  & All\\
-5 & Review Interview Notes& 1:00  & All\\
-6 & Produce Requirements Post Interview & 1:00 & All\\
-7 & Review Initial Requirements & 1:00 & \\
-8 & Prepare Stakeholders Panel Interview Questions & 1:00 & All\\
-9 & Review Notes from Stakeholders Panel Interview & 1:00 & All \\
-10 & Finalise all Requirements & 2:00 & All\\
-11 & Create UML Diagram of Internship Management System & 3:00 & Asset Sarsengaliyev, Nicole Kearns,\\
- & & & Andrew Gardner \\
-12 & Create Use Cases & 3:00 & Nicole Kearns, Andrew Gardner, \\
- & & & Ross Adam, Mamas Nicolaou \\
-13 & Create Use Case diagrams for use cases & 4:00 & Nicole Kearns, Andrew Gardner, \\
- & & & Ross Adam, Mamas Nicolaou \\
-14 & Finalise Requirements Specifications Documents & 2:00 & Ross Adam \\
-15 & Research Bash Scripting & 3:00 & Andrew Gardner\\
-16 & Create Bash Prototype & 6:00 & Andrew Gardner \\
-17 & Test Bash Prototype & 2:00 & Mamas Nicolaou \\
-18 & Demonstrate Bash Prototype to Customer & 0.30 & All\\     
-19 & Review Notes from customer about Bash Prototype & 1:00 & All\\      
 
-\hline %inserts single line
-\end{tabular}
-\label{table:nonlin} % is used to refer this table in the text
-\end{table}
 
 The purpose of this subsection is to list and describe the resources
 available to support the activities defined in the WBS. The resources
@@ -322,6 +342,80 @@ measure).
 
 \subsection{Schedules}
 
+\begin{table}[ht]
+\caption{Tasks Table} % title of Table
+
+\begin{tabular}{|c |c |c |c |c |} % centered columns (4 columns)
+\hline\hline                        %inserts double horizontal lines
+Task & Title & Hours & Depend & Team Members \\ [0.5ex]
+\hline 1 & Breakdown of Initial Problem Definition & 5:00 &-& All\\ % inserting body of the table
+\hline2 & Identify Initial Requirements & 3:00 &1& All\\
+\hline3 & &  && Ross Adam, \\
+ &  Prepare Interview Plan&3:00 &2 &Nicole Kearns, \\
+ & & & &Asset Sarsengaliyev \\
+<<<<<<< HEAD
+\hline4 & Conduct Interview & 0:15 &3& All\\
+\hline5 & Review Interview Notes& 1:00 &4& All\\
+\hline6 & Produce Requirements Post Interview & 1:00 &5& All\\
+\hline7 & Review Initial Requirements & 1:00 &6& All \\
+\hline  & Create UML of Internship Management System & & &\\
+\hline  & Create Use Cases & & &\\
+\hline  & Create Use Case Diagrams & & &\\
+\hline8 & Prepare Stakeholders Panel Interview Questions & 1:00 &7& All\\
+\hline9 & Attend Stakeholders Panel Interview & 1:00 &8& All\\
+\hline10 & Review Notes from Stakeholders Panel Interview & 1:00 &9& All\\
+\hline11 & Finalise all Requirements & 2:00 &10& All\\
+\hline12 & Finalise UML Diagram of  & 3:00 &11& Asset Sarsengaliyev, \\
+ &Internship Management System& & &Nicole Kearns,  \\
+ && & & Andrew Gardner \\
+\hline13 & &  && Andrew Gardner, \\
+ & & & & Mamas Nicolaou, \\
+ & Finalise Use Cases & 3:00& 11& Nicole Kearns,\\
+ & & & & Ross Adam \\
+\hline14 &  & && Nicole Kearns, \\
+ & & & & Ross Adam, \\
+ & Finalise Use Case Diagrams &4:00  &13 &  Andrew Gardner, \\
+ & & & & Mamas Nicolaou \\
+\hline15 & Finalise Requirements Specifications Documents & 2:00 &12,14& Ross Adam \\
+\hline16 & Research Bash Scripting & 3:00 &-&Andrew Gardner\\
+\hline17 & Create Bash Prototype & 6:00 &16&Andrew Gardner \\
+\hline18 & Test Bash Prototype & 2:00 &17& Mamas Nicolaou \\
+\hline19 & Demonstrate Bash Prototype to Customer & 0.30 &18& All\\     
+\hline20 & Review Notes from customer about Bash Prototype & 1:00 &19& All\\      
+=======
+\hline4 & Conduct Interview & 0:15 &3& All\\
+\hline5 & Review Interview Notes& 1:00 &4& All\\
+\hline6 & Produce Requirements Post Interview & 1:00 &5& All\\
+\hline7 & Review Initial Requirements & 1:00 &6& All \\
+\hline8 & Prepare Stakeholders Panel Interview Questions & 1:00 &7& All\\
+\hline9 & Attend Stakeholders Panel Interview & 1:00 &8& All\\
+\hline10 & Review Notes from Stakeholders Panel Interview & 1:00 &9& All\\
+\hline11 & Finalise all Requirements & 2:00 &10& All\\
+\hline12 & Create UML Diagram of  & 3:00 &11& Asset Sarsengaliyev, \\
+ &Internship Management System& & &Nicole Kearns,  \\
+ && & & Andrew Gardner \\
+\hline13 & &  && Andrew Gardner, \\
+ & & & & Mamas Nicolaou, \\
+ & Create Use Cases & 3:00& 11& Nicole Kearns,\\
+ & & & & Ross Adam \\
+\hline14 &  & && Nicole Kearns, \\
+ & & & & Ross Adam, \\
+ & Create Use Case Diagrams &4:00  &13 &  Andrew Gardner, \\
+ & & & & Mamas Nicolaou \\
+\hline15 & Finalise Requirements Specifications Documents & 2:00 &12,14& Ross Adam \\
+\hline16 & Research Bash Scripting & 3:00 &-&Andrew Gardner\\
+\hline17 & Create Bash Prototype & 6:00 &16&Andrew Gardner \\
+\hline18 & Test Bash Prototype & 2:00 &17& Mamas Nicolaou \\
+\hline19 & Demonstrate Bash Prototype to Customer & 0.30 &18& All\\     
+\hline20 & Review Notes from customer about Bash Prototype & 1:00 &19& All\\      
+>>>>>>> f7a2c14b7e6f8e0d06051dd5e7e03cdae67305f8
+
+\hline %inserts single line
+\end{tabular}
+\label{table:nonlin} % is used to refer this table in the text
+\end{table}
+\subsection{Pert Chart}
+\includegraphics[scale=0.7]{img/PERT.jpg}
 Present the schedules on which performance and resource planning are
 based. Include a task table, Gantt and PERT charts.
 
@@ -369,7 +463,13 @@ assurance plan.
 
 \section{Risk Management Plan}
 
-RISKS CAN BE FOUND ON OUR GITHUB PAGE
+Here is the list of risk tables
+\begin{PSDRisk}{1}{}
+  \PSDRiskID{1}%
+  \PSDTaskOutcomes{Requirements Specification}%
+  \PSDTaskDeliverables{D3}%
+  \PSDTaskRisks{}
+\end{PSDTask}
 
 %https://github.com/Stringsy/psd3-groupwork/wiki/_pages
 
@@ -405,10 +505,6 @@ Including expansions of non-standard abbreviations and acronyms and
 other key definitions.  You may find it useful to maintain a glossary
 as a shared section amongst all your PSD documents. using the
 \verb!\input{}! macro.
-
-\section{Another appendix}
-
-Any relevant associated documentation, e.g., a meeting plan.
 
 \end{document}
 
