@@ -5,11 +5,11 @@
 \contentsline {subsection}{\numberline {1.4}Document Status and Schedule}{2}
 \contentsline {section}{\numberline {2}Resources, Budgets, Schedules and Organisation}{2}
 \contentsline {subsection}{\numberline {2.1}Work Breakdown Structure}{2}
-\contentsline {subsection}{\numberline {2.2}Resource Estimation and Allocation to WBS}{3}
-\contentsline {subsection}{\numberline {2.3}Schedules}{3}
-\contentsline {subsection}{\numberline {2.4}Equipment, Materials, Facilities, and Other Resources}{3}
-\contentsline {section}{\numberline {3}Assurance Plan}{3}
-\contentsline {section}{\numberline {4}Risk Management Plan}{3}
-\contentsline {section}{\numberline {5}Configuration Management Plan}{3}
-\contentsline {section}{\numberline {A}Glossary}{4}
-\contentsline {section}{\numberline {B}Another appendix}{4}
+\contentsline {subsection}{\numberline {2.2}Resource Estimation and Allocation to WBS}{6}
+\contentsline {subsection}{\numberline {2.3}Schedules}{6}
+\contentsline {subsection}{\numberline {2.4}Equipment, Materials, Facilities, and Other Resources}{7}
+\contentsline {section}{\numberline {3}Assurance Plan}{7}
+\contentsline {section}{\numberline {4}Risk Management Plan}{7}
+\contentsline {section}{\numberline {5}Configuration Management Plan}{8}
+\contentsline {section}{\numberline {A}Glossary}{8}
+\contentsline {section}{\numberline {B}Another appendix}{8}
