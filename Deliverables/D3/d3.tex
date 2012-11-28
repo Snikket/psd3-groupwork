@@ -63,7 +63,12 @@ descriptions, and scenarios which would be suitable for the system.
 \hline 10/11/2012 & Finalised for Submission & 0.3 & All\\ 
 \hline 11/11/2012 & \textbf{Draft Submission Deadline} & 1.0 & All\\ 
 \hline ... & Revision & & All\\ 
-\hline 26/11/2012 & \textbf{Final Submission Deadline} & All\\ 
+\hline 19/11/2012 & Modified Section 4 & 1.1 & Nicole\\
+\hline 26/11/2012 & Modified the use case diagrams & 1.2 & Nicole\\
+\hline 26/11/2012 & Modified the use case descriptions & 1.3 & Andrew\\
+\hline 27/11/2012 & Modified the use case scenarios & 1.4 & Nicole\\
+\hline 27/11/2012 & & &\\
+\hline 29/11/2012 & \textbf{Final Submission Deadline} & & All\\ 
 \hline 
 \end{tabular} }
 \end{center}
@@ -80,15 +85,6 @@ ordinator will remove any adverts that have been filled or whose deadlines have 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{System Scope}
 
-\textbf{TO DO!}\\
-
-\textit{Give an overview of the system here, in the context of the surrounding
-environment. Use case diagrams can be used to illustrate the
-interactions between actors in the environment and the system.}
-\textit{You should explain the assumptions you have made in defining the
-boundary of the system (i.e. what the system will and will not do).}
-\textit{Describe any conflicts in requirements expressed by different
-stakeholders, how you resolved them and why.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -106,13 +102,12 @@ stakeholders, how you resolved them and why.}
 \begin{center}
 \includegraphics
 [scale=0.7]
-{C:/Users/Mamas Nicolaou/Repositories/psd3-groupwork/Deliverables/D3/UML_D3.jpg}
+{img/UML.png}
 \caption{Domain model}
 \label{fig1:domain model}
 \end{center}
 \end{figure}
 
-\textit{Explain the elements of the domain here.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -126,7 +121,6 @@ use cases. The core use cases for the system are:\\
 \begin{itemize}
 \item Submit internship adverts
 \item Edit adverts 
-\item remove internship adverts
 \end{itemize}
 
 \textbf{Review, comment and publication of internship advertisements by Course Coordinator
@@ -140,7 +134,6 @@ use cases. The core use cases for the system are:\\
 \begin{itemize}
 \item Review internship adverts list
 \item Apply for internship
-\item Flag unsuitable adverts
 \end{itemize}
 
 \textbf{Notification of successful selection for an internship by an SE/ESE student (Section 4.4)
@@ -161,7 +154,7 @@ use cases. The core use cases for the system are:\\
 \begin{center}
 \includegraphics
 [scale=0.7]
-{C:/Users/Administrator/company.jpeg}
+{img/Company.jpeg}
 \caption{Use Case Diagram 4.1}
 \label{fig2:Use Case Diagram4.1}
 \end{center}
@@ -171,17 +164,15 @@ use cases. The core use cases for the system are:\\
 \UseCaseLabel{Submit internship adverts}
 \UseCaseDescription{A company should login and post internship adverts to the system,
 confirm it and logout.}
-\UseCaseRationale{A company must be able to post their internship adverts on the system in
-order for students to apply for them, if suitable.}
+\UseCaseRationale{A company must be able to submit internship adverts to the system in order for the students to view and apply for the placement.}
 \UseCasePriority{Must have}
 \UseCaseStatus{Not implemented}
 \UseCaseActors{Company}
 \UseCaseIncludes{Login,Logout}
-\UseCaseConditions{ Post: Course coordinator needs to review adverts to determine whether or
-not it is suitable for students.}
+\UseCaseConditions{Post: The advert is then stored and must be approved by the CC before put on the system for students to view.}
 \UseCaseNonFunctionalRequirements{}
-\UseCaseScenarios{}
-\UseCaseRisks{Company may post internship adverts that may not be suitable for students.}
+\UseCaseScenarios{A company logs in to the system and fills out the advert form, filling in all appropriate details, and then submits it for review by the course coordinator.}
+\UseCaseRisks{}
 \end{UseCaseTemplate}
 
 \begin{UseCaseTemplate}
@@ -197,25 +188,8 @@ more information about it or remove irrelevant/incorrect details.}
 \UseCaseConditions{Pre: Company must have uploaded their advert to the system. Post: The
 amended advert will now be reviewed (again) by the course Coordinator.}
 \UseCaseNonFunctionalRequirements{}
-\UseCaseScenarios{}
+\UseCaseScenarios{The company logs in. They select the option to edit their advert, and selcts which section they want to edit. The appropriate changes are made and the advert must wait for approval by the CC.}
 \UseCaseRisks{}
-\end{UseCaseTemplate}
-
-\begin{UseCaseTemplate}
-\UseCaseLabel{remove internship adverts}
-\UseCaseDescription{A Company should login, select an option to remove their advert from the
-system, confirm this and then logout.}
-\UseCaseRationale{A company should be able to remove their advert from the system if the
-position has been taken and/or the internship is no longer available.}
-\UseCasePriority{Must Have}
-\UseCaseStatus{Not Implemented}
-\UseCaseActors{Company}
-\UseCaseIncludes{Login,Logout}
-\UseCaseConditions{Post: Advert should no longer be available on the system.}
-\UseCaseNonFunctionalRequirements{}
-\UseCaseScenarios{}
-\UseCaseRisks{Company may remove the wrong advert. Advert may not be successfully
-removed.}
 \end{UseCaseTemplate}
 
 \subsection{Review, comment and publication of internship advertisements by Course
@@ -225,7 +199,7 @@ Coordinator}
 \begin{center}
 \includegraphics
 [scale=0.7]
-{C:/Users/Administrator/CourseCoordinator.jpeg}
+{img/CourseCoordinator.jpg}
 \caption{Use Case Diagram 4.2}
 \label{fig2:Use Case Diagram4.2}
 \end{center}
@@ -244,7 +218,7 @@ review all adverts to ensure they are suitable for ESE/SE students.}
 \UseCaseConditions{ Pre: company must post adverts to the system. Post: adverts are made
 available to the students.}
 \UseCaseNonFunctionalRequirements{}
-\UseCaseScenarios{}
+\UseCaseScenarios{The CC logs into the system. The CC will view all unapproved adverts submitted to the system and decide whether or not the internship is suitable for the students. If not, the advert is not made available to the students and is removed from the system.}
 \UseCaseRisks{}
 \end{UseCaseTemplate}
 \begin{UseCaseTemplate}
@@ -262,7 +236,7 @@ internships.}
 \UseCaseConditions{ Pre: company upload adverts to the system. Pre: adverts reviewed by
 course coordinator}
 \UseCaseNonFunctionalRequirements{}
-\UseCaseScenarios{}
+\UseCaseScenarios{The CC logs in to the system. The CC will then select the option to view unapproved adverts. After reviewing the advert, the  CC selects yes and states which students this advert is suitable for.}
 \UseCaseRisks{Course coordinator may accidentally approve an unsuitable advert.}
 \end{UseCaseTemplate}
 
@@ -272,7 +246,7 @@ course coordinator}
 \begin{center}
 \includegraphics
 [scale=0.7]
-{C:/Users/Administrator/Student.jpeg}
+{img/Student.jpeg}
 \caption{Use Case Diagram 4.3}
 \label{fig2:Use Case Diagram4.3}
 \end{center}
@@ -287,8 +261,7 @@ read detailed information about the internship.}
 \UseCaseStatus{Not Implemented}
 \UseCaseActors{Student}
 \UseCaseIncludes{Login, Logout, Apply for internship}
-\UseCaseConditions{Pre: adverts have been approved by the CC. Post: student can apply for
-internship.}
+\UseCaseConditions{Pre: adverts have been approved by the CC.}
 \UseCaseNonFunctionalRequirements{}
 \UseCaseScenarios{}
 \UseCaseRisks{}
@@ -298,34 +271,15 @@ internship.}
 \UseCaseLabel{Apply for internship}
 \UseCaseDescription{User selects an advert to apply for and will then have to email the
 company or will be directed to the company website to apply}
-\UseCaseRationale{Student must be able to see all details for the advert, including an email
-address and/or website in order to apply for the placement.}
+\UseCaseRationale{Student should be redirected to the company URL or email in order to apply for the internship placement.}
 \UseCasePriority{Must Have}
 \UseCaseStatus{Not Implemented}
 \UseCaseActors{Student}
 \UseCaseIncludes{Login,Logout}
 \UseCaseConditions{}
 \UseCaseNonFunctionalRequirements{}
-\UseCaseScenarios{}
+\UseCaseScenarios{The student will select the apply option within the system. The student will then be redirected to the company website in order to fill out the application for the internship.}
 \UseCaseRisks{The email/website may be incorrect so student may not be able to apply.}
-\end{UseCaseTemplate}
-
-\begin{UseCaseTemplate}
-\UseCaseLabel{Flag unsuitable adverts}
-\UseCaseDescription{Let course coordinator know an advert is not appropriate for its current
-category (if, for example it is categorised as SE suitable but it shouldn’t be).}
-\UseCaseRationale{A student can let the Course Coordinator know there is something wrong
-with an advert on the system.}
-\UseCasePriority{Could have.}
-\UseCaseStatus{Not Implemented}
-\UseCaseActors{Student}
-\UseCaseIncludes{Login,Logout}
-\UseCaseConditions{Pre: The inappropriate advert must be still visible on the system.Post:
-Course Coordinator is notified.}
-\UseCaseNonFunctionalRequirements{}
-\UseCaseScenarios{Student logs in to the system, finds an advert that is misplaced or does not
-fulfil the School of Computing Science placement guidelines and flags it.}
-\UseCaseRisks{Student might abuse this functionality by flagging random adverts .}
 \end{UseCaseTemplate}
 
 \subsection{Notification of successful selection for an internship by an SE/ESE student}
@@ -334,7 +288,7 @@ fulfil the School of Computing Science placement guidelines and flags it.}
 \begin{center}
 \includegraphics
 [scale=0.7]
-{C:/Users/Administrator/Section4.jpeg}
+{img/Section4.jpeg}
 \caption{Use Case Diagram 4.4}
 \label{fig2:Use Case Diagram4.4}
 \end{center}
@@ -353,7 +307,7 @@ the advert from the System.}
 \UseCaseConditions{Pre: The advert for the placement position that was taken must be still
 visible on the system. Post: Course Coordinator is notified.}
 \UseCaseNonFunctionalRequirements{}
-\UseCaseScenarios{}
+\UseCaseScenarios{A student has been successful with a placement with one of the adverts on the system. The student will notfiy the Course coordinator of there successful placement within the system and the course coordinator will receive an email.}
 \UseCaseRisks{}
 \end{UseCaseTemplate}
 
@@ -368,11 +322,9 @@ longer available or suitable.}
 \UseCaseStatus{Not implemented}
 \UseCaseActors{Course coordinator}
 \UseCaseIncludes{Login,Logout}
-\UseCaseConditions{Pre: The application’s deadline for a placement has passed or a company
-has confirmed an offer of position to a student and the student has confirmed he/she accepted
-the position.Post: The advert is no longer visible on the system.}
+\UseCaseConditions{Pre: Course Coordinator has recieved a notification to say the placement has been filled. Post: Advert no longer available on the system.}
 \UseCaseNonFunctionalRequirements{}
-\UseCaseScenarios{}
+\UseCaseScenarios{The course coordinator has recieved a notification of a successful placement and logs into the system. The course coordinator then removes the internship advert from the system, so that it is no longer available to the students.}
 \UseCaseRisks{Course Coordinator might remove the wrong advert.}
 \end{UseCaseTemplate}
 
@@ -382,12 +334,12 @@ the position.Post: The advert is no longer visible on the system.}
 \UseCaseLabel{Login}
 \UseCaseDescription{A user should enter their login id and a password to allow them to access
 the system. }
-\UseCaseRationale{}
+\UseCaseRationale{A user must be able to login, providing different levels of access to the system.}
 \UseCasePriority{Must have}
 \UseCaseStatus{Not implemented}
 \UseCaseActors{Company, Students, Course Coordinator}
 \UseCaseIncludes{}
-\UseCaseConditions{Post: The user is logged in if correct credentials are provided.}
+\UseCaseConditions{}
 \UseCaseNonFunctionalRequirements{}
 \UseCaseScenarios{}
 \UseCaseRisks{}
@@ -404,7 +356,7 @@ unauthorised access from an unattended terminal.}
 \UseCaseStatus{Not implemented}
 \UseCaseActors{Company, Students, Course Coordinator}
 \UseCaseIncludes{}
-\UseCaseConditions{Pre: User logged in. Post: User is logged out.}
+\UseCaseConditions{Pre: User must be logged in to the system.}
 \UseCaseNonFunctionalRequirements{}
 \UseCaseScenarios{}
 \UseCaseRisks{}
