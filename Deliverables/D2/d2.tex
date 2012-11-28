@@ -19,13 +19,6 @@
 \newcommand{\PSDTaskDeliverables}[1]{\PSDTaskComponent{Deliverables}{#1}}
 \newcommand{\PSDTaskRisks}[1]{\PSDTaskComponent{Risk}{#1}}
 
-\newcommand{\PSDRiskComponent}[2]{\it #1: & #2 \\ \hline}
-\newcommand{\PSDRiskID}[1]{\PSDTaskComponent{ID}{#1}}
-\newcommand{\PSDRiskCategory}[1]{\PSDTaskComponent{Category}{#1}}
-\newcommand{\PSDRiskDescription}[1]{\PSDTaskComponent{Description}{#1}}
-\newcommand{\PSDRiskProbability}[1]{\PSDTaskComponent{Probability}{#1}}
-\newcommand{\PSDRiskImpact}[1]{\PSDTaskComponent{Impact}{#1}}
-\newcommand{\PSDRiskControls}[1]{\PSDTaskComponent{Controls}{#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{url}
@@ -141,42 +134,42 @@ header):
   \PSDTaskDescription{ Discussing the initial problems and forming our own ideas of how to approach the client's task.}%
   \PSDTaskOutcomes{Problem breakdown.}%
   \PSDTaskDeliverables{None}%
-  \PSDTaskRisks{Own interpretation of problem might be wrong.}
+  \PSDTaskRisks{R1}
 \end{PSDTask}
 
 \begin{PSDTask}{2}{Identify Initial Requirements}
   \PSDTaskDescription{ Using the initial problem definition, identify what the basic features of the system should be.}%
   \PSDTaskOutcomes{Inital requirements list}%
   \PSDTaskDeliverables{None}%
-  \PSDTaskRisks{Our list of basic requirements of the system may be incorrect.}
+  \PSDTaskRisks{R1}
 \end{PSDTask}
 
 \begin{PSDTask}{3}{Prepare Interview Plan}
   \PSDTaskDescription{ Construct questions for Customer Liaison to ask the client in order to elicit requirements. Questions will then be approved by group. An interview plan will then be written consisting of these questions.}%
   \PSDTaskOutcomes{Interview Plan document.}%
   \PSDTaskDeliverables{None}%
-  \PSDTaskRisks{Questions may be in inappropriate may be too many or too few questions.}
+  \PSDTaskRisks{R2}
 \end{PSDTask}
 
 \begin{PSDTask}{4}{Conduct Interview}
   \PSDTaskDescription{ Meeting with client to collect requirements using the Interview Plan document. If additional information is revealed plan document will be deviated from.}%
   \PSDTaskOutcomes{Interview notes - system requirements}%
   \PSDTaskDeliverables{None}%
-  \PSDTaskRisks{Client might be unclear or provide incorrect specifications.}
+  \PSDTaskRisks{R3}
 \end{PSDTask}
 
 \begin{PSDTask}{5}{Review Interview Notes}
   \PSDTaskDescription{Look over the notes gathered in the interview with the client and the initial requirements.}%
   \PSDTaskOutcomes{None}%
   \PSDTaskDeliverables{None}%
-  \PSDTaskRisks{}
+  \PSDTaskRisks{R1, R3}
 \end{PSDTask}
 
 \begin{PSDTask}{6}{Produce Requirements Post Interview}
   \PSDTaskDescription{Produce a document containing all requirements gathered for the system from the client interview.}%
   \PSDTaskOutcomes{Requirements document}%
   \PSDTaskDeliverables{None}%
-  \PSDTaskRisks{}
+  \PSDTaskRisks{R1, R3}
 \end{PSDTask}
 
 \begin{PSDTask}{7}{Review Initial Requirements}
@@ -190,49 +183,49 @@ header):
   \PSDTaskDescription{Produce a UML diagram of the system to show the structure of the internship system}%
   \PSDTaskOutcomes{UML diagram}%
   \PSDTaskDeliverables{D3}%
-  \PSDTaskRisks{}
+  \PSDTaskRisks{R6}
 \end{PSDTask}
 
 \begin{PSDTask}{9}{Create Use Cases}
   \PSDTaskDescription{ For each of the requirements gathered, produce a use case containing all appropriate information ie. description, actors, conditions,etc}%
   \PSDTaskOutcomes{Requirements Specification}%
   \PSDTaskDeliverables{D3}%
-  \PSDTaskRisks{}
+  \PSDTaskRisks{R1}
 \end{PSDTask}
 
 \begin{PSDTask}{10}{Create Use Case Diagrams}
   \PSDTaskDescription{ Produce use case diagrams to show the relationship between different use cases and the actors involved.}%
   \PSDTaskOutcomes{Requirements Specification}%
   \PSDTaskDeliverables{D3}%
-  \PSDTaskRisks{}
+  \PSDTaskRisks{R1, R6}
 \end{PSDTask}
 
-\begin{PSDTask}{8}{Prepare Stakeholders Panel Interview Questions}
+\begin{PSDTask}{11}{Prepare Stakeholders Panel Interview Questions}
   \PSDTaskDescription{Come up with a few key questions about the system/requirements we are unsure about to ask the clients. Allows us to clarify the requirements we have are correct.}%
   \PSDTaskOutcomes{Stakeholder panel Questions}%
   \PSDTaskDeliverables{None}%
-  \PSDTaskRisks{}
+  \PSDTaskRisks{R2}
 \end{PSDTask}
 
 \begin{PSDTask}{12}{Attend Stakeholders Panel Interview}
   \PSDTaskDescription{Allow the teams to ask questions about the system that maybe were not clear in the interview; or ask questions which they forgot about during the interview.}%
   \PSDTaskOutcomes{Stakeholder panel notes}%
   \PSDTaskDeliverables{None}%
-  \PSDTaskRisks{}
+  \PSDTaskRisks{R3}
 \end{PSDTask}
 
 \begin{PSDTask}{13}{Review Notes from Stakeholders Panel Interview}
   \PSDTaskDescription{Go through the notes from the stakeholder panel and amend the requirements document where necessary.}%
   \PSDTaskOutcomes{}%
   \PSDTaskDeliverables{None}%
-  \PSDTaskRisks{Own interpretation of problem might be wrong.}
+  \PSDTaskRisks{R1, R3}
 \end{PSDTask}
 
 \begin{PSDTask}{14}{Finalise all Requirements}
   \PSDTaskDescription{Gather all requirements from the interview and the stakeholder panel and ensure that all the requirements are included in the document}%
   \PSDTaskOutcomes{Final Requirements Document}%
   \PSDTaskDeliverables{}%
-  \PSDTaskRisks{ Client might be unclear or provide incorrect specifications.}
+  \PSDTaskRisks{}
 \end{PSDTask}
 
 \begin{PSDTask}{15}{Finalised UML of Internship Management System}
@@ -249,35 +242,9 @@ header):
   \PSDTaskRisks{}
 \end{PSDTask}
 
-<<<<<<< HEAD
-\begin{PSDTask}{14}{Finalised Use Case Diagrams}
-  \PSDTaskDescription{Modified the use case diagrams to suit the requirements gathered at the stakeholder panel}%
-  \PSDTaskOutcomes{Requirements Specification}%
-  \PSDTaskDeliverables{D3}%
-  \PSDTaskRisks{}
-\end{PSDTask}
 
-\begin{PSDTask}{12}{Create UML of Internship Management System}
-  \PSDTaskDescription{Produce a UML diagram of the system to show the structure of the internship system}%
-  \PSDTaskOutcomes{UML diagram}%
-  \PSDTaskDeliverables{D3}%
-  \PSDTaskRisks{}
-\end{PSDTask}
-
-\begin{PSDTask}{13}{Create Use Cases}
-  \PSDTaskDescription{ For each of the requirements gathered, produce a use case containing all appropriate information ie. description, actors, conditions,etc}%
-  \PSDTaskOutcomes{Requirements Specification}%
-  \PSDTaskDeliverables{D3}%
-  \PSDTaskRisks{}
-\end{PSDTask}
-
-\begin{PSDTask}{14}{Create Use Case Diagrams}
-  \PSDTaskDescription{ Produce use case diagrams to show the relationship between different use cases and the actors involved.}%
->>>>>>> f7a2c14b7e6f8e0d06051dd5e7e03cdae67305f8
-=======
 \begin{PSDTask}{17}{Finalised Use Case Diagrams}
   \PSDTaskDescription{Modified the use case diagrams to suit the requirements gathered at the stakeholder panel}%
->>>>>>> 940fac985caa08d24a9ca44f73745c53cf3befdc
   \PSDTaskOutcomes{Requirements Specification}%
   \PSDTaskDeliverables{D3}%
   \PSDTaskRisks{}
@@ -301,7 +268,7 @@ header):
   \PSDTaskDescription{Creating the first actual prototype of the application written in Bash Scripting Language.}%
   \PSDTaskOutcomes{Bash Prototype created}%
   \PSDTaskDeliverables{D4}%
-  \PSDTaskRisks{Developer might create an application which is not according the specifications.}
+  \PSDTaskRisks{R8}
 \end{PSDTask}
 
 \begin{PSDTask}{21}{Test Bash Prototype}
@@ -315,11 +282,11 @@ header):
   \PSDTaskDescription{Giving the Customer a first view of how the application functions. The customer will have the opportunity to ask questions and the customer liaison will be available to give answers}%
   \PSDTaskOutcomes{Bash Prototype demonstrated to Customer}%
   \PSDTaskDeliverables{D4}%
-  \PSDTaskRisks{******* TO DO *******.}
+  \PSDTaskRisks{}
 \end{PSDTask}
 
 \begin{PSDTask}{23}{Review Notes from customer about Bash Prototype}
-  \PSDTaskDescription{***TO DO***}%
+  \PSDTaskDescription{}%
   \PSDTaskOutcomes{}%
   \PSDTaskDeliverables{D4}%
   \PSDTaskRisks{}
@@ -407,40 +374,60 @@ Task & Title & Hours & Depend & Team Members \\ [0.5ex]
 \section{Assurance Plan}
 
 
-The Quality Assurance Plan( The QAP) is the basis for maintaining the quality of our product on the highest level that matches the requirements of the given software system. The QAP will be overseen by the team to maintain quality improvement activities, such as monitoring, adding features and evaluating defects. The purpose of the QAP is designed to match the following requirements:\\
+The Quality Assurance Plan(The QAP) is the basis for maintaining the quality of our product on the highest level that matches the requirements for the given software system and approved by stakeholders. The QAP will be overseen by the team to maintain quality improvement activities, such as monitoring, adding features and evaluating defects. The purpose of the QAP is designed to match the following requirements:\\
 
 \begin{itemize}
 \item to perform suitable actions when possibilities for improvements in service are identified.\\
 \item to implement corrective action when technical issues or bugs are found.\\
-\item To ensure that the software system is maintaining properly all the time.\\
-\end{itemize}
+\item to ensure that the software system is maintaining properly all the time.\\
 
-Our team will mainly rely on Risk Management Plan and Product Requirements Specification to keep the product quality to the appropriate level.\\
+Our team will mainly rely on Risk Management Plan, Product Requirements Specification and Change Management Plan to keep the product quality to the appropriate level.\\
 
 Team activities:\\
 
-Prior to making any changes to code, it will be reviewed by the team and will be submitted to GitHub, supporting version control of source code. After altering any part of the code, we invoke test sets to check if the corresponding oracles match expected outputs. Apart from that, we use black box testing with other teams to check if they can find bugs, as they have a fresh look to the product.\\
+Team members use the special group on Facebook to discuss their thoughts. All the documentation and code are  accessible on GitHub for all members as well as supervisors. It is the responsibility of everyone to ensure that update will not harm any working parts of the system. After altering any part of the code, we invoke test sets to check if the corresponding oracles match expected outputs.\\ 
 
-This documentation does not contain any details regarding the action taken.\\
+Team should have one or more meetings every week to discuss the progress of the work. The tasks should be equally divided by team members and this is being added to the timeline of tasks. Every member is in charge of reviewing all finished tasks and task is approved by team if two or more member of the team approves it. \\
 
+Product documentation(Deliverables) are ready to submit when members have no offers how to improve the document. Latex tool is used to produce the documentation.  Feedback for the deliverables is carefully analysed and corrections are done by the whole team at the end of term.\\
 
-Describe the activities to be performed by for assurance of the
-software and other deliverables.
+In order to make sure the quality of the product will be high and the team is in the right direction, team meets the supervisor every week as well as the clients few times per term.\\
 
-Assurance activities include:
-\begin{enumerate}
-\item Review and acceptance testing of products
-\item Verification and validation procedures
-\end{enumerate}
-
-The contents of this subsection will be explained later in the 1st
-semester in the PSD lectures. For initial hand-in deadline, you may
-leave this subsection blank or make your best effort to produce an
-assurance plan.
+Apart from that, we use black box testing with other teams to check if they can find bugs in prototype, as they have a fresh look to the product.\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Risk Management Plan}
+
+\begin{center}{
+\begin{tabular}{|p{2cm}|p{2cm}|p{3cm}|p{2cm}|p{3cm}|p{2cm}|}
+\hline \textbf{Risk ID} &\textbf{Category} & \textbf{Description} & \textbf{Probability} & \textbf{Impact} & \textbf{Controls}\\
+\hline R1 & Requirements & Functional and non-functional requirements may be interpreted differently by team members due to the lack of interviews & Meduim & High / The final product may behave differently and delayed to fix the problems & C1, C3, C5\\
+\hline R2 & Requirements & Team members may ask inappropriate questions or miss important requirements & Low & Medium/ This may lead to improper documentation of the product & C2, C8\\
+\hline R3 & Requirements & The stakeholders are not sure how the final product should look like & High & Medium/ Stakeholders may not be satisfied with what developers will offer & C1, C3, C5\\
+\hline R4 & Skills & Members may over estimate their expectations about the final product & Very high & Medium/ The product will be different from what was offered on documentation & C1, C3, C5\\
+\hline R5 & Requirements & Releasing unprofessional document to the client missing some requirements or poorly prepared & Medium & High/ Consequently, the product may not reach expectations & C3, C5, C7\\
+\hline R6 & Technical & Team members are unfamiliar with appropriate tools & Medium & High/ Consequently, the product may not reach expectations & C3, C7\\
+\hline R7 & Requirements & Tasks may be left from the time-line & Medium & Medium/ This may lead to potential delays & C6\\
+\hline R8 & Prototyping & Prototype is not compatible with client's specification & Medium & High/ Changing all specification and possibly start all the work again & C3, C7\\
+\hline
+\end{tabular} }
+\end{center}
+
+\begin{center}{
+\begin{tabular}{|c|c|}
+\hline \textbf{Control ID} & \textbf{Description}\\
+\hline C1 &  Iteratively checking the specification of the product with stakeholders\\
+\hline C2 & Prepare the questions with team for the interview\\
+\hline C3 & Use other expert advise about the product development\\
+\hline C4 & Make presentation of the software system to the stakeholders\\
+\hline C5 & Develop the prototype of the product, based on bash script\\
+\hline C6 & Check the work by two members of the team\\
+\hline C7 & Investigate software competency and other skills within team\\
+\hline C8 & Assign one member to conduct the interviews\\
+\hline
+\end{tabular} }
+\end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
