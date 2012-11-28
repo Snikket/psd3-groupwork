@@ -19,6 +19,13 @@
 \newcommand{\PSDTaskDeliverables}[1]{\PSDTaskComponent{Deliverables}{#1}}
 \newcommand{\PSDTaskRisks}[1]{\PSDTaskComponent{Risk}{#1}}
 
+\newcommand{\PSDRiskComponent}[2]{\it #1: & #2 \\ \hline}
+\newcommand{\PSDRiskID}[1]{\PSDTaskComponent{ID}{#1}}
+\newcommand{\PSDRiskCategory}[1]{\PSDTaskComponent{Category}{#1}}
+\newcommand{\PSDRiskDescription}[1]{\PSDTaskComponent{Description}{#1}}
+\newcommand{\PSDRiskProbability}[1]{\PSDTaskComponent{Probability}{#1}}
+\newcommand{\PSDRiskImpact}[1]{\PSDTaskComponent{Impact}{#1}}
+\newcommand{\PSDRiskControls}[1]{\PSDTaskComponent{Controls}{#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{url}
@@ -200,7 +207,7 @@ header):
   \PSDTaskRisks{}
 \end{PSDTask}
 
-\begin{PSDTask}{11}{Prepare Stakeholders Panel Interview Questions}
+\begin{PSDTask}{8}{Prepare Stakeholders Panel Interview Questions}
   \PSDTaskDescription{Come up with a few key questions about the system/requirements we are unsure about to ask the clients. Allows us to clarify the requirements we have are correct.}%
   \PSDTaskOutcomes{Stakeholder panel Questions}%
   \PSDTaskDeliverables{None}%
@@ -401,7 +408,13 @@ assurance plan.
 
 \section{Risk Management Plan}
 
-RISKS CAN BE FOUND ON OUR GITHUB PAGE
+Here is the list of risk tables
+\begin{PSDRisk}{1}{}
+  \PSDRiskID{1}%
+  \PSDTaskOutcomes{Requirements Specification}%
+  \PSDTaskDeliverables{D3}%
+  \PSDTaskRisks{}
+\end{PSDTask}
 
 %https://github.com/Stringsy/psd3-groupwork/wiki/_pages
 
