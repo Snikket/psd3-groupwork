@@ -307,7 +307,7 @@ Task & Title & Hours & Depend & Team Members \\ [0.5ex]
 \hline6 & Produce Requirements Post Interview & 1:00 &5& All\\
 \hline7 & Review Initial Requirements & 1:00 &6& All \\
 \hline &  &  & &Asset Sarsengaliyev, \\
-8&Create UML of Internship Management System&3:00 &7 &Nicole Kearns,  \\
+8&Create UML Diagram of Internship Management System&3:00 &7 &Nicole Kearns,  \\
 & & & & Andrew Gardner \\
 \hline9  & Create Use Cases & 2:00&7 &Nicole Kearns,\\
  & & & & Ross Adam \\
@@ -324,12 +324,12 @@ Task & Title & Hours & Depend & Team Members \\ [0.5ex]
 \hline&  & & & Nicole Kearns, \\
  17 & Finalise Use Case Diagrams & 1:00& 16& Ross Adam, \\
  & &  & &Mamas Nicolaou \\
-\hline18 & Finalise Requirements Specifications Documents & 2:00 &15,17& Ross Adam \\
+\hline18 & Finalise Requirements Specification Documents & 2:00 &15,17& Ross Adam \\
 \hline19 & Research Bash Scripting & 3:00 &-&Andrew Gardner\\
 \hline20 & Create Bash Prototype & 6:00 &19,18&Andrew Gardner \\
 \hline21 & Test Bash Prototype & 2:00 &20& Mamas Nicolaou \\
-\hline22 & Demonstrate Bash Prototype to Customer & 0.30 &21& All\\     
-\hline23 & Review Notes from customer about Bash Prototype & 1:00 &22& All\\      
+\hline22 & Demonstrate Bash Prototype to Client& 0.30 &21& All\\     
+\hline23 & Review Feedback from client about Bash Prototype & 1:00 &22& All\\      
 \hline %inserts single line
 \end{tabular}
 \label{table:nonlin} % is used to refer this table in the text
@@ -351,13 +351,16 @@ Task & Title & Hours & Depend & Team Members \\ [0.5ex]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Equipment, Materials, Facilities, and Other Resources}
+\textbf{Equipment:} Level 7 Dell Lab Machines\\
+\textbf{Materials:} Pen \& paper\\
+\textbf{Facilities:} Boyd Orr Building's Level 7 Computing Lab\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Assurance Plan}
+\section{Quality Assurance Plan}
 
 
-The Quality Assurance Plan(The QAP) is the basis for maintaining the quality of our product on the highest level that matches the requirements for the given software system and approved by stakeholders. The QAP will be overseen by the team to maintain quality improvement activities, such as monitoring, adding features and evaluating defects. The purpose of the QAP is designed to match the following requirements:\\
+The Quality Assurance Plan is the basis for maintaining the quality of our product on the highest level that matches the requirements for the given software system and approved by stakeholders. The QAP will be overseen by the team to maintain quality improvement activities, such as monitoring, adding features and evaluating defects. The purpose of the QAP is designed to match the following requirements:\\
 
 \begin{itemize}
 \item to perform suitable actions when possibilities for improvements in service are identified.\\
@@ -386,11 +389,11 @@ Apart from that, we use black box testing with other teams to check if they can 
 \begin{center}{
 \begin{tabular}{|p{2cm}|p{2cm}|p{3cm}|p{2cm}|p{3cm}|p{2cm}|}
 \hline \textbf{Risk ID} &\textbf{Category} & \textbf{Description} & \textbf{Probability} & \textbf{Impact} & \textbf{Controls}\\
-\hline R1 & Requirements & Functional and non-functional requirements may be interpreted differently by team members due to the lack of interviews & Meduim & High / The final product may behave differently and delayed to fix the problems & C1, C3, C5\\
-\hline R2 & Requirements & Team members may ask inappropriate questions or miss important requirements & Low & Medium/ This may lead to improper documentation of the product & C2, C8\\
-\hline R3 & Requirements & The stakeholders are not sure how the final product should look like & High & Medium/ Stakeholders may not be satisfied with what developers will offer & C1, C3, C5\\
-\hline R4 & Skills & Members may over estimate their expectations about the final product & Very high & Medium/ The product will be different from what was offered on documentation & C1, C3, C5\\
-\hline R5 & Requirements & Releasing unprofessional document to the client missing some requirements or poorly prepared & Medium & High/ Consequently, the product may not reach expectations & C3, C5, C7\\
+\hline R1 & Requirements & Functional and non-functional requirements may be interpreted differently by team members due to the lack of interviews. & Meduim & High / The final product may behave differently and delays in fixing problems. & C1, C3, C5\\
+\hline R2 & Requirements & Team members may ask inappropriate questions or miss important requirements. & Low & Medium / This may lead to improper documentation of the product. & C2, C8\\
+\hline R3 & Requirements & The stakeholders are not sure how the final product should be. & High & Medium / Stakeholders may not be satisfied with product developed. & C1, C3, C5\\
+\hline R4 & Skills & Team Members may overestimate their skills & Very high & Medium / The quality of the product will be lower than what was specified. & C1, C3, C5\\
+\hline R5 & Requirements & Releasing poorly written documents to the client. & Medium & High / Consequently, the product may not reach expectations & C3, C5, C7\\
 \hline R6 & Technical & Team members are unfamiliar with appropriate tools & Medium & High/ Consequently, the product may not reach expectations & C3, C7\\
 \hline R7 & Requirements & Tasks may be left from the time-line & Medium & Medium/ This may lead to potential delays & C6\\
 \hline R8 & Prototyping & Prototype is not compatible with client's specification & Medium & High/ Changing all specification and possibly start all the work again & C3, C7\\
@@ -422,50 +425,50 @@ associated with our program there must be a stringent configuration
 management plan.\\
 
 \begin {enumerate}
-\item Change Management
+\item \textbf{Change Management}\\
 The decision to create a prototype rather than use incremental
-development will allow us to let the client interact with a primitive
-yet functional system quickly.//
+development will allow us to let the client interact with a primitive,
+yet functional system quickly.\\
 The prototype will help elicit and validate system requirements while
 also increasing our understanding of the system and uncover any
 additional requirements that may have been omitted.\\
 
-\item Version Management
+\item \textbf{Version Management}\\
 In order to prevent a team member's work being overwritten
-accidentally Team V will be using GitHub to keep a central repository
+accidentally, Team V will be using GitHub to keep a central repository
 of work. This can then be pulled from the GitHub site and worked on in
-a local workspace. To prevent the aforementioned interference local work is
+a local workspace. To prevent the aforementioned interference, local work is
 merged back into the central repository safely.\\  
 
-\item System Building
+\item \textbf{System Building}\\
 As above we will be using GitHub to maintain consistency in the
 codeline.\\
 
-\item Release Management
+\item \textbf{Release Management}\\
 Team V will be utilising the issues feature on GitHub to highlight
 completed tasks and milestones. It can also be used to assign new
 tasks for memebers to complete. This will allow the team to track
 current releases. \\
 \end{enumerate}
 
-Generally if changes need to be made the team will have to discuss
+Generally, if changes need to be made the team will have to discuss
 several different points to conclude if it should be addressed:\\
 
 \begin{enumerate}
-\item Consequences of not implementing the change
-If a change is need to alter a serious system failure it will be
-prioritised and addressed quickly. However if it is a simple error it
-may be left until a later date.
+\item \textbf{Consequences of not implementing the change}\\
+If a change is needed to alter a serious system failure it will be
+prioritised and addressed quickly. However, if it is a simple error it
+will be logged and corrected as current high priority tasks allow.
 
-\item Benefits of change
+\item \textbf{Benefits of change}\\
 Will the change benefit the majority of users or will it simply
 benefit the change proposer.
 
-\item Number of Users affected by change
+\item \textbf{Number of Users affected by change}\\
 If the change is for the benefit of only a few users is it worth the
 risk to potentially adversely effect more users?
 
-\item Cost of making the change
+\item \textbf{Cost of making the change}\\
 If the change is likely to create new bugs or take a lng time to
 implement it may simply be rejected.
 
@@ -481,7 +484,8 @@ easily and changes can be handled efficiently.
 \section{Glossary}
 
 \textbf{PSD3:} Professional Software Development 3\\
-\textbf{CC:} Course Coordinator\\
+\textbf{CC:} Course Co-ordinator\\
+\textbf{QAP:} Quality Assurance Plan\\
 
 \end{document}
 
