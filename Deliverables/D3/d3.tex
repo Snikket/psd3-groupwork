@@ -21,7 +21,7 @@ Asset Sarsengaliyev\\
 \deliverableID{D3}
 \project{PSD3 Group Exercise 1}
 \team{V}
-\version{1.5}
+\version{2.0}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -48,7 +48,7 @@ PSD3 Course Notes \url{http://fims.moodle.gla.ac.uk/file.php/128/lecture-notes/n
 \subsection{Purpose and Description of Document}
 
 The purpose of this document is to detail and explain the requirements collected for the
-internship management system. This will include all actors within the system, their use cases, descriptions, and suitable 
+internship management system. This will include all actors within the system, their use cases, descriptions and suitable 
 scenarios for the system.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -62,13 +62,14 @@ scenarios for the system.
 \hline 30/10/2012 & Initial Draft Completed & 0.2 & All \\ 
 \hline 10/11/2012 & Finalised for Submission & 0.3 & All\\ 
 \hline 11/11/2012 & \textbf{Draft Submission Deadline} & 1.0 & All\\ 
-\hline ... & Revision & & All\\ 
 \hline 19/11/2012 & Modified Section 4 & 1.1 & Nicole\\
-\hline 26/11/2012 & Modified the use case diagrams & 1.2 & Nicole\\
-\hline 26/11/2012 & Modified the use case descriptions & 1.3 & Andrew\\
-\hline 27/11/2012 & Modified the use case scenarios & 1.4 & Nicole\\
-\hline 28/11/2012 & Minor modifications to all use cases & 1.5 & Andrew, Nicole, Mamas\\
-\hline 29/11/2012 & \textbf{Final Submission Deadline} & & All\\ 
+\hline 20/11/2012 & Modified Non-Functional Requirements & 1.2 & Mamas Nicolaou\\
+\hline 26/11/2012 & Modified the use case diagrams & 1.3 & Nicole\\
+\hline 26/11/2012 & Modified the use case descriptions & 1.4 & Andrew\\
+\hline 27/11/2012 & Modified the use case scenarios & 1.5 & Nicole\\
+\hline 28/11/2012 & Minor modifications to all use cases & 1.6 & Andrew, Nicole, Mamas\\
+\hline 28/11/2012 & Finalised for submission & 2.0 & Andrew, Mamas\\
+\hline 29/11/2012 & \textbf{Final Submission Deadline} &2.0 & Andrew, Mamas\\ 
 \hline 
 \end{tabular} }
 \end{center}
@@ -84,32 +85,6 @@ The Course Co-ordinator will remove any adverts that have been filled or whose d
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{System Scope}
-
-From our requirements gathering and the stakeholder panel it has been
-concluded that the program must have the following features:
-
-\textbf{General:}\\
-
-1. Allow seperate logins for different types of Users specifically the subclasses Student, Course Co-ordinator and Company.\\
-2. Allow each user to log out from the system. \\
-3. A "back" option to naviagte away from pages.\\
-
-\textbf{Student:}\\
-
-1. Display a list of adverts.\\
-2. Functionality to select an advert to apply for from the displayed list.\\
-3. A function to notify course co-ordinator of succesful application.\\
-
-\textbf{Course Co-ordinator:}\\
-
-1. Display a list of Adverts that have been approved.\\
-2. Display a list of adverts that still have to be approved.\\
-3. Functionality to approve an advert from list.\\
- 
-\textbf{Company:}\\
-
-1. Ability to submit an advert for approval.\\
-2. Ability to edit advert.\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -156,9 +131,9 @@ use cases. The core use cases for the system are:\\
 \item Apply for internship
 \end{itemize}
 
-\textbf{Notification of successful internship placement by student (Section 4.4):}
+\textbf{Notification of successful internship placement by Student (Section 4.4):}
 \begin{itemize}
-\item Notify if successful placement
+\item Notify of successful placement
 \item Remove internship advert
 \end{itemize}
 
@@ -187,7 +162,7 @@ use cases. The core use cases for the system are:\\
 \UseCaseIncludes{Login, Logout}
 \UseCaseConditions{\textbf{Post:} The advert is stored in the system, pending approval by the CC.}
 \UseCaseNonFunctionalRequirements{Security}
-\UseCaseScenarios{IBM are wanting to submit an internship advert to the system. They log in to the system using their designated username IBM, fill out the submission form, confirm their submission and submit it to the system to eventually be approved by Timothy Storer, the current CC. IBM then log out of the system.}
+\UseCaseScenarios{IBM are wanting to submit an internship advert to the system. They log in to the system using their designated username, IBM, fill out the submission form, confirm their submission and submit it to the system to eventually be approved by Timothy Storer, the current CC. IBM then logs out of the system.}
 \UseCaseRisks{}
 \end{UseCaseTemplate}
 
@@ -200,7 +175,7 @@ use cases. The core use cases for the system are:\\
 \UseCaseActors{Company}
 \UseCaseIncludes{Login, Logout}
 \UseCaseConditions{\textbf{Pre:} Company's advert must currently be pending approval by the CC.}
-\UseCaseNonFunctionalRequirements{Data consistency}
+\UseCaseNonFunctionalRequirements{Data Consistency}
 \UseCaseScenarios{IBM realise that the advert they have previously submitted contains the wrong starting date. They log in to the system, select the relevant advert and section they want to edit and correct the starting date. They confirm their changes and then log out.}
 \UseCaseRisks{During client interview we were told that this probably wouldn't be needed, yet during the stakeholder panel meeting it was made clear that it was a valid requirement.}
 \end{UseCaseTemplate}
@@ -224,21 +199,21 @@ use cases. The core use cases for the system are:\\
 \UseCaseActors{Course Co-ordinator}
 \UseCaseIncludes{Login, Logout}
 \UseCaseConditions{\textbf{Pre:} Must have advert(s) pending approval on system.}
-\UseCaseNonFunctionalRequirements{Data consistency}
+\UseCaseNonFunctionalRequirements{Data Consistency}
 \UseCaseScenarios{Timothy Storer, the current CC, logs in to the system with his GUID and views all pending adverts submitted to the system and decides whether or not each internship is suitable for student review.}
 \UseCaseRisks{}
 \end{UseCaseTemplate}
 \begin{UseCaseTemplate}
 
 \UseCaseLabel{Approve internship advert}
-\UseCaseDescription{C\includegraphics[scale=0.7]{img/ApproveAdverts.png}}
+\UseCaseDescription{\includegraphics[scale=0.7]{img/ApproveAdverts.png}}
 \UseCaseRationale{During the client interview we verified that it was essential for the CC to have the ability to approve adverts.}
 \UseCasePriority{Must have}
 \UseCaseStatus{Not implemented}
 \UseCaseActors{Course coordinator}
 \UseCaseIncludes{Login, Logout}
 \UseCaseConditions{\textbf{Pre:} Must have advert(s) pending approval on system. \textbf{Post:} Approved advert now available for student viewing}
-\UseCaseNonFunctionalRequirements{Data consistency}
+\UseCaseNonFunctionalRequirements{Data Consistency}
 \UseCaseScenarios{After having reviewed an internship advert from IBM, Timothy Storer, the current CC, decides that the advert is suitable. He specifies what degree structure (CS/SE/ESE) it's suitable for and approves the advert for later student viewing.}
 \UseCaseRisks{}
 \end{UseCaseTemplate}
@@ -270,7 +245,7 @@ use cases. The core use cases for the system are:\\
 \begin{UseCaseTemplate}
 \UseCaseLabel{Apply for internship}
 \UseCaseDescription{\includegraphics[scale=0.7]{img/StudentApply.png}}
-\UseCaseRationale{During the interview, client told us that this would be a desirable feature to have but perhaps not essential.}
+\UseCaseRationale{During the interview the client told us that this would be a desirable feature to have but perhaps not essential.}
 \UseCasePriority{Could Have}
 \UseCaseStatus{Not Implemented}
 \UseCaseActors{Student}
@@ -291,7 +266,7 @@ use cases. The core use cases for the system are:\\
 
 
 \begin{UseCaseTemplate}
-\UseCaseLabel{Notify if successful placement}
+\UseCaseLabel{Notify of successful placement}
 \UseCaseDescription{\includegraphics[scale=0.7]{img/NotifyPlacement.png}}
 \UseCaseRationale{During the client interview we were told that allowing students to notify the CC of a successful placement was a requirement.}
 \UseCasePriority{Should have}
@@ -299,10 +274,10 @@ use cases. The core use cases for the system are:\\
 \UseCaseActors{Student}
 \UseCaseIncludes{Login, Logout}
 \UseCaseConditions{\textbf{Pre:} The advert for the placement position that was taken must be still
-visible on the system. \textbf{Post:} Course Coordinator is notified.}
+visible on the system.}
 \UseCaseNonFunctionalRequirements{User Concurrency, Security}
 \UseCaseScenarios{Jim, the 3rd year Software Engineering student, has successfully obtained an internship at his company of choice, IBM. He logs in to the system in order to notify Timothy Storer, the current Course Co-ordinator, that he has got the placement. He selects the relevant option and selects the IBM placement to notify the Course Co-ordinator.}
-\UseCaseRisks{The stakeholder panel meeting left this requirement necessity somewhat abiguous but we didn't feel it was outwith the system scope.}
+\UseCaseRisks{The stakeholder panel meeting left this requirement somewhat abiguous but we didn't feel it was outwith the system scope.}
 \end{UseCaseTemplate}
 
 \begin{UseCaseTemplate}
@@ -313,7 +288,7 @@ visible on the system. \textbf{Post:} Course Coordinator is notified.}
 \UseCaseStatus{Not implemented}
 \UseCaseActors{Course Co-ordinator}
 \UseCaseIncludes{Login, Logout}
-\UseCaseConditions{\textbf{Pre:} Course Co-ordinator has recieved a notification to say the placement has been filled. \textbf{Post:} Advert no longer available on the system.}
+\UseCaseConditions{\textbf{Pre:} Course Co-ordinator has recieved a notification to say the placement has been filled.}
 \UseCaseNonFunctionalRequirements{Data Consistency}
 \UseCaseScenarios{Timothy Storer, the current Course Co-ordinator, receives a notification that Jim the SE student has secured a placement with IBM. Timothy logs in to the system, finds and selects the IBM advert, and removes it from the system.}
 \UseCaseRisks{}
@@ -342,7 +317,7 @@ visible on the system. \textbf{Post:} Course Coordinator is notified.}
 \UseCasePriority{Must Have}
 \UseCaseStatus{Not implemented}
 \UseCaseActors{Company, Students, Course Coordinator}
-\UseCaseIncludes{}
+\UseCaseIncludes{Login}
 \UseCaseConditions{\textbf{Pre:} User must be currently logged in to the system.}
 \UseCaseNonFunctionalRequirements{}
 \UseCaseScenarios{Jim, the 3rd year software engineering student, after browsing the available adverts on the system but finding nothing suitable, wishes to log out of the system. He selects log out and his subsequently logged out of the system.}
@@ -354,9 +329,9 @@ visible on the system. \textbf{Post:} Course Coordinator is notified.}
 \section{Non Functional Requirements}
 
 \begin{itemize}
-\item User Concurrency: The system should be available to all Students of the School of Computing Science and a large number of users might want to use the system at the same time so the System should be able to handle a large number of users at once.
-\item Data Consistency: The system must maintain data accuracy and integrity throughout the sytem's use, to ensure that each user observes a consistent view of the data despite any changes made by other users.
-\item Security: Students should be able to log in with their GUIDs and passowrds which would be the same used for other University of Glasgow websites such as Moodle and MyCampus. Employers who wish to use the system to post placement adverts will need to be provided with new usernames and passwords in order to use the system.
+\item User Concurrency: The system should be available to all Students of the School of Computing Science. A large number of users might want to use the system at the same time so the system should be able to handle a large number of users at once.
+\item Data Consistency: The system must maintain data accuracy and integrity throughout the sytem's use to ensure that each user observes a consistent view of the data despite any changes made by other users.
+\item Security: Students and Course Co-ordinator should be able to log in with their GUIDs and passwords which would be the same used for other University of Glasgow websites such as Moodle and MyCampus. Employers who wish to use the system to post internship adverts will need to be provided with new usernames and passwords in order to use the system.
 \item Number of Adverts: The system must be able to handle an unlimited number of adverts. Any number of companies might offer placement opportunities for students each year therefore the number of adverts that can be posted on the system must not be limited.
 \end{itemize}
 
@@ -366,17 +341,16 @@ visible on the system. \textbf{Post:} Course Coordinator is notified.}
 
 A company should upload their adverts to the system. The course coordinator will review
 all adverts posted to the system and determine whether or not they are appropriate for the
-students. If appropriate, the CC makes the advert available for the students to view. If a student
-wants to apply for an advert, they will email the company or apply through their website. If
-a student successfully secures a placement, they must notify the course coordinator. If all
-placements have been filled, the CC can take the adverts off the system.
+students. If appropriate, the CC makes the advert available for the students to browse. If a student
+wants to apply for an advert, they will be redirected to the company's website or apply through their website. If
+a student successfully secures a placement, they must notify the Course Co-ordinator. The Course Co-ordinator will then remove the advert from the system if all placements have been filled or if the advert has passed the deadline.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
 
 \section{Glossary}
-CC - Course Co-ordinator
+CC - Course Co-ordinator\\
 PSD - Professional Software Development
 
 \section{Stakeholder Interview Documentation}
@@ -389,10 +363,7 @@ Key points we got from our interview with the client are:
 then be posted on the system.
 \item When applying for internships, students will be redirected to the company website or given
 an email address in order to send in their CV.
-\item Students will be able to flag inappropriate adverts to the CC.
-\item Students will notify the CC of a successful placement via email.
-\item The Company must also verify a successful placement to avoid students abusing the
-system.
+\item Students will notify the CC of a successful placement.
 \item Once a student has accepted a placement, the advert is taken off the system.
 \end{itemize}
 
