@@ -409,24 +409,24 @@ An Advert can have the following states: Pendign, Not Published and Published. A
 
 
 \subsection{Advert Management Component}
-\textbf{Method}: public Advertisement getAdvert( Integer advertisementIndex )\\
-\textbf{Description}: Returns advertisement specified by its index\\
+\textbf{Method}: public Advert getAdvert( Integer advertisementIndex )\\
+\textbf{Description}: Returns advert specified by its index\\
 \textbf{Parameters}: Integer advertisementIndex\\
-\textbf{Return Type}: Advertisement\\
-\textbf{Pre Condition}: Advertisement must be stored in system\\
+\textbf{Return Type}: Advert\\
+\textbf{Pre Condition}: Advert must be stored in system\\
 \textbf{Post Condition}:\\
 
 \textbf{Method}: public Map getAdverts( Map filter )\\
-\textbf{Description}: Returns set of advertisements, filtered by mapped options\\
+\textbf{Description}: Returns set of adverts, filtered by mapped options\\
 \textbf{Parameters}: Map filter\\
 \textbf{Return Type}: Map\\
-\textbf{Pre Condition}: At least one advertisement stored in system\\
+\textbf{Pre Condition}: At least one advert stored in system\\
 \textbf{Post Condition}:\\
 
-\textbf{Method}: public Advertisement createAdvert( Map advertDetails )\\
-\textbf{Description}: Creates \& returns advertisement\\
+\textbf{Method}: public Advert createAdvert( Map advertDetails )\\
+\textbf{Description}: Creates \& returns advert\\
 \textbf{Parameters}: Map advertDetails\\
-\textbf{Return Type}: Advertisement \\
+\textbf{Return Type}: Advert \\
 \textbf{Pre Condition}:\\
 \textbf{Post Condition}:\\
 
@@ -437,9 +437,9 @@ An Advert can have the following states: Pendign, Not Published and Published. A
 \textbf{Pre Condition}: Advertisement must be in system \\
 \textbf{Post Condition}: Advertisement no longer present in system\\
 
-\textbf{Method}: public void storeAdvertisement( Advertisement a )\\
+\textbf{Method}: public void storeAdvertisement( Advert a )\\
 \textbf{Description}: Stores advertisement in system\\
-\textbf{Parameters}: Advertisement a\\
+\textbf{Parameters}: Advert a\\
 \textbf{Return Type}: void\\
 \textbf{Pre Condition}:\\
 \textbf{Post Condition}: Advert stored in system\\
@@ -460,6 +460,7 @@ An Advert can have the following states: Pendign, Not Published and Published. A
 
 
 \subsection{User Management Component}
+
 \textbf{Method}: public boolean login( String userName, String password )\\
 \textbf{Description}: Logs user into the system\\
 \textbf{Parameters}: String userName, String password\\
@@ -474,11 +475,39 @@ An Advert can have the following states: Pendign, Not Published and Published. A
 \textbf{Pre Condition}: User currently logged in\\
 \textbf{Post Condition}: Un-sets current user\\
 
-\textbf{Method}: public User getCurrentUser( ) \\
+\textbf{Method}: public User getCurrentUser( )\\
 \textbf{Description}: Returns currently logged in user\\
 \textbf{Parameters}:\\
 \textbf{Return Type}: User\\
 \textbf{Pre Condition}: User currently logged in\\
+\textbf{Post Condition}:\\
+
+\textbf{Method}: public User getCurrentEmployer( )\\
+\textbf{Description}: Returns currently selected employer\\
+\textbf{Parameters}:\\
+\textbf{Return Type}: Employer\\
+\textbf{Pre Condition}: An employer must be selected\\
+\textbf{Post Condition}:\\
+
+\textbf{Method}: public Map getUsers( Map filter )\\
+\textbf{Description}: Returns set of users, filtered by mapped options\\
+\textbf{Parameters}: Map filter\\
+\textbf{Return Type}: Map\\
+\textbf{Pre Condition}: At least one user in system\\
+\textbf{Post Condition}:\\
+
+\textbf{Method}: public Employer registerNewEmployee( String name, String emailAddress )\\
+\textbf{Description}: Returns employer after setting up an account for them\\
+\textbf{Parameters}: String name, String emailAddress\\
+\textbf{Return Type}: Employer\\
+\textbf{Pre Condition}: Employer shouldn't exist on system\\
+\textbf{Post Condition}: Employer has account on system\\
+
+\textbf{Method}: public Student getStudent( String matric )\\
+\textbf{Description}: Returns student specified by matric\\
+\textbf{Parameters}: String matric\\
+\textbf{Return Type}: Student\\
+\textbf{Pre Condition}: Student must exist in system\\
 \textbf{Post Condition}:\\
 
 
