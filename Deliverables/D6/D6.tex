@@ -348,12 +348,16 @@ An Advert can have the following states: Pendign, Not Published and Published. A
 
 \section{Acceptance Tests}
 
-Before we finish the internship management plan, we will assure that the system will be working properly during its use. In order to make sure system will not crash, there will be acceptance tests. The criteria for passing acceptance tests are proper functionality of all use cases as well as passing non-functional requirements.\\
+Before the Internship Management System can be deployed we must create
+several acceptance tests to ensure that the program covers all the
+requirements from the specification. These acceptance tests are not
+designed to identify bugs but to ensure that the user can interact
+with the application and use it's advertised functions.\\
 
 \begin{tabular}{|c|c|}
 \hline \textbf{Identifier} & T.C.5.1.1\\
 \hline \textbf{Use case} & Login \\
-\hline \textbf{Scenario} & Logged in as a course coordinator \\
+\hline \textbf{Scenario} & Logging in as a course coordinator \\
 \hline \textbf{Set up} & System initialised with default parameters\\
 \hline \textbf{Includes} & none\\
 \hline \textbf{Procedure} & Not defined yet\\
@@ -370,7 +374,8 @@ Before we finish the internship management plan, we will assure that the system 
 \hline \textbf{Includes} & none\\
 \hline \textbf{Procedure} & Not defined yet\\
 \hline \textbf{Inputs} & User = «ccadmin», password=pass1\\
-\hline \textbf{Outputs} & User has not changed to ccadmin \\
+\hline \textbf{Outputs} & User has not changed to ccadmin or gained
+access to admin features \\
 \hline
 \end{tabular}
 
@@ -388,7 +393,7 @@ Before we finish the internship management plan, we will assure that the system 
 
 \begin{tabular}{|c|c|}
 \hline \textbf{Identifier} & T.C.5.1.4 \\
-\hline \textbf{Use case} & Logout \\
+\hline \textbf{Use case} & Login \\
 \hline \textbf{Scenario} & Logging in as a company\\
 \hline \textbf{Set up} & System initilised with default parameters and logged in\\
 \hline \textbf{Includes} & T.C.5.7.1\\
@@ -398,7 +403,8 @@ Before we finish the internship management plan, we will assure that the system 
 \hline
 \end{tabular}
 
-There scenario set will include all test with invalid loginnames, passwords for all type of users.\\
+The above Tests cover the different user types logging in with both
+invalid and valid passwords.\\ 
 
 \begin{tabular}{|c|c|}
 \hline \textbf{Identifier} & T.C.5.2.1 \\
@@ -580,6 +586,7 @@ There scenario set will include all test with invalid loginnames, passwords for 
 \hline
 \end{tabular}
 
-This test cases will be implemented using JUnit class of Java. There are also some unit tests to check nonfunctional requirements, such as 100 simulatenous connections to the web server, which matches the maximum number of students can see the ads at the same time.\\
+These test cases will be implemented using the JUnit class within
+Java. 
 
 \end{document}
