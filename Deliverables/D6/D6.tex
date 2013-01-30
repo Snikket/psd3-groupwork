@@ -81,6 +81,20 @@ system desgin and acceptance plan for the internship management system. This rep
 {img/D6_comp_diagram.png}
 \end{center}
 
+\textbf{Rationale}\\
+The component diagram was created to illustrate the structural relationship between all components of the internship management system. It also shows the modularity of the different parts of the system.\\
+
+\textbf{Description}\\
+
+The System store is comprised of three separated databases: the Advert Store, Offer Store and the visit store and each of these are drawn together using a facade, which will direct queries to the relevant database. \\
+
+The User Store contains employer store and GU user store. The employer store is a custom database and the GU user store is the myCampus system. Interaction with the myCampus system will be limited to retrieving basic student and staff information.\\
+
+The User Authentication uses two separate components to forward the data to the relevant login system: myCampus or the employer store. \\
+
+The Internship Management System contains several different components that allow the user to interact with the various other components and data stores within the system.\\
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{State Diagrams}
@@ -90,8 +104,8 @@ system desgin and acceptance plan for the internship management system. This rep
 The following three diagrams were created to illustrate how entities within the application change over time. The three entities are Student, Internship and Advert. These entities were identified by the ``status'' variable in their specification. \\
 
 \subsection{Student}
-\textbf{Description} \\
 
+\textbf{Description} \\
 Student was choosen because it displayed 4 distinct states: Approved, Accepted, Withdrawn and Pending. These were identified from the ``View Student Details'' use case. However the finding other use cases to justify this proved difficult as none could be found that implied a change in the Student entity state. Therefore the following diagram was implemented in a manner deemed logical by the team. This is mostly a sub-state diagram encased within a "Not Withdrawn" box. If withdrawn then the sub-state is immediately exited.
 
 \begin{center}
@@ -101,7 +115,7 @@ Student was choosen because it displayed 4 distinct states: Approved, Accepted, 
 \end{center}
 
 \subsection{Internship}
-\textbf{Description}
+\textbf{Description}\\
 The Internship has two states Pending and Approved. An Internship starts as either depending on whether it was created by the Course Co-ordinator (Approved) or by a student (Pending). A pending entity can be Approved by the approve method.
 
 \begin{center}
@@ -111,7 +125,7 @@ The Internship has two states Pending and Approved. An Internship starts as eith
 \end{center}
 
 \subsection{Advert}
-\textbf{Description}
+\textbf{Description}\\
 An Advert can have the following states: Pendign, Not Published and Published. An advert always starts in the pending state, from there it can either become Not Published or Published. It becomes Published if it is deemed acceptable by the Course Co-ordinator and it becomes Not Published if it needs revised. Only a pending or Not Published article can be revised.
 
 \begin{center}
