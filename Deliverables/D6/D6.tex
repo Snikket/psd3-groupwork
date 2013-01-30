@@ -174,7 +174,7 @@ An Advert can have the following states: Pendign, Not Published and Published. A
 \textbf{Method}: Public void storeAdvert(integer advertId)\\
 \textbf{Description}: Adds a new advert with the given advert id to the advert store. \\
 \textbf{Parameters}: Integer advertId\\
-\textbf{Return Type}: \\
+\textbf{Return Type}: void\\
 \textbf{Pre Condition}: Advert is not already stored in the advert store.\\
 \textbf{Post Condition}: Advert is now stored in the advert store.\\
 
@@ -190,7 +190,7 @@ An Advert can have the following states: Pendign, Not Published and Published. A
 \textbf{Method}: Public void removeOffer(integer offerId)\\
 \textbf{Description}: The offer with the given offer id is removed from the system. \\
 \textbf{Parameters}: Integer offerId \\
-\textbf{Return Type}:\\
+\textbf{Return Type}: void\\
 \textbf{Pre Condition}: offer with the given id is available within the system.\\
 \textbf{Post Condition}: offer is no longer stored on the system.\\
 
@@ -204,7 +204,7 @@ An Advert can have the following states: Pendign, Not Published and Published. A
 \textbf{Method}: Public void storeOffer(integer offerId)\\
 \textbf{Description}: Adds a new offer with the given offer id to the offer store. \\
 \textbf{Parameters}: Integer offerId\\
-\textbf{Return Type}:\\
+\textbf{Return Type}: void\\
 \textbf{Pre Condition}: offer is not already stored in the offer store.\\
 \textbf{Pre Condition}: student notifies course coordinator of internship placement offer.\\
 \textbf{Post Condition}: offer is now stored in the offer store.\\
@@ -221,7 +221,7 @@ An Advert can have the following states: Pendign, Not Published and Published. A
 \textbf{Method}: Public void removeVisit(integer advertId)\\
 \textbf{Description}: The visit details with the given visit id removed from the system. \\
 \textbf{Parameters}: Integer visitId\\
-\textbf{Return Type}:\\
+\textbf{Return Type}: void\\
 \textbf{Pre Condition}: visit details with the given id are available within the system.\\
 \textbf{Post Condition}: visit details are no longer available on the system.\\
 
@@ -235,7 +235,7 @@ An Advert can have the following states: Pendign, Not Published and Published. A
 \textbf{Method}: Public void storeVisit(integer visitId) \\
 \textbf{Description}:  adds the details of a new visit with the given visit id to the visit store.\\
 \textbf{Parameters}: Integer visitId\\
-\textbf{Return Type}:\\
+\textbf{Return Type}: void\\
 \textbf{Pre Condition}: Visit is not already stored in the visit store.\\
 \textbf{Post Condition}: visit is now stored in the visit store.\\
 
@@ -251,7 +251,7 @@ An Advert can have the following states: Pendign, Not Published and Published. A
 \textbf{Method}: Public void removeEmployer(integer employerId) \\
 \textbf{Description}: will remove the employer with the specified id from the system, meaning that they can no longer log in to the system\\
 \textbf{Parameters}: Integer empoyerId\\
-\textbf{Return Type}:\\
+\textbf{Return Type}: void\\
 \textbf{Pre Condition}: The employer is stored in the Employer Store\\
 \textbf{Post Condition}: The employer details are no longer available/stored.\\
 
@@ -265,51 +265,31 @@ An Advert can have the following states: Pendign, Not Published and Published. A
 \textbf{Method}: Public void storeEmployer(integer employerId) \\
 \textbf{Description}:  Adds a new Employer with the given Employer id to the Employer store.\\
 \textbf{Parameters}: Integer employerId\\
-\textbf{Return Type}:\\
+\textbf{Return Type}: void\\
 \textbf{Pre Condition}: employer with the specified id does not exist in the employer store.\\
 \textbf{Post Condition}: Employer is stored in the employer store.\\
+
+\textbf{Method}: Public void updateEmployer(integer employerID, Map empDetails)\\
+\textbf{Description}: updates the specified details for the employer with the given employerId.\\
+\textbf{Parameters}: Integer employerId, Map empDetails\\
+\textbf{Return Type}: void\\
+\textbf{Pre Condition}: employer is already stored in the system.\\
+\textbf{Post Condition}: The specified details are updated in the system.\\
+
 
 \textbf{Method}: Public void setEmployerPassword(String password) \\
 \textbf{Description}: Allows the Employer to set up a new password.\\
 \textbf{Parameters}: String password\\
-\textbf{Return Type}: \\
+\textbf{Return Type}: void\\
 \textbf{Pre Condition}: Employer with given id is available in the system.\\
 \textbf{Post Condition}: New password is now set to the String passed in.\\
 
-\textbf{Method}: Public String getEmployerPassword() \\
+\textbf{Method}: Public String getEmployerPassword(Integer employerId) \\
 \textbf{Description}: Will provide the user with the password for the specific employer.\\
-\textbf{Parameters}:\\
+\textbf{Parameters}: Integer employerId\\
 \textbf{Return Type}: String \\
 \textbf{Pre Condition}: Employer is available in the system.\\
 \textbf{Post Condition}:\\
-
-\textbf{Method}: Public String getEmployerName()\\
-\textbf{Description}: Gets the name of the employer with a specific employer id.\\
-\textbf{Parameters}:\\
-\textbf{Return Type}: String\\
-\textbf{Pre Condition}: Employer with given id is available in the system.\\
-\textbf{Post Condition}:\\
-
-\textbf{Method}: Public void setEmployerName(String name)\\
-\textbf{Description}: Allows the user to set the name of the employer for the specified employer.\\
-\textbf{Parameters}: String name\\
-\textbf{Return Type}:\\
-\textbf{Pre Condition}: Employer with given id is available in the system.\\
-\textbf{Post Condition}: Employer name is now set to the String given.\\
-
-\textbf{Method}: Public void getEmployerEmail()\\
-\textbf{Description}: Gets the email address for the employer with a specific employer id.\\
-\textbf{Parameters}:\\
-\textbf{Return Type}:\\
-\textbf{Pre Condition}: Employer with given id is available in the system.\\
-\textbf{Post Condition}:\\
-
-\textbf{Method}: Public void setEmployerEmail(String email)\\
-\textbf{Description}: Allows the user to set the email address of the employer for the specified employer.\\
-\textbf{Parameters}:String email\\
-\textbf{Return Type}:\\
-\textbf{Pre Condition}: Employer with given id is available in the system.\\
-\textbf{Post Condition}: The email address of the employer is set to the String provided.\\
 
 \subsection{GU User Store}
 
@@ -324,7 +304,7 @@ An Advert can have the following states: Pendign, Not Published and Published. A
 \textbf{Description}: Will remove the GU user with the specified id from the system, meaning that they can no longer log in to the system.
 \\
 \textbf{Parameters}: Integer GUuserId\\
-\textbf{Return Type}:\\
+\textbf{Return Type}: void\\
 \textbf{Pre Condition}: GU user details are stored in the GU user store\\
 \textbf{Post Condition}: User details are no longer available in the GU user store\\
 
@@ -338,37 +318,16 @@ An Advert can have the following states: Pendign, Not Published and Published. A
 \textbf{Method}: Public void storeGUuser (integer GUuserId)\\
 \textbf{Description}: Adds a new GU user with the given GUuser id to the GU user store.\\
 \textbf{Parameters}: Integer GUuserId\\
-\textbf{Return Type}:\\
+\textbf{Return Type}: void\\
 \textbf{Pre Condition}: No user with the given id is stored in the GU user store\\
 \textbf{Post Condition}: GU user is stored in the GU user store.\\
-
-\textbf{Method}: Public String getGUuserName()\\
-\textbf{Description}: Gets the name of the GU user with a specific GU user id.\\
-\textbf{Parameters}:\\
-\textbf{Return Type}: String\\
-\textbf{Pre Condition}: GU user with given id is stored in the system.\\
-\textbf{Post Condition}:\\
-
-\textbf{Method}: Public void setGUuserName(String name)\\
-\textbf{Description}: Allows the user to set the name of the GU user for the specified GUuser Id.\\
-\textbf{Parameters}: String name\\
-\textbf{Return Type}:\\
-\textbf{Pre Condition}: GU user is stored in the system.\\
-\textbf{Post Condition}: The name of the GU user is set to the String provided.\\
-
-\textbf{Method}: Public void getGUuserEmail(Integer GUuserId)\\
-\textbf{Description}: Gets the email address for the GU user with a specific GUuser id.\\
-\textbf{Parameters}: Integer GUuserId\\
-\textbf{Return Type}:\\
-\textbf{Pre Condition}: GUuser with the given id is available within the system.\\
-\textbf{Post Condition}:\\
 
 \subsection{Employer Authentication}
 
 \textbf{Method}: Public void authenticateEmpUser(String username, String password)\\
 \textbf{Description}: Checks that the username and password for the user are correct.\\
 \textbf{Parameters}: String username, String password\\
-\textbf{Return Type}:\\
+\textbf{Return Type}: void\\
 \textbf{Pre Condition}: Employer user is not logged in to the system.\\
 \textbf{Post Condition}: Employer is logged into the system.\\
 
@@ -377,7 +336,7 @@ An Advert can have the following states: Pendign, Not Published and Published. A
 \textbf{Method}: Public void authenticateGUuser(String username, String password)\\
 \textbf{Description}: Checks that the username and password for the user are correct. \\
 \textbf{Parameters}: String username, String password\\
-\textbf{Return Type}:\\
+\textbf{Return Type}: void\\
 \textbf{Pre Condition}: GU user is not logged in to the system.\\
 \textbf{Post Condition}: GU user is logged into the system.\\
 
