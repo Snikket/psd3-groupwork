@@ -78,37 +78,40 @@ design of the system and an evaluation of our prototype.
 
 \section{State Diagrams}
 
-\subsection{Rationale} \\
+\subsection{Rationale}
 
 The following three diagrams were created to illustrate how entities within the application change over time. The three entities are Student, Internship and Advert. These entities were identified by the ``status'' variable in their specification. \\
 
-\subsection{Student}\\
+\subsection{Student}
 \textbf{Description} \\
 
 Student was choosen because it displayed 4 distinct states: Approved, Accepted, Withdrawn and Pending. These were identified from the ``View Student Details'' use case. However the finding other use cases to justify this proved difficult as none could be found that implied a change in the Student entity state. Therefore the following diagram was implemented in a manner deemed logical by the team. This is mostly a sub-state diagram encased within a "Not Withdrawn" box. If withdrawn then the sub-state is immediately exited.
 
-\textbf{Diagram}
+\begin{center}
 \includegraphics
-{img/Student State.png}
-\end{center}\\
+[scale=0.7]
+{img/Student-State.png}
+\end{center}
 
-\subsection{Internship}\\
+\subsection{Internship}
 \textbf{Description}
 The Internship has two states Pending and Approved. An Internship starts as either depending on whether it was created by the Course Co-ordinator (Approved) or by a student (Pending). A pending entity can be Approved by the approve method.
 
-\textbf{Diagram}
+\begin{center}
 \includegraphics
-{img/Internship State.png}
-\end{center}\\
+[scale=0.7]
+{img/Internship-state.png}
+\end{center}
 
 \subsection{Advert}
 \textbf{Description}
 An Advert can have the following states: Pendign, Not Published and Published. An advert always starts in the pending state, from there it can either become Not Published or Published. It becomes Published if it is deemed acceptable by the Course Co-ordinator and it becomes Not Published if it needs revised. Only a pending or Not Published article can be revised.
 
-\textbf{Diagram}
+\begin{center}
 \includegraphics
-{img/Advert State.png}
-\end{center}\\
+[scale=0.7]
+{img/Advert-State.png}
+\end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -356,4 +359,4 @@ An Advert can have the following states: Pendign, Not Published and Published. A
 
 \section{Acceptance Tests}
 
-\end{document
+\end{document}
