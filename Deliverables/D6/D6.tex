@@ -349,7 +349,7 @@ Before we finish the internship management plan, we will assure that the system 
 \begin{tabular}{|c|c|}
 \hline \textbf{Identifier} & T.C.5.1.1\\
 \hline \textbf{Use case} & Login \\
-\hline \textbf{Scenario} & Primary \\
+\hline \textbf{Scenario} & Logged in as a course coordinator \\
 \hline \textbf{Set up} & System initialised with default parameters\\
 \hline \textbf{Includes} & none\\
 \hline \textbf{Procedure} & Not defined yet\\
@@ -361,7 +361,7 @@ Before we finish the internship management plan, we will assure that the system 
 \begin{tabular}{|c|c|}
 \hline \textbf{Identifier} & T.C.5.1.2 \\
 \hline \textbf{Use case} & Login\\
-\hline \textbf{Scenario} & Invalid password\\
+\hline \textbf{Scenario} & Invalid login/password\\
 \hline \textbf{Set up} & System initialised with default parameters\\
 \hline \textbf{Includes} & none\\
 \hline \textbf{Procedure} & Not defined yet\\
@@ -373,21 +373,35 @@ Before we finish the internship management plan, we will assure that the system 
 \begin{tabular}{|c|c|}
 \hline \textbf{Identifier} & T.C.5.1.3\\
 \hline \textbf{Use case} & Login \\
-\hline \textbf{Scenario} & Other types of users\\
+\hline \textbf{Scenario} & Logging in as a student\\
 \hline \textbf{Set up} & System initialised with default parameters\\
 \hline \textbf{Includes} & none\\
 \hline \textbf{Procedure} & not defined yet\\
-\hline \textbf{Inputs} & User = «2060267s», password=password \\
+\hline \textbf{Inputs} & User = «2060267s», password=password\\
 \hline \textbf{Outputs} & User has changed to student\\
 \hline
 \end{tabular}
 
 \begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.1.4 \\
+\hline \textbf{Use case} & Logout \\
+\hline \textbf{Scenario} & Logging in as a company\\
+\hline \textbf{Set up} & System initilised with default parameters and logged in\\
+\hline \textbf{Includes} & T.C.5.7.1\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & User = «Google», password=Mypassword1998\\
+\hline \textbf{Outputs} & User has changed to company\\
+\hline
+\end{tabular}
+
+There scenario set will include all test with invalid loginnames, passwords for all type of users.\\
+
+\begin{tabular}{|c|c|}
 \hline \textbf{Identifier} & T.C.5.2.1 \\
 \hline \textbf{Use case} & Logout \\
-\hline \textbf{Scenario} & Primary\\
+\hline \textbf{Scenario} & Logging out\\
 \hline \textbf{Set up} & System initilised with default parameters and logged in\\
-\hline \textbf{Includes} & T.C.5.1.1 \\
+\hline \textbf{Includes} & T.C.5.1.1/T.C.5.1.3/T.C.5.1.4 (logged in as a registered user)\\
 \hline \textbf{Procedure} & Not defined yet\\
 \hline \textbf{Inputs} & logout\\
 \hline \textbf{Outputs} & User has changed to guest\\
@@ -397,9 +411,9 @@ Before we finish the internship management plan, we will assure that the system 
 \begin{tabular}{|c|c|}
 \hline \textbf{Identifier} & T.C.5.3.1 \\
 \hline \textbf{Use case} & View internship list\\
-\hline \textbf{Scenario} & Primary\\
+\hline \textbf{Scenario} & Viewing approved internships\\
 \hline \textbf{Set up} & System initilised with default parameters and logged in\\
-\hline \textbf{Includes} & T.C.5.1.1\\
+\hline \textbf{Includes} & T.C.5.1.1/T.C.5.1.3 (logged in as a member of university)\\
 \hline \textbf{Procedure} & Not defined yet\\
 \hline \textbf{Inputs} & view\\
 \hline \textbf{Outputs} & All approved internship lists are shown\\
@@ -407,11 +421,23 @@ Before we finish the internship management plan, we will assure that the system 
 \end{tabular}
 
 \begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.3.2 \\
+\hline \textbf{Use case} & View internship list\\
+\hline \textbf{Scenario} & Show unapproved intershnips\\
+\hline \textbf{Set up} & System initilised with default parameters and logged in\\
+\hline \textbf{Includes} &T.C.5.1.1 (course coordinator), T.C.5.5.1(submitted ads)\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & View unapproved\\
+\hline \textbf{Outputs} & All unapproved internship lists are shown\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
 \hline \textbf{Identifier} & T.C.5.4.1 \\
 \hline \textbf{Use case} & Edit internship\\
 \hline \textbf{Scenario} & Primary\\
-\hline \textbf{Set up} & System initilised with default parameters and logged in\\
-\hline \textbf{Includes} & T.C.5.1.1, T.C.5.3.1\\
+\hline \textbf{Set up} & Logged in as a course coordinator\\
+\hline \textbf{Includes} & T.C.5.1.1, T.C.5.6.1 (ad details shown, course coordinator)\\
 \hline \textbf{Procedure} & Not defined yet \\
 \hline \textbf{Inputs} & New description\\
 \hline \textbf{Outputs} & Internship is updated\\
@@ -422,8 +448,8 @@ Before we finish the internship management plan, we will assure that the system 
 \hline \textbf{Identifier} & T.C.5.5.1\\
 \hline \textbf{Use case} & Submit internship\\
 \hline \textbf{Scenario} & Primary\\
-\hline \textbf{Set up} & System initilised with default parameters\\
-\hline \textbf{Includes} & none\\
+\hline \textbf{Set up} & Logged in as a company\\
+\hline \textbf{Includes} & T.C.5.1.4 (company login)\\
 \hline \textbf{Procedure} & Not defined yet\\
 \hline \textbf{Inputs} & Internship details\\
 \hline \textbf{Outputs} & Email sent to course coordinator\\
@@ -435,7 +461,7 @@ Before we finish the internship management plan, we will assure that the system 
 \hline \textbf{Use case} & View advertisement detail\\
 \hline \textbf{Scenario} & Primary\\
 \hline \textbf{Set up} & System initilised with default parameters and logged in\\
-\hline \textbf{Includes} & T.C.5.1.1 T.C.5.5.1\\
+\hline \textbf{Includes} & T.C.5.1.1 T.C.5.1.3 T.C.5.1.4 T.C.5.5.1\\
 \hline \textbf{Procedure} & Not defined yet\\
 \hline \textbf{Inputs} & Select internship\\
 \hline \textbf{Outputs} & Selected internship details are shown\\
@@ -445,7 +471,7 @@ Before we finish the internship management plan, we will assure that the system 
 \begin{tabular}{|c|c|}
 \hline \textbf{Identifier} & T.C.5.7.1\\
 \hline \textbf{Use case} & Register employer\\
-\hline \textbf{Scenario} & Primary\\
+\hline \textbf{Scenario} & Employer is registered\\
 \hline \textbf{Set up} & System initilised with default parameters\\
 \hline \textbf{Includes} & none\\
 \hline \textbf{Procedure} & Not defined yet\\
@@ -471,7 +497,7 @@ Before we finish the internship management plan, we will assure that the system 
 \hline \textbf{Use case} & View advertisement summary\\
 \hline \textbf{Scenario} & Primary\\
 \hline \textbf{Set up} & System initilised with published advertisements\\
-\hline \textbf{Includes} & T.C.5.9.1\\
+\hline \textbf{Includes} & T.C.5.9.1 T.C.5.1.1\\
 \hline \textbf{Procedure} & Not defined yet\\
 \hline \textbf{Inputs} & View ads\\
 \hline \textbf{Outputs} & Advertisement summary is shown\\
@@ -499,6 +525,54 @@ Before we finish the internship management plan, we will assure that the system 
 \hline \textbf{Procedure} & Not defined yet\\
 \hline \textbf{Inputs} & Unpublished ad\\
 \hline \textbf{Outputs} & Ad is not published, company is notified\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.10.1\\
+\hline \textbf{Use case} & Notify course coordinator\\
+\hline \textbf{Scenario} & primary\\
+\hline \textbf{Set up} & Internship details are filled in, logged as a student\\
+\hline \textbf{Includes} & T.C.5.1.3\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & Internship details\\
+\hline \textbf{Outputs} & Email sent to course coordinator for approval\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.10.2\\
+\hline \textbf{Use case} & Notify course coordinator\\
+\hline \textbf{Scenario} & secondary\\
+\hline \textbf{Set up} & logged as a student\\
+\hline \textbf{Includes} & T.C.5.1.3\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & Missing/invalid Internship details\\
+\hline \textbf{Outputs} & Warning message is shown\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.11.1\\
+\hline \textbf{Use case} & Approve advert\\
+\hline \textbf{Scenario} & Approving internship\\
+\hline \textbf{Set up} & logged as a course coordinator\\
+\hline \textbf{Includes} & T.C.5.1.1 T.C.5.11.1\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & Approve\\
+\hline \textbf{Outputs} & Internship approved in student details\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.11.2\\
+\hline \textbf{Use case} & Approve advert\\
+\hline \textbf{Scenario} & Disapproving internship\\
+\hline \textbf{Set up} & logged as a course coordinator\\
+\hline \textbf{Includes} & T.C.5.1.1 T.C.5.11.1\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & Disapprove\\
+\hline \textbf{Outputs} & Internship disapproved in student details\\
 \hline
 \end{tabular}
 
