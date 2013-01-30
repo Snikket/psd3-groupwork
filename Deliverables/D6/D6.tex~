@@ -72,6 +72,10 @@ system desgin and acceptance plan for the internship management system. This rep
 \hline 30/01/13 & Added the information to the introduction section & 0.3 & Nicole\\ 
 \hline 30/01/13 & Added the APIs for the Stores and Authentication & 0.3 & Nicole\\
 \hline 30/01/13 & Added the component diagram, and the description and rationale & 0.3 & Nicole, Ross\\
+\hline 30/01/13 & Added the Acceptance tests & 0.4 & Asset\\
+\hline 30/01/13 & Updated the Acceptance tests & 0.5 & Ross\\
+\hline 30/01/13 & Added the APIs for the Advert, Visit, Offer and User Management & 0.6 & Andrew\\
+\hline 30/01/13 & Added the Class diagrams & 0.7 & Mamas\\
 \hline 
 \end{tabular} }
 \end{center}
