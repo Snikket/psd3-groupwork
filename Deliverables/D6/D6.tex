@@ -385,4 +385,164 @@ An Advert can have the following states: Pendign, Not Published and Published. A
 
 \section{Acceptance Tests}
 
+Before we finish the internship management plan, we will assure that the system will be working properly during its use. In order to make sure system will not crash, there will be acceptance tests. The criteria for passing acceptance tests are proper functionality of all use cases as well as passing non-functional requirements.\\
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.1.1\\
+\hline \textbf{Use case} & Login \\
+\hline \textbf{Scenario} & Primary \\
+\hline \textbf{Set up} & System initialised with default parameters\\
+\hline \textbf{Includes} & none\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & User = «ccadmin», password=pass\\
+\hline \textbf{Outputs} & User set from guest to ccadmin \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.1.2 \\
+\hline \textbf{Use case} & Login\\
+\hline \textbf{Scenario} & Invalid password\\
+\hline \textbf{Set up} & System initialised with default parameters\\
+\hline \textbf{Includes} & none\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & User = «ccadmin», password=pass1\\
+\hline \textbf{Outputs} & User has not changed to ccadmin \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.1.3\\
+\hline \textbf{Use case} & Login \\
+\hline \textbf{Scenario} & Other types of users\\
+\hline \textbf{Set up} & System initialised with default parameters\\
+\hline \textbf{Includes} & none\\
+\hline \textbf{Procedure} & not defined yet\\
+\hline \textbf{Inputs} & User = «2060267s», password=password \\
+\hline \textbf{Outputs} & User has changed to student\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.2.1 \\
+\hline \textbf{Use case} & Logout \\
+\hline \textbf{Scenario} & Primary\\
+\hline \textbf{Set up} & System initilised with default parameters and logged in\\
+\hline \textbf{Includes} & T.C.5.1.1 \\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & logout\\
+\hline \textbf{Outputs} & User has changed to guest\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.3.1 \\
+\hline \textbf{Use case} & View internship list\\
+\hline \textbf{Scenario} & Primary\\
+\hline \textbf{Set up} & System initilised with default parameters and logged in\\
+\hline \textbf{Includes} & T.C.5.1.1\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & view\\
+\hline \textbf{Outputs} & All approved internship lists are shown\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.4.1 \\
+\hline \textbf{Use case} & Edit internship\\
+\hline \textbf{Scenario} & Primary\\
+\hline \textbf{Set up} & System initilised with default parameters and logged in\\
+\hline \textbf{Includes} & T.C.5.1.1, T.C.5.3.1\\
+\hline \textbf{Procedure} & Not defined yet \\
+\hline \textbf{Inputs} & New description\\
+\hline \textbf{Outputs} & Internship is updated\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.5.1\\
+\hline \textbf{Use case} & Submit internship\\
+\hline \textbf{Scenario} & Primary\\
+\hline \textbf{Set up} & System initilised with default parameters\\
+\hline \textbf{Includes} & none\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & Internship details\\
+\hline \textbf{Outputs} & Email sent to course coordinator\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.6.1\\
+\hline \textbf{Use case} & View advertisement detail\\
+\hline \textbf{Scenario} & Primary\\
+\hline \textbf{Set up} & System initilised with default parameters and logged in\\
+\hline \textbf{Includes} & T.C.5.1.1 T.C.5.5.1\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & Select internship\\
+\hline \textbf{Outputs} & Selected internship details are shown\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.7.1\\
+\hline \textbf{Use case} & Register employer\\
+\hline \textbf{Scenario} & Primary\\
+\hline \textbf{Set up} & System initilised with default parameters\\
+\hline \textbf{Includes} & none\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & Valid employer details\\
+\hline \textbf{Outputs} & Details sent to course coordinator\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.7.2\\
+\hline \textbf{Use case} & Register employer\\
+\hline \textbf{Scenario} & Invalid details\\
+\hline \textbf{Set up} & System initilised with default parameters\\
+\hline \textbf{Includes} & none\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & Invalid/missing employer details\\
+\hline \textbf{Outputs} & Warning message is shown with error details\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.8.1\\
+\hline \textbf{Use case} & View advertisement summary\\
+\hline \textbf{Scenario} & Primary\\
+\hline \textbf{Set up} & System initilised with published advertisements\\
+\hline \textbf{Includes} & T.C.5.9.1\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & View ads\\
+\hline \textbf{Outputs} & Advertisement summary is shown\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.9.1\\
+\hline \textbf{Use case} & Review/publish advert\\
+\hline \textbf{Scenario} & Primary\\
+\hline \textbf{Set up} & System initilised with unpublished advertisements\\
+\hline \textbf{Includes} & T.C.5.1.1 T.C.5.5.1\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & Unpublished ad\\
+\hline \textbf{Outputs} & Ad is published, company is notified\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.9.2\\
+\hline \textbf{Use case} & Review/publish advert\\
+\hline \textbf{Scenario} & Secondary\\
+\hline \textbf{Set up} & System initilised with unpublished advertisements\\
+\hline \textbf{Includes} & T.C.5.1.1 T.C.5.5.1\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & Unpublished ad\\
+\hline \textbf{Outputs} & Ad is not published, company is notified\\
+\hline
+\end{tabular}
+
+This test cases will be implemented using JUnit class of Java. There are also some unit tests to check nonfunctional requirements, such as 100 simulatenous connections to the web server, which matches the maximum number of students can see the ads at the same time.\\
+
 \end{document}
