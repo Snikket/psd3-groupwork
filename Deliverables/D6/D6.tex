@@ -510,6 +510,51 @@ An Advert can have the following states: Pendign, Not Published and Published. A
 \textbf{Pre Condition}: Student must exist in system\\
 \textbf{Post Condition}:\\
 
+\textbf{Method}: public void notifyAcceptedOffer( Role role, String managerName, String managerEmail )\\
+\textbf{Description}: Notifies coordinator of accepted offer by E-Mail\\
+\textbf{Parameters}: Role role, String managerName, String managerEmail\\
+\textbf{Return Type}: void\\
+\textbf{Pre Condition}: Student must be logged in\\
+\textbf{Post Condition}:\\
+
+\subsection{Offer Management}
+\textbf{Method}: public void acceptOffer( ) \\
+\textbf{Description}: TODO?\\
+\textbf{Parameters}: TODO?\\
+\textbf{Return Type}: TODO?\\
+\textbf{Pre Condition}: TODO?\\
+\textbf{Post Condition}: TODO?\\
+
+\textbf{Method}: public void approveAcceptedOffer( String matriculation )\\
+\textbf{Description}: Approves offer most recently accepted by student with this matriculation id\\
+\textbf{Parameters}: String matriculation\\
+\textbf{Return Type}: void\\
+\textbf{Pre Condition}: Student needs to have accepted at least one offer \\
+\textbf{Post Condition}:\\
+
+\subsection{Visit Management}
+\textbf{Method}: public Visit createVisit( String matriculation, UoGGrade grade, String description )\\
+\textbf{Description}: Creates and returns a visit\\
+\textbf{Parameters}: String matriculation, UoGGrade grade, String description\\
+\textbf{Return Type}: Visit\\
+\textbf{Pre Condition}: Student must exist on system\\
+\textbf{Post Condition}:\\
+
+\textbf{Method}: public void storeVisit( Visit v )\\
+\textbf{Description}: Stores visit in system\\
+\textbf{Parameters}: Visit v\\
+\textbf{Return Type}: void\\
+\textbf{Pre Condition}:\\
+\textbf{Post Condition}:\\
+
+\subsection{Utility COmponent}
+\textbf{Method}: public void sendEmail( String emailAddress, String content ) \\
+\textbf{Description}: Sends an E-Mail containing content to emailAddress\\
+\textbf{Parameters}: String emailAddress, String content\\
+\textbf{Return Type}: void\\
+\textbf{Pre Condition}:\\
+\textbf{Post Condition}:\\
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
