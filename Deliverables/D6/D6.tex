@@ -121,7 +121,7 @@ Student was choosen because it displayed 4 distinct states: Approved, Accepted, 
 
 \subsection{Internship}
 \textbf{Description}\\
-The Internship has two states Pending and Approved. An Internship starts as either depending on whether it was created by the Course Co-ordinator (Approved) or by a student (Pending). A pending entity can be Approved by the approve method.
+The Internship has two states Pending and Approved. An Internsaddhip starts as either depending on whether it was created by the Course Co-ordinator (Approved) or by a student (Pending). A pending entity can be Approved by the approve method.
 
 \begin{center}
 \includegraphics
@@ -339,6 +339,82 @@ An Advert can have the following states: Pendign, Not Published and Published. A
 \textbf{Return Type}: void\\
 \textbf{Pre Condition}: GU user is not logged in to the system.\\
 \textbf{Post Condition}: GU user is logged into the system.\\
+
+
+\subsection{Advert Management Component}
+\textbf{Method}: public Advertisement getAdvert( Integer advertisementIndex )\\
+\textbf{Description}: Returns advertisement specified by its index\\
+\textbf{Parameters}: Integer advertisementIndex\\
+\textbf{Return Type}: Advertisement\\
+\textbf{Pre Condition}: Advertisement must be stored in system\\
+\textbf{Post Condition}:\\
+
+\textbf{Method}: public Map getAdverts( Map filter )\\
+\textbf{Description}: Returns set of advertisements, filtered by mapped options\\
+\textbf{Parameters}: Map filter\\
+\textbf{Return Type}: Map\\
+\textbf{Pre Condition}: At least one advertisement stored in system\\
+\textbf{Post Condition}:\\
+
+\textbf{Method}: public Advertisement createAdvert( Map advertDetails )\\
+\textbf{Description}: Creates \& returns advertisement\\
+\textbf{Parameters}: Map advertDetails\\
+\textbf{Return Type}: Advertisement \\
+\textbf{Pre Condition}:\\
+\textbf{Post Condition}:\\
+
+\textbf{Method}: public void removeAdvert( Integer advertIndex )\\
+\textbf{Description}: Removes advertisment from system\\
+\textbf{Parameters}: Integer advertIndex \\
+\textbf{Return Type}: void \\
+\textbf{Pre Condition}: Advertisement must be in system \\
+\textbf{Post Condition}: Advertisement no longer present in system\\
+
+\textbf{Method}: public void storeAdvertisement( Advertisement a )\\
+\textbf{Description}: Stores advertisement in system\\
+\textbf{Parameters}: Advertisement a\\
+\textbf{Return Type}: void\\
+\textbf{Pre Condition}:\\
+\textbf{Post Condition}: Advert stored in system\\
+
+\textbf{Method}: public void publishAdvertisement ( Integer advertIndex, String comment )\\
+\textbf{Description}: Makes advertisement visible to students \& sends comment to employer by E-Mail\\
+\textbf{Parameters}: Integer advertIndex, String comment\\
+\textbf{Return Type}: void\\
+\textbf{Pre Condition}: Advertisement must be in system \& be unpublished\\
+\textbf{Post Condition}: Advertisment is now visible to students\\
+
+\textbf{Method}: public Role selectRole( Integer advertIndex, Integer roleIndex )\\
+\textbf{Description}: Returns role for an advertisement, both specified by index\\
+\textbf{Parameters}: Integer advertIndex, Integer roleIndex\\
+\textbf{Return Type}: Role\\
+\textbf{Pre Condition}: Advert \& role must be in system\\
+\textbf{Post Condition}:\\
+
+
+\subsection{User Management Component}
+\textbf{Method}: public boolean login( String userName, String password )\\
+\textbf{Description}: Logs user into the system\\
+\textbf{Parameters}: String userName, String password\\
+\textbf{Return Type}: boolean\\
+\textbf{Pre Condition}: User exists on system \& not currently logged in\\
+\textbf{Post Condition}: Set as current user\\
+
+\textbf{Method}: public void logout( )\\
+\textbf{Description}: Logs user out of the system\\
+\textbf{Parameters}:\\
+\textbf{Return Type}: void\\
+\textbf{Pre Condition}: User currently logged in\\
+\textbf{Post Condition}: Un-sets current user\\
+
+\textbf{Method}: public User getCurrentUser( ) \\
+\textbf{Description}: Returns currently logged in user\\
+\textbf{Parameters}:\\
+\textbf{Return Type}: User\\
+\textbf{Pre Condition}: User currently logged in\\
+\textbf{Post Condition}:\\
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
