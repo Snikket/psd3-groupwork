@@ -1,11 +1,8 @@
 package uk.ac.glasgow.internman.impl;
 import static org.junit.Assert.*;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Map;
 
 import org.junit.After;
 import org.junit.Before;
@@ -14,9 +11,11 @@ import org.junit.Test;
 import uk.ac.glasgow.internman.Advertisement;
 import uk.ac.glasgow.internman.Employer;
 import uk.ac.glasgow.internman.Role;
-import uk.ac.glasgow.internman.Student;
-import uk.ac.glasgow.internman.UoGGrade;
+import uk.ac.glasgow.internman.users.CCUser;
+import uk.ac.glasgow.internman.users.EmployerUser;
 import uk.ac.glasgow.internman.users.User;
+
+
 
 public class InternManStubTest {
 	private String username;
@@ -25,8 +24,9 @@ public class InternManStubTest {
 	private String forename;
 	private String surname;
 	private String email;
+	private String ccuser;
+	private String ccpassword;
 	InternManStub interfc;
-	User student;
 	
 	@Before
 	public void setUp() throws Exception {
@@ -36,8 +36,8 @@ public class InternManStubTest {
 		forename="Daniel";
 		surname="Gonzales";
 		ID="1000000";
-		//creating new student for testing
-		student=new User(ID,password,forename, surname, email);
+		ccuser="tws";
+		ccpassword="1234";
 		interfc=new InternManStub();
 	}
 	
@@ -47,43 +47,44 @@ public class InternManStubTest {
 		username=null;
 		password=null;
 		interfc=null;
-		student=null;
 		email=null;
 		forename=null;
 		surname=null;
 		ID=null;
+		ccuser=null;
+		ccpassword=null;
 	}
-	//TODO Register new Student
+	@Test
+	public void loginTest(){
+		assertTrue(interfc.login("tws", "1234"));
+	}
+	
+	@Test
+	public void getCurrentUserTest(){
+		interfc.login("tws", "1234");
+		assertTrue(interfc.getCurrentUser().getID()=="tws");
+	}
 	
 	@Test
 	public void RegisterNewEmployerTest() 
 	{
+		interfc.login("tws", "1234");
 		Employer p= interfc.registerNewEmployer(username, email);
 		Boolean result=(p instanceof Employer)&&(p.getEmailAddress().equals(email))&&(p.getName().equals(forename));
 		assertTrue(result);
 	}
-	
-	@Test
-	public void loginTest(){
-		assertTrue(interfc.login(username, password));
-	}
-
-	@Test
-	public void getCurrentUserTest(){
-		User test=interfc.getCurrentUser();
-		assertEquals(student,test);
-	}
 
 	@Test
 	public void createNewAdvertisementTest(){
+		interfc.login("tws", "1234");
 		Advertisement ad=interfc.createNewAdvertisement("Testing Data");
-		assertEquals("Testing Data",ad.getApplicationDetails());
+		assertTrue(ad!=null);
 		
 	}
 	
 	@Test
 	public void selectAdvertisementTest(){
-		interfc.login(username, password);
+		interfc.login("tws", "1234");
 		assertTrue(interfc.selectAdvertisement(1) instanceof Advertisement);
 	}
 
@@ -93,18 +94,8 @@ public class InternManStubTest {
 	}
 	
 	@Test
-	public void notifyAcceptedOfferTest() {
-		String managerEmail="manager@test.com";
-		notifyAcceptedOffer(role, managerName, managerEmail);
-		final ByteArrayOutputStream printedContent = new ByteArrayOutputStream();
-		System.setOut(new PrintStream(printedContent));
-		assertEquals("Notification email sent to " + managerEmail, printedContent.toString());		
-	}
-	
-	@Test
 	public void selectStudentTest(){
-		Student test=interfc.selectStudent(student.getID());
-		assertTrue(student.equals(test));
+		
 	}
 
 	@Test
