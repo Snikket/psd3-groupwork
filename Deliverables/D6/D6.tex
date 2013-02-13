@@ -15,7 +15,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Check these macro values for appropriateness for your own document.
 
-\title{Draft Submission}
+\title{System Design and Acceptance Test Plan}
 
 \author{Ross Adam \\
         Andrew Gardner \\
@@ -28,7 +28,7 @@
 \deliverableID{D6}
 \project{PSD3 Group Exercise 2}
 \team{V}
-\version{0.1}
+\version{0.7}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -48,7 +48,7 @@
 \section{Introduction}
 
 \subsection{Identification}
-System Desgin and Acceptance test plan for internship management system.
+System Design and Acceptance test plan for internship management system.
 
 \subsection{Related Documentation}
 
@@ -97,7 +97,7 @@ The component diagram was created to illustrate the structural relationship betw
 
 The System store is comprised of three separated databases: the Advert Store, Offer Store and the visit store and each of these are drawn together using a facade, which will direct queries to the relevant database. \\
 
-The User Store contains employer store and GU user store. The employer store is a custom database and the GU user store is the myCampus system. Interaction with the myCampus system will be limited to retrieving basic student and staff information.\\
+The User Store contains employer store and GU user store. The employer store is a custom database and the GU user store is a front-end to the myCampus system. Interaction with the myCampus system will be limited to retrieving basic student and staff information.\\
 
 The User Authentication uses two separate components to forward the data to the relevant login system: myCampus or the employer store. \\
 
@@ -125,7 +125,7 @@ Student was choosen because it displayed 4 distinct states: Approved, Accepted, 
 
 \subsection{Internship}
 \textbf{Description}\\
-The Internship has two states Pending and Approved. An Internsaddhip starts as either depending on whether it was created by the Course Co-ordinator (Approved) or by a student (Pending). A pending entity can be Approved by the approve method.
+The Internship has two states Pending and Approved. An Internship starts as either depending on whether it was created by the Course Co-ordinator (Approved) or by a student (Pending). A pending entity can be Approved by the approve method.
 
 \begin{center}
 \includegraphics
@@ -630,7 +630,7 @@ access to admin features \\
 \hline \textbf{Identifier} & T.C.5.1.4 \\
 \hline \textbf{Use case} & Login \\
 \hline \textbf{Scenario} & Logging in as a company\\
-\hline \textbf{Set up} & System initilised with default parameters and logged in\\
+\hline \textbf{Set up} & System initialised with default parameters and logged in\\
 \hline \textbf{Includes} & T.C.5.7.1\\
 \hline \textbf{Procedure} & Not defined yet\\
 \hline \textbf{Inputs} & User = «Google», password=Mypassword1998\\
@@ -645,7 +645,7 @@ invalid and valid passwords.\\
 \hline \textbf{Identifier} & T.C.5.2.1 \\
 \hline \textbf{Use case} & Logout \\
 \hline \textbf{Scenario} & Logging out\\
-\hline \textbf{Set up} & System initilised with default parameters and logged in\\
+\hline \textbf{Set up} & System initialised with default parameters and logged in\\
 \hline \textbf{Includes} & T.C.5.1.1/T.C.5.1.3/T.C.5.1.4 (logged in as a registered user)\\
 \hline \textbf{Procedure} & Not defined yet\\
 \hline \textbf{Inputs} & logout\\
@@ -657,7 +657,7 @@ invalid and valid passwords.\\
 \hline \textbf{Identifier} & T.C.5.3.1 \\
 \hline \textbf{Use case} & View internship list\\
 \hline \textbf{Scenario} & Viewing approved internships\\
-\hline \textbf{Set up} & System initilised with default parameters and logged in\\
+\hline \textbf{Set up} & System initialised with default parameters and logged in\\
 \hline \textbf{Includes} & T.C.5.1.1/T.C.5.1.3 (logged in as a member of university)\\
 \hline \textbf{Procedure} & Not defined yet\\
 \hline \textbf{Inputs} & view\\
@@ -669,7 +669,7 @@ invalid and valid passwords.\\
 \hline \textbf{Identifier} & T.C.5.3.2 \\
 \hline \textbf{Use case} & View internship list\\
 \hline \textbf{Scenario} & Show unapproved intershnips\\
-\hline \textbf{Set up} & System initilised with default parameters and logged in\\
+\hline \textbf{Set up} & System initialised with default parameters and logged in\\
 \hline \textbf{Includes} &T.C.5.1.1 (course coordinator), T.C.5.5.1(submitted ads)\\
 \hline \textbf{Procedure} & Not defined yet\\
 \hline \textbf{Inputs} & View unapproved\\
@@ -705,7 +705,7 @@ invalid and valid passwords.\\
 \hline \textbf{Identifier} & T.C.5.6.1\\
 \hline \textbf{Use case} & View advertisement detail\\
 \hline \textbf{Scenario} & Primary\\
-\hline \textbf{Set up} & System initilised with default parameters and logged in\\
+\hline \textbf{Set up} & System initialised with default parameters and logged in\\
 \hline \textbf{Includes} & T.C.5.1.1 T.C.5.1.3 T.C.5.1.4 T.C.5.5.1\\
 \hline \textbf{Procedure} & Not defined yet\\
 \hline \textbf{Inputs} & Select internship\\
@@ -717,7 +717,7 @@ invalid and valid passwords.\\
 \hline \textbf{Identifier} & T.C.5.7.1\\
 \hline \textbf{Use case} & Register employer\\
 \hline \textbf{Scenario} & Employer is registered\\
-\hline \textbf{Set up} & System initilised with default parameters\\
+\hline \textbf{Set up} & System initialised with default parameters\\
 \hline \textbf{Includes} & none\\
 \hline \textbf{Procedure} & Not defined yet\\
 \hline \textbf{Inputs} & Valid employer details\\
@@ -729,7 +729,7 @@ invalid and valid passwords.\\
 \hline \textbf{Identifier} & T.C.5.7.2\\
 \hline \textbf{Use case} & Register employer\\
 \hline \textbf{Scenario} & Invalid details\\
-\hline \textbf{Set up} & System initilised with default parameters\\
+\hline \textbf{Set up} & System initialised with default parameters\\
 \hline \textbf{Includes} & none\\
 \hline \textbf{Procedure} & Not defined yet\\
 \hline \textbf{Inputs} & Invalid/missing employer details\\
@@ -741,7 +741,7 @@ invalid and valid passwords.\\
 \hline \textbf{Identifier} & T.C.5.8.1\\
 \hline \textbf{Use case} & View advertisement summary\\
 \hline \textbf{Scenario} & Primary\\
-\hline \textbf{Set up} & System initilised with published advertisements\\
+\hline \textbf{Set up} & System initialised with published advertisements\\
 \hline \textbf{Includes} & T.C.5.9.1 T.C.5.1.1\\
 \hline \textbf{Procedure} & Not defined yet\\
 \hline \textbf{Inputs} & View ads\\
@@ -753,7 +753,7 @@ invalid and valid passwords.\\
 \hline \textbf{Identifier} & T.C.5.9.1\\
 \hline \textbf{Use case} & Review/publish advert\\
 \hline \textbf{Scenario} & Primary\\
-\hline \textbf{Set up} & System initilised with unpublished advertisements\\
+\hline \textbf{Set up} & System initialised with unpublished advertisements\\
 \hline \textbf{Includes} & T.C.5.1.1 T.C.5.5.1\\
 \hline \textbf{Procedure} & Not defined yet\\
 \hline \textbf{Inputs} & Unpublished ad\\
@@ -765,7 +765,7 @@ invalid and valid passwords.\\
 \hline \textbf{Identifier} & T.C.5.9.2\\
 \hline \textbf{Use case} & Review/publish advert\\
 \hline \textbf{Scenario} & Secondary\\
-\hline \textbf{Set up} & System initilised with unpublished advertisements\\
+\hline \textbf{Set up} & System initialised with unpublished advertisements\\
 \hline \textbf{Includes} & T.C.5.1.1 T.C.5.5.1\\
 \hline \textbf{Procedure} & Not defined yet\\
 \hline \textbf{Inputs} & Unpublished ad\\
@@ -821,7 +821,8 @@ invalid and valid passwords.\\
 \hline
 \end{tabular}
 
-These test cases will be implemented using the JUnit class within
-Java. 
+Subsection{Test Plan Implementation}
+
+These test cases will be implemented using the JUnit test harness within Java. 
 
 \end{document}
