@@ -18,12 +18,16 @@ public class OfferManagement {
 	private OfferStore OS;
 	
 	public OfferManagement(){
-		
+		this.OS = new OfferStore("offer_store.txt");
 	}
 	
-	//public void acceptOffer(){
-	//	OS.getOffer(ID).setStatus(InternshipStatus.ACCEPTED);
-	//}
+	public Offer getOffer(Integer ID){
+		return OS.getOffer(ID);
+	}
+	
+	public void acceptOffer(Integer ID){
+		OS.getOffer(ID).setStatus(InternshipStatus.ACCEPTED);
+	}
 	
 	public void approveAcceptedOffer(String matriculation){
 		

@@ -7,8 +7,7 @@ import uk.ac.glasgow.internman.Employer;
 import uk.ac.glasgow.internman.Role;
 import uk.ac.glasgow.internman.stores.UserStore;
 import uk.ac.glasgow.internman.stores.UserStoreImpl;
-import uk.ac.glasgow.internman.users.EmployerUser;
-import uk.ac.glasgow.internman.users.User;
+import uk.ac.glasgow.internman.users.*;
 
 public class UserManagement {
 
@@ -16,8 +15,9 @@ public class UserManagement {
 	
 	public UserManagement()
 	{
-		this.US = new UserStoreImpl("data/users.obj");
-		US.addUser("tws", "12324", "Tim", "Storer", "timothy.storer@gla.ac.uk");
+		this.US = new UserStoreImpl("user_store.txt");
+		CCUser ccu = new CCUser("tws", "1234", "Tim", "Storer", "timothy@storer.gla.ac.uk");
+		US.addUser(ccu);
 	}
 	
 	public boolean login(String userName, String password) {

@@ -14,7 +14,7 @@ public class Offer implements Internship {
 	private String manager;
 	private String managerEmail;
 	private Employer employer;
-	private InternshipStatus status;
+	private InternshipStatus status = InternshipStatus.APPLYING;
 	private Role role;
 	private Visit visit;
 	
@@ -49,6 +49,10 @@ public class Offer implements Internship {
 
 	public InternshipStatus getStatus(){
 		return this.status;
+	}
+	
+	public void setStatus(InternshipStatus status){
+		this.status = status;
 	}
 
 	public Visit getVisit(){
