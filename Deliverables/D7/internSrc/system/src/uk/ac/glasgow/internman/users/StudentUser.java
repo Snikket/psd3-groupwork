@@ -5,7 +5,7 @@ import uk.ac.glasgow.internman.Student;
 
 public class StudentUser extends User implements Student {
 	
-	private final String userType = "GU";
+	private final String userType = "student";
 
 	public StudentUser(String ID, String password, String forename,
 			String surname, String email) {
