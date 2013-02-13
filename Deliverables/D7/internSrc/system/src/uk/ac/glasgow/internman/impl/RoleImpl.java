@@ -21,6 +21,7 @@ public class RoleImpl implements Role {
 	private Date startDate;
 	private Date endDate;
 	private Double salary;
+	private boolean isApproved;
 	private String location;
 	
 	public RoleImpl(){
@@ -49,7 +50,7 @@ public class RoleImpl implements Role {
 	}
 	
 	public boolean isApproved(){
-		return false;
+		return this.isApproved;
 	}
 
 	public String getLocation(){

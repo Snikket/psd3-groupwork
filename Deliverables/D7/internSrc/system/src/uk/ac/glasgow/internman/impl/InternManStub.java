@@ -9,6 +9,7 @@ import uk.ac.glasgow.internman.Advertisement;
 import uk.ac.glasgow.internman.Advertisement.AdvertisementStatus;
 import uk.ac.glasgow.internman.Employer;
 import uk.ac.glasgow.internman.InternMan;
+import uk.ac.glasgow.internman.Internship;
 import uk.ac.glasgow.internman.Internship.InternshipStatus;
 import uk.ac.glasgow.internman.Role;
 import uk.ac.glasgow.internman.Student;
@@ -32,8 +33,6 @@ public class InternManStub implements InternMan {
 	// Advert Management Component
 	private AdvertManagement AM;
 	
-	private OfferManagement OM;
-	
 	// Current logged in user
 	private User currentUser = null;
 	
@@ -44,6 +43,8 @@ public class InternManStub implements InternMan {
 	
 	@Override
 	public boolean login(String userName, String password) {
+		
+		AM.createAdvert("test", null);
 		
 		if (UM.login(userName, password)){
 			this.currentUser = UM.getUser(userName);
@@ -130,6 +131,9 @@ public class InternManStub implements InternMan {
 		Advertisement advert = AM.getAdvert(index);
 		// get advert's employer
 		String empName = advert.getEmployer().getName();
+		
+		System.out.printf("ARGH!");
+		
 		// get advert status
 		AdvertisementStatus status = advert.getStatus();
 		// get current user
@@ -154,6 +158,24 @@ public class InternManStub implements InternMan {
 
 	@Override
 	public Role selectRole(Integer advertisementIndex, Integer roleIndex) {
+		
+		Advert advert = AM.getAdvert(advertisementIndex);
+		String empName = advert.getEmployer().getName();
+		AdvertisementStatus status = advert.getStatus();
+		
+		User user = this.currentUser;
+		String userType = user.getUserType();
+		
+		if (userType == "student" && status != AdvertisementStatus.PUBLISHED){
+			return null;
+		}
+		if (userType == "employer"){
+			Employer employer = (EmployerUser)user;
+			if (employer.getName() != empName){
+				return null;
+			}
+		}	
+		
 		return (Role) AM.getAdvert(advertisementIndex).getRoles();
 	}
 
@@ -190,15 +212,12 @@ public class InternManStub implements InternMan {
 		if (this.currentUser.getUserType() != "coordinator")
 			return;
 		
-		//if offer is ACCEPTED change to APPROVED.
-		//get the student with the matric and get their offer
+		StudentUser student = (StudentUser) UM.getUser(matriculation);
 		
-		User student = UM.getUser(matriculation);
-				
-		if (OM.getOffer(ID).getStatus() != InternshipStatus.ACCEPTED)
+		
+		if (student.getInternship().getStatus() != InternshipStatus.ACCEPTED)
 			return;
-		
-		OM.getOffer(ID).setStatus(InternshipStatus.APPROVED);
+		((Offer) student.getInternship()).setStatus(InternshipStatus.APPROVED);
 
 	}
 

@@ -29,8 +29,8 @@ public class OfferManagement {
 		OS.getOffer(ID).setStatus(InternshipStatus.ACCEPTED);
 	}
 	
-	public void approveAcceptedOffer(String matriculation){
-		
+	public void approveAcceptedOffer(Integer ID){
+		OS.getOffer(ID).setStatus(InternshipStatus.APPROVED);
 	}
 	
 	

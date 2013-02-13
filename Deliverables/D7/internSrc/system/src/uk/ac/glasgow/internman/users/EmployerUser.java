@@ -6,7 +6,6 @@ public class EmployerUser extends User implements Employer {
 	
 	private static int counter;
 	private String name;
-	private final String userType = "employer";
 	
 	public EmployerUser(String ID, String password, String name, String forename,
 			String surname, String email) {
@@ -19,6 +18,11 @@ public class EmployerUser extends User implements Employer {
 		this.setPassword(Integer.toString(counter*1000));
 	}
 
+	public String getUserType(){
+		return "employer";
+	}
+	
+	
 	public String getName() {
 		return this.name;
 	}

@@ -5,7 +5,7 @@ import uk.ac.glasgow.internman.Student;
 
 public class StudentUser extends User implements Student {
 	
-	private final String userType = "student";
+	private Internship internship;
 
 	public StudentUser(String ID, String password, String forename,
 			String surname, String email) {
@@ -13,8 +13,13 @@ public class StudentUser extends User implements Student {
 		super(ID, password, forename, surname, email);
 	}
 
+	public String getUserType(){
+		return "student";
+	}
+	
+	
 	public Internship getInternship() {
-		return null;
+		return this.internship;
 	}
 
 	public String getSurname() {

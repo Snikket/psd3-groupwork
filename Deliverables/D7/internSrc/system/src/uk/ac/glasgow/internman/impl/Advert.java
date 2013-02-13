@@ -1,5 +1,6 @@
 package uk.ac.glasgow.internman.impl;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -9,7 +10,7 @@ import uk.ac.glasgow.internman.Employer;
 import uk.ac.glasgow.internman.Role;
 import uk.ac.glasgow.internman.Advertisement.AdvertisementStatus;
 
-public class Advert implements Advertisement {
+public class Advert implements Advertisement, Serializable {
 	
 	private static int IDCount = 0;
 	

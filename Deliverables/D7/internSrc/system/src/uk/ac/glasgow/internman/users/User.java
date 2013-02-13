@@ -11,7 +11,6 @@ public class User implements Serializable {
 	private String forename;
 	private String surname;
 	private String email;
-	private final String userType = null;
 		
 	public User (String ID, String password, String forename, String surname, String email){
 		this.ID = ID;
@@ -22,7 +21,7 @@ public class User implements Serializable {
 	}
 	
 	public String getUserType(){
-		return this.userType;
+		return null;
 	}
 	
 	public String getID() {

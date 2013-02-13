@@ -15,7 +15,7 @@ public class UserManagement {
 	
 	public UserManagement()
 	{
-		this.US = new UserStoreImpl("user_store.txt");
+		this.US = new UserStoreImpl("user_store1.txt");
 		CCUser ccu = new CCUser("tws", "1234", "Tim", "Storer", "timothy@storer.gla.ac.uk");
 		US.addUser(ccu);
 	}

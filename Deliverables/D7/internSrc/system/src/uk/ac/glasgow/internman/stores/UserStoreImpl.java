@@ -94,4 +94,6 @@ public class UserStoreImpl implements UserStore {
 		User user = this.users.get(ID);
 		return !(user == null);
 	}
+	
+	
 }
