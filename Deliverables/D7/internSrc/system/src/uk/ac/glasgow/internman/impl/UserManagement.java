@@ -18,6 +18,8 @@ public class UserManagement {
 		this.US = new UserStoreImpl("user_store1.txt");
 		CCUser ccu = new CCUser("tws", "1234", "Tim", "Storer", "timothy@storer.gla.ac.uk");
 		US.addUser(ccu);
+		StudentUser student = new StudentUser("0902059","password", "nicole", "kearns", "nicole@email.com");
+		US.addUser(student);
 	}
 	
 	public boolean login(String userName, String password) {
