@@ -1,0 +1,7 @@
+Installation instructions
+
+Automated Netbeans Ant script; main commands:
+-do-jar-without-manifest : Build jar files
+run : Run project
+-javadoc-build : Builds javadoc
+test-report : JUnit test report generation
