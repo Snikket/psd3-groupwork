@@ -20,7 +20,7 @@ public class UserManagement {
 		US.addUser(ccu);
 		StudentUser student = new StudentUser("123456","password", "john", "smith", "john@email.com");
 		US.addUser(student);
-		EmployerUser employer = new EmployerUser("IBM1", "1000", "IBM", "null" , "null" ,"IBM@IBM.com");
+		EmployerUser employer = new EmployerUser("IMB1", "1000", "IMB", "null" , "null" ,"IBM@IBM.com");
 		US.addUser(employer);
 	}
 	
