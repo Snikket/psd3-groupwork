@@ -81,8 +81,7 @@ public class UserStoreImpl implements UserStore {
 	}
 	
 	public User getUser(String ID) {
-		User user = users.get(ID);
-		if (userExists(ID)) return user;
+		if (userExists(ID)) return users.get(ID);
 		else return null;
 	}
 	

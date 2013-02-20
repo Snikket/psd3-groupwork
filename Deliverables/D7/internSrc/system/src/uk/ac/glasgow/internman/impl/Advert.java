@@ -25,7 +25,8 @@ public class Advert implements Advertisement, Serializable {
 		this.details = details;
 		this.employer = emp;
 		this.IDCount++;
-		this.ID = this.IDCount;		
+		this.ID = this.IDCount;
+		this.roles = new HashMap<Integer, Role>();
 	}
 	
 	public Integer getID() {
@@ -61,6 +62,9 @@ public class Advert implements Advertisement, Serializable {
 	}
 
 	public Role addNewRole(String title, String location, Date start, Date end, String description, Double salary) {
-		return null;
+		Role role = new RoleImpl(title, location, start, end, description, salary);
+		Integer ID = ((RoleImpl) role).getID();
+		this.roles.put(ID, role);
+		return role;
 	}
 }

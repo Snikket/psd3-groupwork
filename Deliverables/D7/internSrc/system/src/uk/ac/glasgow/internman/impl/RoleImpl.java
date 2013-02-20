@@ -1,5 +1,6 @@
 package uk.ac.glasgow.internman.impl;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Map;
 
@@ -12,7 +13,7 @@ import uk.ac.glasgow.internman.Advertisement.AdvertisementStatus;
 
 import uk.ac.glasgow.internman.Role;
 
-public class RoleImpl implements Role {
+public class RoleImpl implements Role, Serializable {
 	
 	private static int idCount =0;
 	
@@ -20,13 +21,20 @@ public class RoleImpl implements Role {
 	private String title;
 	private Date startDate;
 	private Date endDate;
+	private String description;
 	private Double salary;
 	private boolean isApproved;
 	private String location;
 	
-	public RoleImpl(){
+	public RoleImpl(String title, String location, Date start, Date end, String description, Double salary){
 		this.idCount++;
 		this.ID = idCount;
+		this.title = title;
+		this.location = location;
+		this.startDate = start;
+		this.endDate = end;
+		this.description = description;
+		this.salary = salary;
 	}
 	
 	public Integer getID(){

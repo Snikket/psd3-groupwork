@@ -23,19 +23,19 @@ public class StudentUser extends User implements Student {
 	}
 
 	public String getSurname() {
-		return this.getSurname();
+		return super.getSurname();
 	}
 
 	public String getMatriculation() {
-		return this.getID();
+		return super.getID();
 	}
 
 	public String getForename() {
-		return this.getForename();
+		return super.getForename();
 	}
 
 	public String getEmail() {
-		return this.getEmail();
+		return super.getEmail();
 	}
 
 	public Programme getProgramme() {

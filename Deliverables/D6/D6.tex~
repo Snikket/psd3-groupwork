@@ -76,6 +76,9 @@ system desgin and acceptance plan for the internship management system. This rep
 \hline 30/01/13 & Updated the Acceptance tests & 0.5 & Ross\\
 \hline 30/01/13 & Added the APIs for the Advert, Visit, Offer and User Management & 0.6 & Andrew\\
 \hline 30/01/13 & Added the Class Diagrams & 0.7 & Mamas\\
+\hline 12/02/13 & Fixed minor errors - like spelling mistakes & 0.8 & Nicole\\
+\hline 19/02/13 & Updated the acceptance test plan & 0.9 & Nicole\\
+\hline 19/02/13 & Updated the API specification & 0.10 & Nicole\\
 \hline 
 \end{tabular} }
 \end{center}
@@ -759,7 +762,7 @@ The above Tests cover the different user types logging in with both invalid and 
 \hline
 \end{tabular}
 
-\TEXTBF{FIX....}
+\textbf{FIX....}
 \begin{tabular}{|c|c|}
 \hline \textbf{Identifier} & T.C.5.7.2\\
 \hline \textbf{Use case} & publishAdvert\\
