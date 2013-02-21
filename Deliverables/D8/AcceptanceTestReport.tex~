@@ -1,0 +1,105 @@
+\documentclass{l3deliverable}
+
+\title{Project Plan}
+
+%%authors
+\author{
+  Ross Adam \\
+  Andrew Gardner \\
+  Nicole Kearns \\
+  Mamas Nicolau \\
+  Asset Sarsengaliyev \\
+  }
+
+%%release date
+\date{28 February 2013}
+
+\deliverableID{D8}
+\project{PSD Group Exercise 2}
+\team{V}
+\version{0.1}
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+\section{Introduction}
+\subsection{Identification}
+Acceptance Test Report document for Team V's Internship Management System.
+\subsection{Document Status and Schedule}
+\begin{center}{
+\begin{tabular}{|c|c|c|c|}
+\hline \textbf{Date} &\textbf{Change} & \textbf{Version} & \textbf{Author}\\ 
+18/02/13 & Created Document Template & 0.1 & Ross Adam\\
+\hline 
+\end{tabular} }
+\end{center}
+
+\subsection{Purpose}
+This Internship Management System Test Report provides a summary of the results of test performed as outlined within this document.
+
+\section{Test Summary}
+
+\begin{tabular}{|l|l|}
+\hline
+Project Name: & \\
+\hline
+System Name: &\\
+\hline
+Test Results: &\\
+\hline
+Additional Comments: &\\
+\hline
+\end{tabular}
+
+\subsection{Tests}
+
+\begin{tabular}{|l|c|}
+\hline
+Test ID &\\
+\hline
+Test Type &\\
+\hline
+Test Owner  &\\
+\hline
+Test Date &\\
+\hline
+Test Results &\\
+\hline
+Additional Comments &\\
+\hline
+\end{tabular}
+
+\section{Test Assessment}
+[Enter a comprehensive assessment of your interpretation of how adequate the test was in light of how thorough the test plan said it should be? What wasn't tested well enough?]
+
+\section{Test Results}
+[Summarize the test results. Include a detailed description of any deviations from the original test plan, design, test case, or expected results. Include any issues or bugs discovered during the test.]
+
+\section{Unit/Module/System Testing}
+Unit, module, and system integration testing activities were performed during the development of the system build or release.
+
+\section{Variances}
+[Describe any variances between the testing that was planned and the testing that actually occurred.  Also, provide an assessment of the manner in which the test environment may be different from the operational environment and the effect of this difference on the test results.]
+
+\section{Test Instances}
+[Provide a brief description of the unexpected results, problems, or defects that occurred during the testing.]
+
+\subsection{Resolved Test Instances}
+[Identify all resolved test incidents and summarize their resolutions.  Reference may be made to Test Incident Reports that describe in detail the unexpected results, problems, or defects reported during testing, along with their documented resolutions, which may be included as an appendix to this document.]
+
+\subsection{Unresolved Test Instances}
+[Identify all unresolved test incidents and provide a plan of action for their resolution.  Reference may be made to Test Incident Reports that describe in detail the unexpected results, problems, or defects reported during testing, which may be included as an appendix to this document.]
+
+\section{Recommendations}
+[Describe what actions are suggested upon completion of this test. Provide any recommended improvements in the design, operation, or future testing of the business product that resulted from the testing being reported.  A discussion of each recommendation and its impact on the business product may be provided.  If there are no recommendations to report, then simply state as such.]
+\newpage
+\section{Appendix A}
+The undersigned acknowledge they have reviewed the Internship Management System Test Report and agree with the approach it presents. Changes to this Test Report will be coordinated with and approved by the undersigned or their designated representatives.\\
+Print Name: \\
+Title: \\
+Role: Project Manager \\
+Date: \\
+Signature: \\
+
+\end{document}
