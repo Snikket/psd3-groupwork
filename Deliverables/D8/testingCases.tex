@@ -1,0 +1,244 @@
+gmail
+\section{Acceptance Tests}
+
+Before the Internship Management System can be deployed we must create several acceptance tests to ensure that the program covers all the requirements from the specification. These acceptance tests are not designed to identify bugs but to ensure that the user can interact with the application and use it's advertised functions.\\
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.1.1\\
+\hline \textbf{Use case} & Login \\
+\hline \textbf{Scenario} & Primary \\
+\hline \textbf{Set up} & System initialised with default parameters - Course - Coordinator username and password.\\
+\hline \textbf{Includes} & none\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & User = "ccadmin", password="pass"\\
+\hline \textbf{Outputs} & System returns true and user is set tou Course - Coordinator.\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.1.2 \\
+\hline \textbf{Use case} & Login\\
+\hline \textbf{Scenario} & Invalid login/password for course coordinator\\
+\hline \textbf{Set up} & System initialised with default parameters - course coordinator username and password\\
+\hline \textbf{Includes} & none\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & User = "ccadmin", password="pass1"\\
+\hline \textbf{Outputs} & System returns false and User has not changed to ccadmin or gained access to admin features.\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.1.3\\
+\hline \textbf{Use case} & Login \\
+\hline \textbf{Scenario} & Primary\\
+\hline \textbf{Set up} & System initialised with default parameters - student username and password\\
+\hline \textbf{Includes} & none\\
+\hline \textbf{Procedure} & not defined yet\\
+\hline \textbf{Inputs} & User = "2060267s", password="password"\\
+\hline \textbf{Outputs} & System returns true and user is changed to student\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.1.4 \\
+\hline \textbf{Use case} & Login \\
+\hline \textbf{Scenario} & Primary\\
+\hline \textbf{Set up} & System initialised with default parameters - employer username and password\\
+\hline \textbf{Includes} & T.C.5.5.1\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & User = "Google", password="Mypassword1998"\\
+\hline \textbf{Outputs} & System returns true and user is changed to company\\
+\hline
+\end{tabular}
+
+The above Tests cover the different user types logging in with both invalid and valid passwords.\\ 
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.2.1 \\
+\hline \textbf{Use case} & getAdvertisements\\
+\hline \textbf{Scenario} & Primary - View approved adverts\\
+\hline \textbf{Set up} & logged in as a student\\
+\hline \textbf{Includes} & T.C.5.1.3 (logged in as student)\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & view\\
+\hline \textbf{Outputs} & All published adverts are displayed.\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.2.2 \\
+\hline \textbf{Use case} & getAdvertisements\\
+\hline \textbf{Scenario} & Primary - show all adverts, pending and published\\
+\hline \textbf{Set up} & System initialised with default parameters - logged in as course coordinator\\
+\hline \textbf{Includes} &T.C.5.1.1 (course coordinator), T.C.5.5.1(submitted ads)\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & View pending\\
+\hline \textbf{Outputs} & All pending adverts are shown\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.3.1\\
+\hline \textbf{Use case} & SubmitAdvert\\
+\hline \textbf{Scenario} & Primary\\
+\hline \textbf{Set up} & Logged in as a employer\\
+\hline \textbf{Includes} & T.C.5.1.4 (employer login)\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & Internship details\\
+\hline \textbf{Outputs} & Email sent to course coordinator\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.4.1\\
+\hline \textbf{Use case} & selectAdvertisements\\
+\hline \textbf{Scenario} & Primary\\
+\hline \textbf{Set up} & System initialised with default parameters - logged in as student\\
+\hline \textbf{Includes} & T.C.5.1.3, T.C.5.2.1\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & Id for the advert to view\\
+\hline \textbf{Outputs} & Selected advert details are shown\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.5.1\\
+\hline \textbf{Use case} & RegisterNewEemployer\\
+\hline \textbf{Scenario} & Primary\\
+\hline \textbf{Set up} & System initialised with default parameters - logged in as course coordinator\\
+\hline \textbf{Includes} & T.C.5.1.1\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & Valid employer details - string name and email address\\
+\hline \textbf{Outputs} & Account created for employer. System returns the newly created Employer object. The new Employer object has the same name and email address as specified by the Inputs\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.5.2\\
+\hline \textbf{Use case} & RegisterNewEmployer\\
+\hline \textbf{Scenario} & Invalid details\\
+\hline \textbf{Set up} & System initialised with default parameters - logged in as course coordinator\\
+\hline \textbf{Includes} & T.C.5.1.1\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & Invalid/missing employer details\\
+\hline \textbf{Outputs} & Warning message is shown with error details. Returned object is Null.\\
+\hline
+\end{tabular}
+
+\textbf{FIX...}
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.6.1\\
+\hline \textbf{Use case} & ViewAdvertisements\\
+\hline \textbf{Scenario} & Primary\\
+\hline \textbf{Set up} & System initialised with published advertisements\\
+\hline \textbf{Includes} & T.C.5.7.1, T.C.5.1.1\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & View ads\\
+\hline \textbf{Outputs} & Advertisement summary is shown\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.7.1\\
+\hline \textbf{Use case} & publishAdvert\\
+\hline \textbf{Scenario} & Primary\\
+\hline \textbf{Set up} & System initialised with default parameters - logged in as course coordinator\\
+\hline \textbf{Includes} & T.C.5.1.1, T.C.5.3.1\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & advertisement ID, comment\\
+\hline \textbf{Outputs} & Advert is published and feedback sent to employer (email)\\
+\hline
+\end{tabular}
+
+\textbf{FIX....}
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.7.2\\
+\hline \textbf{Use case} & publishAdvert\\
+\hline \textbf{Scenario} & Advert is not suitable for students\\
+\hline \textbf{Set up} & System initialised with default parameters - logged in as course coordinator\\
+\hline \textbf{Includes} & T.C.5.1.1, T.C.5.3.1\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & CHANGE\\
+\hline \textbf{Outputs} & Advert is not published, employer is notified via email\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.8.1\\
+\hline \textbf{Use case} & NotifyAcceptedOffer\\
+\hline \textbf{Scenario} & primary\\
+\hline \textbf{Set up} & Offer details are filled in, logged as a student\\
+\hline \textbf{Includes} & T.C.5.1.3\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & Role, manager name, manager email address\\
+\hline \textbf{Outputs} & Email sent to course coordinator for approval\\
+\hline
+\end{tabular}
+
+\textbf{FIX....}
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.8.2\\
+\hline \textbf{Use case} & Notify course coordinator\\
+\hline \textbf{Scenario} & student supplies incorrect offer details\\
+\hline \textbf{Set up} & logged as a student\\
+\hline \textbf{Includes} & T.C.5.1.3\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & Incorrect role details \\
+\hline \textbf{Outputs} & Warning message is shown\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.9.1\\
+\hline \textbf{Use case} & ApproveAcceptedOffer\\
+\hline \textbf{Scenario} & Primary\\
+\hline \textbf{Set up} & logged as a course coordinator\\
+\hline \textbf{Includes} & T.C.5.1.1, T.C.5.8.1\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & students matriculation number\\
+\hline \textbf{Outputs} & Offer status is now approved in student details\\
+\hline
+\end{tabular}
+
+\textbf{FIX....}
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.9.2\\
+\hline \textbf{Use case} & ApproveAcceptedOffer\\
+\hline \textbf{Scenario} & Offer is not approved.\\
+\hline \textbf{Set up} & logged as a course coordinator\\
+\hline \textbf{Includes} & T.C.5.1.1, T.C.5.8.1\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & Students matriculation number\\
+\hline \textbf{Outputs} & Offer status is not set to approved in student details\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.10.1\\
+\hline \textbf{Use case} & selectStudent\\
+\hline \textbf{Scenario} & Primary\\
+\hline \textbf{Set up} & logged as a course coordinator\\
+\hline \textbf{Includes} & T.C.5.1.1\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & Students matriculation number\\
+\hline \textbf{Outputs} & System returns student user object. Returned object has the same matriculation number as the one defined in Inputs.\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.10.2\\
+\hline \textbf{Use case} & selectStudent\\
+\hline \textbf{Scenario} & matriculation number is incorrect\\
+\hline \textbf{Set up} & logged as a course coordinator\\
+\hline \textbf{Includes} & T.C.5.1.1\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & Students matriculation number\\
+\hline \textbf{Outputs} & Students details not shown. System returns Null.\\
+\hline
+\end{tabular}
+
+Subsection{Test Plan Implementation}
+
+These test cases will be implemented using the JUnit test harness within Java. 
+
+\end{document}
