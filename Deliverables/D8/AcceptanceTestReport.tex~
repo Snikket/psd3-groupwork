@@ -1,6 +1,6 @@
 \documentclass{l3deliverable}
 
-\title{Project Plan}
+\title{Acceptance Test Report}
 
 %%authors
 \author{
@@ -31,6 +31,7 @@ Acceptance Test Report document for Team V's Internship Management System.
 \begin{tabular}{|c|c|c|c|}
 \hline \textbf{Date} &\textbf{Change} & \textbf{Version} & \textbf{Author}\\ 
 18/02/13 & Created Document Template & 0.1 & Ross Adam\\
+25/02/13 & Completed Variances; Test Instances Section & 0.1 & Ross Adam\\
 \hline 
 \end{tabular} }
 \end{center}
@@ -42,13 +43,13 @@ This Internship Management System Test Report provides a summary of the results 
 
 \begin{tabular}{|l|l|}
 \hline
-Project Name: & \\
+Project Name: Team U Final & \\
 \hline
-System Name: &\\
+System Name: Internship Management &\\
 \hline
-Test Results: &\\
+Test Results: 13 Tests: 3 Errors and 5 Failures &\\
 \hline
-Additional Comments: &\\
+Additional Comments: Tests run on 18/02/13 &\\
 \hline
 \end{tabular}
 
@@ -82,8 +83,13 @@ Unit, module, and system integration testing activities were performed during th
 \section{Variances}
 [Describe any variances between the testing that was planned and the testing that actually occurred.  Also, provide an assessment of the manner in which the test environment may be different from the operational environment and the effect of this difference on the test results.]
 
+To prepare the tests we had to create several artificial entries for use within the system to use for testing. Also several import statements were added to the code that Team U's implementation required.
+In order for our tests to be run on Team U's implementation we had to alter our test stub to integrate with their code. Firstly we had to alter one of our method names to match the one they provided. getID() which was Team V's method of retrieving a student's unique matriculation number became getMatriculation() for the tests.  
+Overall there was little deviation from the pre-approved test plan.
+
 \section{Test Instances}
 [Provide a brief description of the unexpected results, problems, or defects that occurred during the testing.]
+In each test instance where an error occured it was the result of a Null Pointer Exception being thrown. This implied that where a comparison in the code was being performed there was no object to be compared against which resulted in the aforementioned exception. 
 
 \subsection{Resolved Test Instances}
 [Identify all resolved test incidents and summarize their resolutions.  Reference may be made to Test Incident Reports that describe in detail the unexpected results, problems, or defects reported during testing, along with their documented resolutions, which may be included as an appendix to this document.]
