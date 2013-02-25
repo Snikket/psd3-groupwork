@@ -65,4 +65,7 @@ public class RoleImpl implements Role, Serializable {
 		return this.location;
 	}
 
+	public void setApproved(boolean b){
+		this.isApproved = b;
+	}
 }

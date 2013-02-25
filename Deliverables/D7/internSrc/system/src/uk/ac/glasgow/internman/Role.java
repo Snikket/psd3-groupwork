@@ -14,5 +14,7 @@ public interface Role {
 	
 	boolean isApproved();
 
+	void setApproved(boolean b);
+	
 	public String getLocation();
 }

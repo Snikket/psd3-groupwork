@@ -33,12 +33,19 @@ public class InternManStub implements InternMan {
 	// Advert Management Component
 	private AdvertManagement AM;
 	
+	// Offer Management Component
+	private OfferManagement OM;
+	
 	// Current logged in user
 	private User currentUser = null;
+	
+	// Current selected employer
+	private Employer currentEmployer = null;
 	
 	public InternManStub(){
 		this.UM = new UserManagement();
 		this.AM = new AdvertManagement();
+		this.OM = new OfferManagement();
 	}
 	
 	@Override
@@ -46,6 +53,8 @@ public class InternManStub implements InternMan {
 		
 		if (UM.login(userName, password)){
 			this.currentUser = UM.getUser(userName);
+			if (this.currentUser.getUserType() == "employer")
+				this.currentEmployer = (Employer)this.currentUser;
 			return true;
 		}
 		else
@@ -146,7 +155,6 @@ public class InternManStub implements InternMan {
 		}
 		
 		if (userType == "student"){
-			CCUser coordinator = (CCUser)user;
 			if (status != AdvertisementStatus.PUBLISHED)
 				return null;
 		}
@@ -161,6 +169,9 @@ public class InternManStub implements InternMan {
 		String empName = advert.getEmployer().getName();
 		AdvertisementStatus status = advert.getStatus();
 		
+		// Set currently selected employer
+		this.currentEmployer = advert.getEmployer();
+		
 		User user = this.currentUser;
 		String userType = user.getUserType();
 		
@@ -174,14 +185,16 @@ public class InternManStub implements InternMan {
 			}
 		}	
 		
-		return (Role) AM.getAdvert(advertisementIndex).getRoles();
+		return AM.getAdvert(advertisementIndex).getRoles().get(roleIndex);
 	}
 
 	@Override
 	public Student selectStudent(String matriculation) {
-		
+	
 		if (this.currentUser.getUserType() != "coordinator")
 			return null;
+		
+		StudentUser student = (StudentUser) UM.getUser(matriculation);
 		
 		return (Student)UM.getUser(matriculation);
 	}
@@ -202,21 +215,36 @@ public class InternManStub implements InternMan {
 	public void notifyAcceptedOffer(Role role, String managerName, String managerEmail) {
 		if (this.currentUser.getUserType() != "student")
 			return;
+		
+		Offer offer = this.OM.createOffer(role, managerName, managerEmail, this.currentEmployer);
+		this.OM.storeOffer(offer);
+		this.OM.acceptOffer(offer.getID());
+		
+		StudentUser student = (StudentUser)this.currentUser;
+		student.setInternship(offer);
+		this.UM.storeUser(student);
+		
 		System.out.println("Notification email sent to " + managerEmail);		
 	}
 
 	@Override
 	public void approveAcceptedOffer(String matriculation) {
+		
 		if (this.currentUser.getUserType() != "coordinator")
 			return;
 		
-		StudentUser student = (StudentUser) UM.getUser(matriculation);
+		StudentUser student = (StudentUser) UM.getUser(matriculation);		
 		
+		System.out.println(student.getInternship());
 		
 		if (student.getInternship().getStatus() != InternshipStatus.ACCEPTED)
 			return;
+		
 		((Offer) student.getInternship()).setStatus(InternshipStatus.APPROVED);
-
+		((Offer) student.getInternship()).getRole().setApproved(true);
+		
+		this.UM.storeUser(student);
+		
 	}
 
 	@Override
@@ -234,10 +262,7 @@ public class InternManStub implements InternMan {
 
 	@Override
 	public Employer getCurrentEmployer() {
-		if (this.currentUser.getUserType() != "employer")
-			return null;
-		else
-			return (Employer)this.currentUser;
+		return this.currentEmployer;
 	}
 
 	@Override
