@@ -23,6 +23,9 @@
 	</section>
 	<section name="JavaElementSearchActions">
 	</section>
+	<section name="BuildPathsPropertyPage">
+		<item value="3" key="pageIndex"/>
+	</section>
 	<section name="JavaSearchPage">
 		<item value="false" key="CASE_SENSITIVE"/>
 		<item value="11" key="INCLUDE_MASK"/>
@@ -47,6 +50,9 @@
 		<item value="true" key="SearchInSources"/>
 	</section>
 	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="ClasspathContainerSelectionPage">
+		<item value="1" key="index"/>
 	</section>
 	<section name="CallHierarchySearchScope">
 	</section>

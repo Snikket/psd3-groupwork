@@ -200,7 +200,7 @@ The above Tests cover the different user types logging in with both invalid and 
 \begin{tabular}{|c|c|}
 \hline \textbf{Identifier} & T.C.5.9.2\\
 \hline \textbf{Use case} & ApproveAcceptedOffer\\
-\hline \textbf{Scenario} & Offer has not been accepted by the student.\\
+\hline \textbf{Scenario} & Offer has not been accepted.\\
 \hline \textbf{Set up} & logged as a course coordinator\\
 \hline \textbf{Includes} & T.C.5.1.1, T.C.5.8.1\\
 \hline \textbf{Procedure} & Not defined yet\\
