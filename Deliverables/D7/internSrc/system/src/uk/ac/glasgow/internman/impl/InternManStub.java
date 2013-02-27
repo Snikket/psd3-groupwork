@@ -190,11 +190,11 @@ public class InternManStub implements InternMan {
 
 	@Override
 	public Student selectStudent(String matriculation) {
-	
-		if (this.currentUser.getUserType() != "coordinator")
-			return null;
 		
 		StudentUser student = (StudentUser) UM.getUser(matriculation);
+		
+		if (this.currentUser.getUserType() != "coordinator")
+			return null;
 		
 		return (Student)UM.getUser(matriculation);
 	}
@@ -234,8 +234,6 @@ public class InternManStub implements InternMan {
 			return;
 		
 		StudentUser student = (StudentUser) UM.getUser(matriculation);		
-		
-		System.out.println(student.getInternship());
 		
 		if (student.getInternship().getStatus() != InternshipStatus.ACCEPTED)
 			return;
