@@ -234,13 +234,10 @@ public class InternManStub implements InternMan {
 		this.OM.acceptOffer(offer.getID());
 		
 		StudentUser student = (StudentUser)this.currentUser;
-		this.internship.add(offer);
-		//student.getInternship().set(0, offer);
-		//student.getInternship().add(offer);
-		//student.getInternship();
+		student.getInternship().add(offer);
 		this.UM.storeUser(student);
 		
-		System.out.println("Notification email sent to " + managerEmail);		
+		System.out.println("Notification email sent to " + managerEmail);
 	}
 
 	@Override

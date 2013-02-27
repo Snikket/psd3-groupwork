@@ -114,7 +114,7 @@ The Internship Management System contains several different components that allo
 
 \subsection{Rationale}
 
-The following three diagrams were created to illustrate how entities within the application change over time. The three entities are Student, Internship and Advert. These entities were identified by the ``status'' variable in their specification. \\
+The following three diagrams were created to illustrate how entities within the application change over time. The three entities are Student, Internship and Advert. These entities were identified by the ``status'' variable in the domain model. \\
 
 \subsection{Student}
 

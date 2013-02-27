@@ -1,0 +1,84 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{l3deliverable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{graphicx}%
+\usepackage{url}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% See D1 for an example of how to integrate sub version revision
+%% numbers into a LaTeX document.
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Check these macro values for appropriateness for your own document.
+
+\title{Change Report}
+
+\author{Ross Adam \\
+        Andrew Gardner \\
+        Nicole Kearns \\
+        Mamas Nicolaou\\
+	Asset Sarsengaliyev\\}
+
+\date{28th February 2013}
+
+\deliverableID{D8.4}
+\project{PSD3 Group Exercise 8}
+\team{V}
+\version{0.1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Standard section for all documents
+
+\section{Introduction}
+
+Team V's a change report describing our modiﬁcations to our internship management system.
+
+\section{Report}
+
+In order to include the new requirements in our internship management system, we had to make several changes to our implementation. The changes applied to our internship management system are:\\
+
+\begin{tabular}{|c|c|c|}
+\hline \textbf{ID} &\textbf{Package/Class} & \textbf{Changes Applied}\\
+\hline 1 & uk.ac.glasgow.internman.users.StudentUser & return type for getInternship() \\
+\hline 2 & uk.ac.glasgow.internman.impl.InternManStub & approveAcceptedOffer() parameters \\
+\hline 3 & uk.ac.glasgow.internman.ui.ApproveOfferCommand & Changed parameters to reflect Change ID 2\\
+\hline 4 & uk.ac.glasgow.internman.ui.ViewStudentDetailCommand & Changed to iterate over internship details \\
+\hline 5 & uk.ac.glasgow.internman.ui.InternManStub & selectStudent()\\
+\hline
+\end{tabular}
+
+\subsection{Change ID: 1}
+
+In our previous implementation, a student could only accept one internship. However, according to the new requirements, a student must be able to accept more than one internship. In order to meet these requirements, we had to change the getInternship() method from an Object Internship to a List<Internship>. This allows the system to store a list of all internships that a student has accepted rather than a single internship per student. As we had changed this method in the java class, we then had to change the interface to reflect this change.\\
+
+\subsection{Change ID: 2}
+
+In our previous implementation, when the course coordinator was approving an accepted internship, he simply had to pass in the students matriculation number. However, as the student can now have multiple accepted internships, we had to change the parameters for the ApproveAcceptedOffer() method of the facade to pass in an Internship index, which specifies what internship the course coordinator was approving along with the student's matriculation number.
+
+\subsection{Change ID: 3}
+
+Previously, within the ApprovedOfferCommand, when calling the ApproveAcceptedOffer() method, it was simply passing in the students matriculation number. We modified this to pass in the students Internship ID, as well as the students matriculation number. This allows the 
+
+\subsection{Change ID: 4}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere quam eget sapien varius mollis. In hac habitasse platea dictumst. Vivamus euismod placerat lorem, non consectetur orci fermentum vel. Donec vehicula porttitor rutrum. Nam vestibulum libero nec diam fermentum hendrerit. Sed urna metus, iaculis sit amet tempor vel, auctor vitae arcu. Nullam dictum nibh in dolor condimentum rutrum. Sed viverra, nunc ac elementum vulputate, urna augue facilisis nunc, ac blandit sapien arcu sed augue. Nunc tellus mi, semper aliquet mollis sit amet, aliquet vitae lacus. Cras sed nisi nibh. Aenean pulvinar ornare auctor. Nullam at lorem adipiscing mauris ullamcorper interdum sed nec lorem. Pellentesque porttitor egestas tortor.
+
+\subsection{Change ID: 5}
+
+\end{document}

@@ -88,7 +88,7 @@ public class ViewStudentDetailCommand extends SystemCommand<InternMan> {
 						result += "Grade:\t" + grade + "\n";
 						result += "Description:\t" + visit.getDescription() + "\n";
 					}			
-				}	
+				}
 			}
 			
 		}
