@@ -28,7 +28,7 @@
 \deliverableID{D6}
 \project{PSD3 Group Exercise 2}
 \team{V}
-\version{0.7}
+\version{0.13}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -80,6 +80,8 @@ system desgin and acceptance plan for the internship management system. This rep
 \hline 19/02/13 & Updated the acceptance test plan & 0.9 & Nicole\\
 \hline 19/02/13 & Updated the API specification & 0.10 & Nicole\\
 \hline 25/02/13 & Updated acceptance test plan & 0.11 & Mamas\\
+\hline 27/02/13 & Updated the Component Diagram & 0.12 & Andrew\\
+\hline 27/02/13 & Updated the state diagrams & 0.13 & Ross\\
 \hline 
 \end{tabular} }
 \end{center}
@@ -580,7 +582,22 @@ This section covers a detailed API specification for all the interfaces realised
 \textbf{Pre Condition}: Offer is stored in the Offer store.\\
 \textbf{Post Condition}:\\
 
+\textbf{Method}: public Offer createOffer(Role role, String manager, String managerEmail, Employer employer)\\
+\textbf{Description}: creates a new offer with the specified details\\
+\textbf{Parameters}: Role role, String manager, String managerEmail, Employer employer \\
+\textbf{Return Type}: Offer\\
+\textbf{Pre Condition}: new offer is created.\\
+\textbf{Post Condition}:\\
+
+\textbf{Method}: public Offer storeOffer(Integer OfferID)\\
+\textbf{Description}: Add offer with the given offer ID to the offer store\\
+\textbf{Parameters}: Integer OfferID\\
+\textbf{Return Type}: Offer\\
+\textbf{Pre Condition}: Offer is added in the Offer store.\\
+\textbf{Post Condition}:\\
+
 \subsection{Visit Management}
+
 \textbf{Method}: public Visit createVisit( String matriculation, UoGGrade grade, String description )\\
 \textbf{Description}: Creates and returns a visit\\
 \textbf{Parameters}: String matriculation, UoGGrade grade, String description\\
