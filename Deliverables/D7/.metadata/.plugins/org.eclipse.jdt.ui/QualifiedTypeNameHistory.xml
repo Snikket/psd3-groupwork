@@ -2,4 +2,5 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="uk.ac.glasgow.internman.users.StudentUser"/>
 <fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="uk.ac.glasgow.internman.impl.Advert"/>
 </qualifiedTypeNameHistroy>

@@ -21,17 +21,28 @@ public class OfferManagement {
 		this.OS = new OfferStore("offer_store.txt");
 	}
 	
+	public Offer createOffer(Role role, String manager, String managerEmail, Employer employer){
+		return new Offer(role, manager, managerEmail, employer);
+	}
+	
 	public Offer getOffer(Integer ID){
 		return OS.getOffer(ID);
 	}
 	
 	public void acceptOffer(Integer ID){
-		OS.getOffer(ID).setStatus(InternshipStatus.ACCEPTED);
+		Offer offer = OS.getOffer(ID);
+		offer.setStatus(InternshipStatus.ACCEPTED);
+		this.storeOffer(offer);
 	}
 	
 	public void approveAcceptedOffer(Integer ID){
-		OS.getOffer(ID).setStatus(InternshipStatus.APPROVED);
+		Offer offer = OS.getOffer(ID);
+		offer.setStatus(InternshipStatus.APPROVED);
+		this.storeOffer(offer);
 	}
 	
+	public void storeOffer(Offer o){
+		this.OS.addOffer(o);
+	}
 	
 }

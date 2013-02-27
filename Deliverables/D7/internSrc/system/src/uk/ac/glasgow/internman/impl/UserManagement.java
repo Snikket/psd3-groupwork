@@ -16,12 +16,13 @@ public class UserManagement {
 	public UserManagement()
 	{
 		this.US = new UserStoreImpl("user_store1.txt");
-		CCUser ccu = new CCUser("tws", "1234", "Tim", "Storer", "timothy@storer.gla.ac.uk");
-		US.addUser(ccu);
-		StudentUser student = new StudentUser("123456","password", "john", "smith", "john@email.com");
-		US.addUser(student);
-		EmployerUser employer = new EmployerUser("IBM1", "1000", "IBM", "null" , "null" ,"IBM@IBM.com");
-		US.addUser(employer);
+//		CCUser ccu = new CCUser("tws", "1234", "Tim", "Storer", "timothy@storer.gla.ac.uk");
+//		US.addUser(ccu);
+//		StudentUser student = new StudentUser("123456","password", "john", "smith", "john@email.com");
+//		US.addUser(student);
+//		EmployerUser employer = new EmployerUser("IBM1", "1000", "IBM", "null" , "null" ,"IBM@IBM.com");
+//		US.addUser(employer);
+		
 	}
 	
 	public boolean login(String userName, String password) {
@@ -61,5 +62,7 @@ public class UserManagement {
 		  System.out.println("Notification email sent to " + managerEmail);
 	  }
 	
-	
+	  public void storeUser(User u){
+		  this.US.addUser(u);
+	  }
 }

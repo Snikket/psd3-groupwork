@@ -71,7 +71,10 @@ public class AdvertManagement {
 	}
 	
 	public Role selectRole(Integer ID, Integer roleIndex){
-		return null;
+		Advert advert = this.getAdvert(ID);
+		Map<Integer, Role> roles = advert.getRoles();
+		Role role = roles.get(roleIndex);
+		return role;
 	}	
 
 }

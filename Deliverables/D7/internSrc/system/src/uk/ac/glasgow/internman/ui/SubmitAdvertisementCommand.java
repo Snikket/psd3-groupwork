@@ -15,6 +15,8 @@ import uk.ac.glasgow.clui.SystemDialogue;
 import uk.ac.glasgow.internman.Advertisement;
 import uk.ac.glasgow.internman.Employer;
 import uk.ac.glasgow.internman.InternMan;
+import uk.ac.glasgow.internman.impl.Advert;
+import uk.ac.glasgow.internman.stores.AdvertStore;
 
 @MinimumArguments(0)
 @CommandDescription("Initiates a dialogue to submit a new advertisement containing internship roles.")
@@ -67,6 +69,11 @@ public class SubmitAdvertisementCommand extends SystemCommand<InternMan>{
 				Double salary = Double.parseDouble(dialogue.getUserInput("Enter salary (GBP/week)."));
 			
 				advertisement.addNewRole(title, location, start, end, description, salary);
+				
+				// not our fault
+				AdvertStore AS = new AdvertStore("advert_store.txt");
+				Advert a = (Advert)advertisement;
+				AS.addAdvert(a);
 			
 				addAnotherRole = dialogue.getUserInput("Add another role (Y/N)?").equals("Y");
 

@@ -41,4 +41,9 @@ public class StudentUser extends User implements Student {
 	public Programme getProgramme() {
 		return null;
 	}
+	
+	public void setInternship(Internship i){
+		this.internship = i;
+	}
+	
 }

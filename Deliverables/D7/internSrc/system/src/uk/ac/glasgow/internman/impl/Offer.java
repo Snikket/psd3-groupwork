@@ -1,12 +1,14 @@
 package uk.ac.glasgow.internman.impl;
 
+import java.io.Serializable;
+
 import uk.ac.glasgow.internman.Employer;
 import uk.ac.glasgow.internman.Internship;
 import uk.ac.glasgow.internman.Role;
 import uk.ac.glasgow.internman.Visit;
 import uk.ac.glasgow.internman.Internship.InternshipStatus;
 
-public class Offer implements Internship {
+public class Offer implements Internship, Serializable {
 	
 	private static int IDCount = 0;
 	
@@ -18,9 +20,12 @@ public class Offer implements Internship {
 	private Role role;
 	private Visit visit;
 	
-	public Offer(){
+	public Offer(Role role, String manager, String managerEmail, Employer employer){
 		this.IDCount++;
 		this.ID = this.IDCount;
+		this.manager = manager;
+		this.managerEmail = managerEmail;
+		this.role = role;
 	}
 	
 	public Integer getID(){
@@ -58,5 +63,4 @@ public class Offer implements Internship {
 	public Visit getVisit(){
 		return null;
 	}
-
 }
