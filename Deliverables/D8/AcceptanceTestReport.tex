@@ -31,7 +31,8 @@ Acceptance Test Report document for Team V's Internship Management System.
 \begin{tabular}{|c|c|c|c|}
 \hline \textbf{Date} &\textbf{Change} & \textbf{Version} & \textbf{Author}\\ 
 18/02/13 & Created Document Template & 0.1 & Ross Adam\\
-25/02/13 & Completed Variances; Test Instances Section & 0.1 & Ross Adam\\
+25/02/13 & Completed Variances; Test Instances Section & 0.2 & Ross Adam\\
+25/02/13 & Completed Tests Section & 0.3 & Ross Adam\\
 \hline 
 \end{tabular} }
 \end{center}
@@ -55,30 +56,265 @@ Additional Comments: Tests run on 18/02/13 &\\
 
 \subsection{Tests}
 
-\begin{tabular}{|l|c|}
+\begin{tabular}{|p{2cm}|p{12cm}|}
 \hline
-Test ID &\\
+Test ID & T.C.5.1.1\\
 \hline
-Test Type &\\
+Test Type & Unit\\
 \hline
-Test Owner  &\\
+Test Owner  & Mamas Nicolaou\\
 \hline
-Test Date &\\
+Test Date & 18/02/13\\
 \hline
-Test Results &\\
+Test Results & Pass: 0.001s\\
 \hline
-Additional Comments &\\
+Additional Comments & Passed with supplied parameters\\
+\hline
+\end{tabular}
+
+\vspace{4 mm}
+
+\begin{tabular}{|p{2cm}|p{12cm}|}
+\hline
+Test ID & T.C.5.3.1\\
+\hline
+Test Type & Unit\\
+\hline
+Test Owner  & Mamas Nicolaou\\
+\hline
+Test Date & 18/02/13\\
+\hline
+Test Results & Pass: 0.093s\\
+\hline
+Additional Comments & Test does not match up to specified test plan. Initial plan required Employer details to be used to create a new advert. This test uses Course Co-ordinator details. Recommend re-doing test.\\
+\hline
+\end{tabular}
+
+\vspace{4 mm}
+
+\begin{tabular}{|p{2cm}|p{12cm}|}
+\hline
+Test ID & T.C.5.4.1\\
+\hline
+Test Type & Unit\\
+\hline
+Test Owner  & Mamas Nicolaou\\
+\hline
+Test Date & 18/02/13\\
+\hline
+Test Results & Fail: 0.087s\\
+\hline
+Additional Comments & Deviates from test plan because the Course Co-ordinator details are used instead of student details. Fails due to assertion exception.\\
+\hline
+\end{tabular}
+
+\subsection{Modified T.C.5.5.1 Tests}
+
+\begin{tabular}{|p{2cm}|p{12cm}|}
+\hline
+Test ID & T.C.5.5.1\\
+\hline
+Test Type & Unit\\
+\hline
+Test Owner  & Mamas Nicolaou\\
+\hline
+Test Date & 18/02/13\\
+\hline
+Test Results & Fail: 0.139s\\
+\hline
+Additional Comments & Raised an assertion exception upon execution.\\
+\hline
+\end{tabular}
+
+\vspace{4 mm}
+
+\begin{tabular}{|p{2cm}|p{12cm}|}
+\hline
+Test ID & T.C.5.5.1\\
+\hline
+Test Type & Unit\\
+\hline
+Test Owner  & Mamas Nicolaou\\
+\hline
+Test Date & 18/02/13\\
+\hline
+Test Results & Fail: 0.139s\\
+\hline
+Additional Comments & Raised an assertion exception upon execution.\\
+\hline
+\end{tabular}
+
+\subsection{Modified T.C.5.6.1 Tests}
+
+\begin{tabular}{|p{2cm}|p{12cm}|}
+\hline
+Test ID & T.C.5.6.1\\
+\hline
+Test Type & Unit\\
+\hline
+Test Owner  & Mamas Nicolaou\\
+\hline
+Test Date & 18/02/13\\
+\hline
+Test Results & Pass: 0.000s\\
+\hline
+Additional Comments & This test was conducted using course co-ordinator details for login.\\
+\hline
+\end{tabular}
+
+\vspace{4 mm}
+
+\begin{tabular}{|p{2cm}|p{12cm}|}
+\hline
+Test ID & T.C.5.6.1\\
+\hline
+Test Type & Unit\\
+\hline
+Test Owner  & Mamas Nicolaou\\
+\hline
+Test Date & 18/02/13\\
+\hline
+Test Results & Fail: 0.002s\\
+\hline
+Additional Comments & This test was conducted using student details for login. This test failed with an assertion error.\\
+\hline
+\end{tabular}
+
+\vspace{4 mm}
+
+\begin{tabular}{|p{2cm}|p{12cm}|}
+\hline
+Test ID & T.C.5.6.1\\
+\hline
+Test Type & Unit\\
+\hline
+Test Owner  & Mamas Nicolaou\\
+\hline
+Test Date & 18/02/13\\
+\hline
+Test Results & Fail: 0.001s\\
+\hline
+Additional Comments & This test was conducted using employer details for login. This test raised an error rather than a failure because of a NULL pointer exception.\\
+\hline
+\end{tabular}
+
+\subsection{Modified T.C.5.10.1 Tests}
+
+\begin{tabular}{|p{2cm}|p{12cm}|}
+\hline
+Test ID & T.C.5.10.1\\
+\hline
+Test Type & Unit\\
+\hline
+Test Owner  & Mamas Nicolaou\\
+\hline
+Test Date & 18/02/13\\
+\hline
+Test Results & Error: 0.083s\\
+\hline
+Additional Comments & Execution of this test resulted in a NULL pointer exception.\\
+\hline
+\end{tabular}
+
+\vspace{4 mm}
+
+\begin{tabular}{|p{2cm}|p{12cm}|}
+\hline
+Test ID & T.C.5.10.1\\
+\hline
+Test Type & Unit\\
+\hline
+Test Owner  & Mamas Nicolaou\\
+\hline
+Test Date & 18/02/13\\
+\hline
+Test Results & Fail: 0.105s\\
+\hline
+Additional Comments & This modified test used employer details and retrieved their details rather than a student's details. Execution of this test resulted in an assertion error.\\
+\hline
+\end{tabular}
+
+\vspace{4 mm}
+
+\begin{tabular}{|p{2cm}|p{12cm}|}
+\hline
+Test ID & T.C.5.10.1\\
+\hline
+Test Type & Unit\\
+\hline
+Test Owner  & Mamas Nicolaou\\
+\hline
+Test Date & 18/02/13\\
+\hline
+Test Results & Pass: 0.036s\\
+\hline
+Additional Comments & The course co-ordinator was logged in.\\
+\hline
+\end{tabular}
+
+\vspace{4 mm}
+
+\begin{tabular}{|p{2cm}|p{12cm}|}
+\hline
+Test ID & T.C.5.10.1\\
+\hline
+Test Type & Unit\\
+\hline
+Test Owner  & Mamas Nicolaou\\
+\hline
+Test Date & 18/02/13\\
+\hline
+Test Results & Fail: 0.002s\\
+\hline
+Additional Comments & This modified test did not use a login to retrieve data.Execution of this test resulted in an assertion error.\\
+\hline
+\end{tabular}
+
+\vspace{4 mm}
+
+\begin{tabular}{|p{2cm}|p{12cm}|}
+\hline
+Test ID & T.C.5.11.1\\
+\hline
+Test Type & Unit\\
+\hline
+Test Owner  & Ross Adam\\
+\hline
+Test Date & 18/02/13\\
+\hline
+Test Results & Error: 0.085s\\
+\hline
+Additional Comments & Raises NULL pointer exception.\\
+\hline
+\end{tabular}
+
+\vspace{4 mm}
+
+\begin{tabular}{|p{2cm}|p{12cm}|}
+\hline
+Test ID & T.C.5.12.1\\
+\hline
+Test Type & Unit\\
+\hline
+Test Owner  & Ross Adam\\
+\hline
+Test Date & 18/02/13\\
+\hline
+Test Results & Pass: 0.093s\\
+\hline
+Additional Comments & Test successful.\\
 \hline
 \end{tabular}
 
 \section{Test Assessment}
-[Enter a comprehensive assessment of your interpretation of how adequate the test was in light of how thorough the test plan said it should be? What wasn't tested well enough?]
+Upon completion of the testing plan and this document it is evident that testing could have been much more robust and detailed. Several tests deviated from the test plan mostly because a different user's details were supplied. This may be a minor factor but it could have influenced the results. Additionally several tests required minor modification to match up to the tests we implemented: most evidently was the use of test case T.C.5.10.1 with several different login detail variations.
 
 \section{Test Results}
-[Summarize the test results. Include a detailed description of any deviations from the original test plan, design, test case, or expected results. Include any issues or bugs discovered during the test.]
+From the results it seems evident that the system was developed primarily from the perspective of the Course Co-ordinator. This makes sense from an implementation point of view because most of the functions specified are for use by the Course Co-ordinator however it appears to have adversely effected the development of both the Student and Employer users. Many errors stem from tests where employer or students are logged in.\\
+As mentioned in the Test Assessment section there were many deviations and modifications to existing test. Only the log in details were changed for each to facilitate differen user log in sessions. 
 
 \section{Unit/Module/System Testing}
-Unit, module, and system integration testing activities were performed during the development of the system build or release.
+Unit testing activities were performed during the development of the system build.
 
 \section{Variances}
 To prepare the tests we had to create several artificial entries for use within the system to use for testing. Also several import statements were added to the code that Team U's implementation required.
@@ -93,16 +329,27 @@ In each test instance where an error occured it was the result of a Null Pointer
 
 \subsection{Unresolved Test Instances}
 [Identify all unresolved test incidents and provide a plan of action for their resolution.  Reference may be made to Test Incident Reports that describe in detail the unexpected results, problems, or defects reported during testing, which may be included as an appendix to this document.]
+Test Instances to be resolved:
+
+\begin{enumerate} 
+\item getCurrentUserTest() associated methods need refinement as the returned results do not match the expected input.
+\item getAdvertisementsForStudentsTest() associated methods need refinement as the returned results do not match the expected input.
+\item getAdvertisementsForStudentsTest() created error, requires major re-assessment and re-iteration.
+\item registerNewEmployerTest() associated methods need refinement as the returned results do not match the expected input.
+\item getCurrentEmployerTest() associated methods need refinement as the returned results do not match the expected input.
+\item selectAdvertisementTest() associated methods need refinement as the returned results do not match the expected input.
+\item selectRoleTest() created error, requires major re-assessment and re-iteration.
+\item selectStudentTest() created error, requires major re-assessment and re-iteration.
+\end{enumerate}
 
 \section{Recommendations}
-[Describe what actions are suggested upon completion of this test. Provide any recommended improvements in the design, operation, or future testing of the business product that resulted from the testing being reported.  A discussion of each recommendation and its impact on the business product may be provided.  If there are no recommendations to report, then simply state as such.]
+It is recommended that the decelopment team return to and re-assess how Student and Employer objects are utilised within the system. Specifically the program's many get methods as they caused significant problems during testing. These methods should then be re-tested using identical test criteria.
 \newpage
 \section{Appendix A}
 The undersigned acknowledge they have reviewed the Internship Management System Test Report and agree with the approach it presents. Changes to this Test Report will be coordinated with and approved by the undersigned or their designated representatives.\\
-Print Name: \\
-Title: \\
+Print Name: Ross Adam \\
 Role: Project Manager \\
-Date: \\
-Signature: \\
+Date: 27/02/13\\
+
 
 \end{document}
