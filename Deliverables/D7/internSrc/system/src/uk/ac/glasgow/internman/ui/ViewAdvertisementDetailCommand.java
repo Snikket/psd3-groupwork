@@ -15,6 +15,7 @@ import uk.ac.glasgow.internman.Advertisement;
 import uk.ac.glasgow.internman.Employer;
 import uk.ac.glasgow.internman.InternMan;
 import uk.ac.glasgow.internman.Role;
+import uk.ac.glasgow.internman.Advertisement.AdvertisementStatus;
 
 @MinimumArguments(1)
 @CommandDescription("Presents the detail of internship roles for a single advertisement.")
@@ -34,12 +35,14 @@ public class ViewAdvertisementDetailCommand extends SystemCommand<InternMan> {
 	public void processCommand(String... args) throws SystemCommandException {
 
 		Integer advertisementIndex = Integer.parseInt(args[0]);
-		
+		String result;
 		Advertisement advertisement = facade.selectAdvertisement(advertisementIndex);
-		
+		if(advertisement==null){
+			result="Advertisement Details are not available for this advertisement ID!";
+		}else{
 		Employer employer = advertisement.getEmployer();
 		
-		String result = 
+		result = 
 				"Employer\t\t: "+employer.getName()+"\n"+
 				"Application process\t:"+advertisement.getApplicationDetails()+"\n";
 		
@@ -62,7 +65,7 @@ public class ViewAdvertisementDetailCommand extends SystemCommand<InternMan> {
 		}
 		
 		result +="Coordinator's comments:\n"+advertisement.getComments();
-				
+		}		
 		dialogue.sendMessage(result);
 	}
 
