@@ -119,7 +119,7 @@ The following three diagrams were created to illustrate how entities within the 
 \subsection{Student}
 
 \textbf{Description} \\
-Student was choosen because it displayed 4 distinct states: Approved, Accepted, Withdrawn and Pending. These were identified from the ``View Student Details'' use case. However the finding other use cases to justify this proved difficult as none could be found that implied a change in the Student entity state. Therefore the following diagram was implemented in a manner deemed logical by the team. This is mostly a sub-state diagram encased within a ``Not Withdrawn" box. If withdrawn then the sub-state is immediately exited.
+Student was choosen because it displayed 4 distinct states: Approved, Accepted, Withdrawn and Pending. These were identified from the ``View Student Details'' use case. This is mostly a sub-state diagram encased within a ``Not Withdrawn" box. If withdrawn then the sub-state is immediately exited. However there is currently no trigger that allows transition to the Withdrawn state but it has still been included in a manner that the team deemed logical.
 
 \begin{center}
 \includegraphics
