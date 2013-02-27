@@ -1,11 +1,15 @@
 package uk.ac.glasgow.internman.users;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 import uk.ac.glasgow.internman.Internship;
 import uk.ac.glasgow.internman.Student;
 
 public class StudentUser extends User implements Student {
 	
-	private Internship internship;
+	private List<Internship> internship = new ArrayList<Internship>();
 
 	public StudentUser(String ID, String password, String forename,
 			String surname, String email) {
@@ -15,10 +19,9 @@ public class StudentUser extends User implements Student {
 
 	public String getUserType(){
 		return "student";
-	}
+	}	
 	
-	
-	public Internship getInternship() {
+	public List<Internship> getInternship() {
 		return this.internship;
 	}
 
@@ -42,8 +45,8 @@ public class StudentUser extends User implements Student {
 		return null;
 	}
 	
-	public void setInternship(Internship i){
-		this.internship = i;
-	}
+	//public void setInternship(Integer ID, Internship i){
+	//	this.internship = i;
+	//}
 	
 }

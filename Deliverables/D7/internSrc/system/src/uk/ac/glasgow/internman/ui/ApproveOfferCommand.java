@@ -11,7 +11,7 @@ import uk.ac.glasgow.internman.Internship;
 import uk.ac.glasgow.internman.Internship.InternshipStatus;
 import uk.ac.glasgow.internman.Student;
 
-@MinimumArguments(1)
+@MinimumArguments(2)
 @CommandDescription("")
 @ArgumentsDescription("")
 public class ApproveOfferCommand extends SystemCommand<InternMan>{
@@ -24,13 +24,14 @@ public class ApproveOfferCommand extends SystemCommand<InternMan>{
 	public void processCommand(String... args) throws SystemCommandException {
 		
 		String matriculation = args[0];
+		Integer internshipID = Integer.valueOf(args[1]);
 				
-		facade.approveAcceptedOffer(matriculation);
+		facade.approveAcceptedOffer(matriculation, internshipID);
 		
 		Student student = facade.selectStudent(matriculation);
 		
 		if (student != null){
-			Internship internship = student.getInternship();
+			Internship internship = student.getInternship().get(internshipID);
 			
 			if (internship != null &&
 				internship.getStatus().equals(InternshipStatus.APPROVED))

@@ -102,7 +102,7 @@ public interface InternMan {
      * coordinator only. Approves offer most recently accepted
      * by student with this matriculation id.
      */
-    void approveAcceptedOffer(String matriculation);
+    void approveAcceptedOffer(String matriculation, Integer internshipID);
 	
     
     /**

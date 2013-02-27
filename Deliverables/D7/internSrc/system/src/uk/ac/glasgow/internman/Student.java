@@ -1,5 +1,8 @@
 package uk.ac.glasgow.internman;
 
+import java.util.List;
+import java.util.Map;
+
 import uk.ac.glasgow.internman.Internship;
 
 public interface Student {
@@ -8,7 +11,7 @@ public interface Student {
 		ESE,SE,CS3H,CS3
 	}
 
-	Internship getInternship();
+	List<Internship> getInternship();
 
 	String getSurname();
 

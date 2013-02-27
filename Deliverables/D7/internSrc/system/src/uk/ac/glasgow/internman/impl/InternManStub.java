@@ -1,7 +1,9 @@
 package uk.ac.glasgow.internman.impl;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -41,6 +43,9 @@ public class InternManStub implements InternMan {
 	
 	// Current selected employer
 	private Employer currentEmployer = null;
+	
+	// internship list for student
+	private List<Internship> internship = new ArrayList<Internship>();
 	
 	public InternManStub(){
 		this.UM = new UserManagement();
@@ -83,12 +88,14 @@ public class InternManStub implements InternMan {
 			filter.put("employerName", employer.getName());
 		}
 		
+		/*checks if current user is a student*/
 		if (userType == "student"){
 			StudentUser student = (StudentUser)user;
 			filter.put("userType", "student");
 			filter.put("employerName", null);
 		}
 		
+		/*checks if current user is the course coordinator*/
 		if (userType == "coordinator"){
 			CCUser coordinator = (CCUser)user;
 			filter.put("userType", "coordinator");
@@ -192,11 +199,17 @@ public class InternManStub implements InternMan {
 	public Student selectStudent(String matriculation) {
 		
 		StudentUser student = (StudentUser) UM.getUser(matriculation);
+		String studentID = student.getID();
 		
-		if (this.currentUser.getUserType() != "coordinator")
+		if(studentID == this.currentUser.getID()){
+			return (Student)UM.getUser(matriculation);
+		}		
+		else if (this.currentUser.getUserType() == "coordinator")
+			return (Student)UM.getUser(matriculation);
+		
+		else{
 			return null;
-		
-		return (Student)UM.getUser(matriculation);
+		}
 	}
 
 	@Override
@@ -221,25 +234,28 @@ public class InternManStub implements InternMan {
 		this.OM.acceptOffer(offer.getID());
 		
 		StudentUser student = (StudentUser)this.currentUser;
-		student.setInternship(offer);
+		this.internship.add(offer);
+		//student.getInternship().set(0, offer);
+		//student.getInternship().add(offer);
+		//student.getInternship();
 		this.UM.storeUser(student);
 		
 		System.out.println("Notification email sent to " + managerEmail);		
 	}
 
 	@Override
-	public void approveAcceptedOffer(String matriculation) {
+	public void approveAcceptedOffer(String matriculation, Integer internshipID) {
 		
 		if (this.currentUser.getUserType() != "coordinator")
 			return;
 		
 		StudentUser student = (StudentUser) UM.getUser(matriculation);		
 		
-		if (student.getInternship().getStatus() != InternshipStatus.ACCEPTED)
+		if (student.getInternship().get(internshipID).getStatus() != InternshipStatus.ACCEPTED)
 			return;
 		
-		((Offer) student.getInternship()).setStatus(InternshipStatus.APPROVED);
-		((Offer) student.getInternship()).getRole().setApproved(true);
+		((Offer) student.getInternship().get(internshipID)).setStatus(InternshipStatus.APPROVED);
+		((Offer) student.getInternship().get(internshipID)).getRole().setApproved(true);
 		
 		this.UM.storeUser(student);
 		
