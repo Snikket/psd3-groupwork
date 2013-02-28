@@ -75,22 +75,16 @@ In our previous implementation, when the course coordinator was approving an acc
 \subsection{Change ID: 3}
 
 Previously, within the ApprovedOfferCommand, when calling the ApproveAcceptedOffer() method, it was simply passing in the students matriculation number. We modified this to pass in the students Internship ID, as well as the students matriculation number. \\
-Due to the changes in Change ID 2, a number of commands in uk.ac.glasgow.internman/ui/ApproveOfferCommand were malfunctioning. To solve this we had to apply some modifications to some methods of the class in order to get them to work with the changes that were made to the facade. Namely, we created an integer internshipID which is reading in args[1], changed the approveAcceptedOffer() parameters to include the internship ID and modifiied the way in which the system retrieves an internship.\\
-
-String matriculation = args[0];
-Integer internshipID = Integer.valueOf(args[1]);	
-facade.approveAcceptedOffer(matriculation, internshipID);
-Student student = facade.selectStudent(matriculation);
-	if (student != null){
-		Internship internship = student.getInternship().get(internshipID);
+Due to the changes in Change ID 2, a number of commands in uk.ac.glasgow.internman.ui/.ApproveOfferCommand were malfunctioning. To solve this we had to apply some modifications to some methods of the class in order to get them to work with the changes that were made to the facade. Namely, we created an integer internshipID which is reading in args[1], changed the approveAcceptedOffer() parameters to include the internship ID and modifiied the way in which the system retrieves an internship.\\
 
 
 \subsection{Change ID: 4}
 
-For our previous implementation, a student was only able to accept one internship. Therefore in the ViewStudentDetailCommand, the system was only storing the details of an internship once. If a student accepted a different internship, the previous details were simply overwritten. However, as the new requirements state that a student should be able to accept more than one internship, the system must be able to store these details for each internship accepted. To deal with this requirement, we had to loop over all internships the student had applied for and store these details for each.\\
+For our previous implementation, a student was only able to accept one internship. Therefore in the ViewStudentDetailCommand, the system was only storing the details of an internship once. If a student accepted a different internship, the previous details were simply overwritten. However, as the new requirements state that a student should be able to accept more than one internship, the system must be able to store these details for each internship accepted. 
+To deal with this requirement, we had to loop over all internships the student had applied for and store these details for each of them.\\
 
 \subsection{Change ID: 5}
 
-For the previous implementation, it was only the course coordinator that was allowed to view a students details.However, the new requirements stated that a student should be able to view their own details that are stored in the system. To change the implementation to suit this requirement, we modified the selectStudent() method within th facade. To do this, we simply checked to see if the ID of the current user logged in to the system matched the matriculation number entered by the user. This means that a student can view only their own details.\\
+In our previous implementation, only the course-coordinator was allowed to view a students details. However, the new requirements stated that a student should be able to view their own details as these are stored in the system. To change the implementation to suit this requirement, we modified the selectStudent() method within the facade. That means that a student can now request their details by calling the method selectStudent() and providing their matriculation number. The method now simply checks to see if the GUID of the user currently logged in to the system matches the matriculation number provided to the method. This means that a student can view only their own details.\\
 
 \end{document}
