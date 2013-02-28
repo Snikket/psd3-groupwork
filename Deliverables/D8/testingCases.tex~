@@ -103,7 +103,7 @@ The above Tests cover the different user types logging in with both invalid and 
 
 \begin{tabular}{|c|c|}
 \hline \textbf{Identifier} & T.C.5.5.1\\
-\hline \textbf{Use case} & RegisterNewEemployer\\
+\hline \textbf{Use case} & RegisterNewEmployer\\
 \hline \textbf{Scenario} & Primary\\
 \hline \textbf{Set up} & System initialised with default parameters - logged in as course coordinator\\
 \hline \textbf{Includes} & T.C.5.1.1\\
@@ -200,7 +200,7 @@ The above Tests cover the different user types logging in with both invalid and 
 \begin{tabular}{|c|c|}
 \hline \textbf{Identifier} & T.C.5.9.2\\
 \hline \textbf{Use case} & ApproveAcceptedOffer\\
-\hline \textbf{Scenario} & Offer has not been accepted.\\
+\hline \textbf{Scenario} & Offer has not been accepted by the student.\\
 \hline \textbf{Set up} & logged as a course coordinator\\
 \hline \textbf{Includes} & T.C.5.1.1, T.C.5.8.1\\
 \hline \textbf{Procedure} & Not defined yet\\
@@ -230,6 +230,30 @@ The above Tests cover the different user types logging in with both invalid and 
 \hline \textbf{Procedure} & Not defined yet\\
 \hline \textbf{Inputs} & Students matriculation number = "2060267s"\\
 \hline \textbf{Outputs} & Students details not shown. System returns Null.\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.11.1\\
+\hline \textbf{Use case} & selectRole\\
+\hline \textbf{Scenario} & Advert specific detail retrieval\\
+\hline \textbf{Set up} & logged as a course coordinator\\
+\hline \textbf{Includes} & T.C.5.1.1\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & select role number = "1"\\
+\hline \textbf{Outputs} & Advert role is shown. System returns Null.\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline \textbf{Identifier} & T.C.5.12.1\\
+\hline \textbf{Use case} & createRole\\
+\hline \textbf{Scenario} & Add new role\\
+\hline \textbf{Set up} & logged as a course coordinator\\
+\hline \textbf{Includes} & T.C.5.1.1\\
+\hline \textbf{Procedure} & Not defined yet\\
+\hline \textbf{Inputs} & title = ``test Engineer``; location = ``Glasgow``; descrription = ``Test Description`` and salary = ``100.00``\\
+\hline \textbf{Outputs} & Advert role is shown. System returns Null.\\
 \hline
 \end{tabular}
 
