@@ -25,7 +25,7 @@
 
 \date{30th January 2013}
 
-\deliverableID{D6}
+\deliverableID{D8.1  D8.2}
 \project{PSD3 Group Exercise 2}
 \team{V}
 \version{0.13}
@@ -101,11 +101,9 @@ The component diagram was created to illustrate the structural relationship betw
 
 \textbf{Description}\\
 
-The System store is comprised of three separated databases: the Advert Store, Offer Store and the visit store and each of these are drawn together using a facade, which will direct queries to the relevant database. \\
+The System store is comprised of three separated databases: the Advert Store, Offer Store and the visit store and each of these are drawn together using a facade, much like a broker architecture, which will direct queries to the relevant database. \\
 
 The User Store contains employer store and GU user store. The employer store is a custom database and the GU user store is a front-end to the myCampus system. Interaction with the myCampus system will be limited to retrieving basic student and staff information.\\
-
-The User Authentication uses two separate components to forward the data to the relevant login system: myCampus or the employer store. \\
 
 The Internship Management System contains several different components that allow the user to interact with the various other components and data stores within the system.\\
 
@@ -228,15 +226,6 @@ An Advert can have the following states: Pendign, Not Published and Published. A
 [scale=0.5]
 {img/OfferManagement.jpg}
 \end{center}
-
-
-\subsection{Utility}
-\begin{center}
-\includegraphics
-[scale=0.5]
-{img/Utility.jpg}
-\end{center}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

@@ -14,7 +14,7 @@
 %%release date
 \date{28 February 2013}
 
-\deliverableID{D8}
+\deliverableID{D8.3}
 \project{PSD Group Exercise 2}
 \team{V}
 \version{1.0}
@@ -274,8 +274,8 @@ Additional Comments & Pass\\
 Upon completion of the testing plan and this document it is evident that testing could have been much more robust and detailed. Several tests deviated from the test plan mostly because a different user's details were supplied. This may be a minor factor but it could have influenced the results. Additionally several tests required minor modification to match up to the tests we implemented: most evidently was the use of test case T.C.5.10.1 with several different login detail variations.
 
 \section{Test Results}
-From the results it seems evident that the system was developed primarily from the perspective of the Course Co-ordinator. This makes sense from an implementation point of view because most of the functions specified are for use by the Course Co-ordinator however it appears to have adversely effected the development of both the Student and Employer users. Many errors stem from tests where employer or students are logged in.\\
-As mentioned in the Test Assessment section there were many deviations and modifications to existing test. Only the log in details were changed for each to facilitate different user log in sessions. 
+From the results it seems evident that the system was developed primarily from the perspective of the Course Co-ordinator. This makes sense from an implementation point of view because most of the functions specified are for use by the Course Co-ordinator. However, it appears to have adversely effected the development of both the Student and Employer users. Many errors stem from tests where employer or students are logged in.\\
+As mentioned in the Test Assessment, section there were many deviations and modifications to existing the test. Only the log in details were changed for each to facilitate different user log in sessions. 
 
 \section{Unit/Module/System Testing}
 Unit testing activities were performed during the development of the system build.
@@ -289,8 +289,8 @@ Overall there was little deviation from the pre-approved test plan.
 In each test instance where an error occurred it was the result of a Null Pointer Exception being thrown. This implied that where a comparison in the code was being performed there was no object to be compared against which resulted in the aforementioned exception. 
 
 \subsection{Unresolved Test Instances}
-[Identify all unresolved test incidents and provide a plan of action for their resolution.  Reference may be made to Test Incident Reports that describe in detail the unexpected results, problems, or defects reported during testing, which may be included as an appendix to this document.]
-Test Instances to be resolved:
+
+Test Instances to be resolved:\\
 
 \begin{enumerate} 
 \item getCurrentUserTest() associated methods need refinement as the returned results do not match the expected input.
