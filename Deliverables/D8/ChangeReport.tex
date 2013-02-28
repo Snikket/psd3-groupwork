@@ -70,12 +70,11 @@ In our previous implementation, a student could only accept one internship. Howe
 
 \subsection{Change ID: 2}
 
-In our previous implementation, when the course coordinator was approving an accepted internship, he simply had to pass in the students matriculation number. However, as the student can now have multiple accepted internships, we need to change the parameters for the ApproveAcceptedOffer() method of the facade to pass in an integer "Internship index". The Internship Index is no provided to the ApproveAcceptedOffer method along with the student's matriculation number which results to the course-coordinator approving one of potentially many accepted offers a student might have.
+In our previous implementation, when the course coordinator was approving an accepted internship, he simply had to pass in the students matriculation number. However, as the student can now have multiple accepted internships, we need to change the parameters for the ApproveAcceptedOffer() method of the facade to pass in an integer "Internship index". The Internship Index is now provided to the ApproveAcceptedOffer method along with the student's matriculation number which results to the course-coordinator approving one of potentially many accepted offers a student might have.
 
 \subsection{Change ID: 3}
 
-Previously, within the ApprovedOfferCommand, when calling the ApproveAcceptedOffer() method, it was simply passing in the students matriculation number. We modified this to pass in the students Internship ID, as well as the students matriculation number. \\
-Due to the changes in Change ID 2, a number of commands in uk.ac.glasgow.internman.ui/.ApproveOfferCommand were malfunctioning. To solve this we had to apply some modifications to some methods of the class in order to get them to work with the changes that were made to the facade. Namely, we created an integer internshipID which is reading in args[1], changed the approveAcceptedOffer() parameters to include the internship ID and modifiied the way in which the system retrieves an internship.\\
+Due to the changes in Change ID 2, a number of commands in uk.ac.glasgow.internman.ui.ApproveOfferCommand were malfunctioning. To solve this we had to apply some modifications to some methods of the class in order to get them to work with the changes that were made to the facade. Namely, we created an integer internshipID which is reading in args[1], changed the approveAcceptedOffer() parameters to include the internship ID and modifiied the way in which the system retrieves an internship.\\
 
 
 \subsection{Change ID: 4}
