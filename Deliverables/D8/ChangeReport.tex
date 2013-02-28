@@ -66,11 +66,11 @@ In order to include the new requirements in our internship management system, we
 
 \subsection{Change ID: 1}
 
-In our previous implementation, a student could only accept one internship. However, according to the new requirements, a student must be able to accept more than one internship. In order to meet these requirements, we had to change the getInternship() method from an Object Internship to a List<Internship>. This allows the system to store a list of all internships that a student has accepted rather than a single internship per student. As we had changed this method in the java class, we then had to change the interface to reflect this change.\\
+In our previous implementation, a student could only accept one internship. However, according to the new requirements, a student must be able to accept more than one internship. In order to meet these requirements, we had to change the type returned by getInternship(). GetInternship() currently returns an Internship Object so that was changed so that the method returns a list of Internship objects, "List<Internship>". This allows the system to store a list of all internships that a student has accepted rather than a single internship per student. As we had changed this method in the java class, we then had to change the interface to reflect this change.\\
 
 \subsection{Change ID: 2}
 
-In our previous implementation, when the course coordinator was approving an accepted internship, he simply had to pass in the students matriculation number. However, as the student can now have multiple accepted internships, we had to change the parameters for the ApproveAcceptedOffer() method of the facade to pass in an Internship index, which specifies what internship the course coordinator was approving along with the student's matriculation number.
+In our previous implementation, when the course coordinator was approving an accepted internship, he simply had to pass in the students matriculation number. However, as the student can now have multiple accepted internships, we need to change the parameters for the ApproveAcceptedOffer() method of the facade to pass in an integer "Internship index". The Internship Index is no provided to the ApproveAcceptedOffer method along with the student's matriculation number which results to the course-coordinator approving one of potentially many accepted offers a student might have.
 
 \subsection{Change ID: 3}
 
