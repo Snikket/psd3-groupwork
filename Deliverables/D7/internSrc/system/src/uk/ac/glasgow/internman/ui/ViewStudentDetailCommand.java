@@ -3,6 +3,7 @@ package uk.ac.glasgow.internman.ui;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import uk.ac.glasgow.clui.ArgumentsDescription;
 import uk.ac.glasgow.clui.CommandDescription;
@@ -48,46 +49,47 @@ public class ViewStudentDetailCommand extends SystemCommand<InternMan> {
 			"Programme:\t" + student.getProgramme()+"\n";
 			
 			
-			Internship internship = student.getInternship();
-			
-			if (internship != null){
-				result+= 
-					"Status:\t"+internship.getStatus()+"\n"+
-					"Manager:\t"+ internship.getManager()+"\n"+
-					"Email:\t"+ internship.getManagerEmail()+"\n";
-				
-			}
-			
-			Role role = internship.getRole();
-		
-			if (role != null)
-				result +=
-					"Role\t:"+role.getTitle()+"\n"+
-					"Begin:\t"   + formatDate(role.getStart())+"\n"+
-					"End:\t"     + formatDate(role.getEnd())+"\n"+
-					"Salary:\t"  + role.getSalary()+"\n"+
-					"Location\t:" +role.getLocation()+"\n";
-			
-			Employer employer = internship.getEmployer();
-			
-			if (employer != null)
-				result += 
-					"Employer:\t"+employer.getName();
-			
-			Visit visit = internship.getVisit();
-			
-			if (visit != null){
-				Visitor visitor = visit.getVisitor();
-				
-				if (visitor != null)
-					result+= "Visitor:\t"+visitor.getName()+"\n";
+			List<Internship> internship = student.getInternship();
+			for (int i =0; i <internship.size(); i++){
+				if (internship != null){
+					result+= 
+						"Status:\t"+internship.get(i).getStatus()+"\n"+
+						"Manager:\t"+ internship.get(i).getManager()+"\n"+
+						"Email:\t"+ internship.get(i).getManagerEmail()+"\n";
 					
-				UoGGrade grade = visit.getGrade();
-				if (grade != null){
-					result += "Grade:\t" + grade + "\n";
-					result += "Description:\t" + visit.getDescription() + "\n";
-				}			
-			}			
+				}
+				
+				Role role = internship.get(i).getRole();
+			
+				if (role != null)
+					result +=
+						"Role\t:"+role.getTitle()+"\n"+
+						"Begin:\t"   + formatDate(role.getStart())+"\n"+
+						"End:\t"     + formatDate(role.getEnd())+"\n"+
+						"Salary:\t"  + role.getSalary()+"\n"+
+						"Location\t:" +role.getLocation()+"\n";
+				
+				Employer employer = internship.get(i).getEmployer();
+				
+				if (employer != null)
+					result += 
+						"Employer:\t"+employer.getName();
+				
+				Visit visit = internship.get(i).getVisit();
+				
+				if (visit != null){
+					Visitor visitor = visit.getVisitor();
+					
+					if (visitor != null)
+						result+= "Visitor:\t"+visitor.getName()+"\n";
+						
+					UoGGrade grade = visit.getGrade();
+					if (grade != null){
+						result += "Grade:\t" + grade + "\n";
+						result += "Description:\t" + visit.getDescription() + "\n";
+					}			
+				}
+			}
 			
 		}
 		dialogue.sendMessage(result);

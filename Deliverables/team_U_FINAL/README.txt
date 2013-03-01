@@ -1,7 +1,7 @@
 README
 
 - Installation instructions
--Operating instructions
+- Operating instructions
 - A file manifest (list of files included)
 - Known bugs
 - Implementation Overview
